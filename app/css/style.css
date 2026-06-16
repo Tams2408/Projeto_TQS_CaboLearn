@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+.hero {
+    padding: 100px;
+}
+
+.btn {
+    background: #22c55e;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.login-box {
+    width: 300px;
+    margin: 100px auto;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #3b82f6;
+    border: none;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #111827;
+}

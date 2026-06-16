@@ -1,0 +1,20 @@
+# Dependências
+node_modules/
+vendor/
+
+# Ambiente
+.env
+.env.local
+
+# Builds
+dist/
+build/
+target/
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
