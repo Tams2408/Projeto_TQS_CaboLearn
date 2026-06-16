@@ -1,0 +1,321 @@
+/* =========================================
+   CABOLEARN - COMMON.CSS
+   Elementos comuns a todas as páginas
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Inter", Arial, sans-serif;
+    background: #DDE6E9;
+    color: #000000;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* =========================================
+   CONTAINER BASE DA PÁGINA
+========================================= */
+
+.page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #DDE6E9;
+    overflow: hidden;
+    transform: none !important;
+}
+
+/* Mantém compatibilidade caso ainda exista app-stage */
+.app-stage {
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden;
+    background: #DDE6E9;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.topbar {
+    position: absolute;
+    width: 100vw;
+    height: 10.56vh;
+    left: 0;
+    top: 0;
+    background: #2D2F32;
+    z-index: 50;
+}
+
+.logo-area {
+    position: absolute;
+    left: 2.34vw;
+    top: 0.83vh;
+    width: 26.15vw;
+    height: 8.89vh;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.header-line {
+    position: absolute;
+    width: 100vw;
+    height: 0.93vh;
+    left: 0;
+    top: 10.56vh;
+    background: #4579E1;
+    z-index: 51;
+}
+
+/* =========================================
+   AÇÕES DO HEADER
+========================================= */
+
+.topbar-actions {
+    position: absolute;
+    right: 3.23vw;
+    top: 2.5vh;
+    height: 5.65vh;
+    display: flex;
+    align-items: center;
+    gap: 1.85vw;
+    color: #FFFFFF;
+}
+
+.notification-area {
+    position: relative;
+    width: 3.13vw;
+    height: 5.56vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-icon {
+    width: 3.13vw;
+    height: 3.13vw;
+    object-fit: contain;
+    display: block;
+}
+
+.notification-badge {
+    position: absolute;
+    width: 1.04vw;
+    height: 1.04vw;
+    right: 0.2vw;
+    top: 0.1vh;
+    background: #FE9800;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-size: 0.83vw;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topbar-divider {
+    width: 1px;
+    height: 5.92vh;
+    background: #4B4E52;
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 1.04vw;
+}
+
+.user-avatar {
+    width: 3.18vw;
+    height: 3.18vw;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.user-name {
+    color: #FFFFFF;
+    font-size: 1.67vw;
+    font-weight: 400;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.user-arrow {
+    width: 1.56vw;
+    height: 1.56vw;
+    object-fit: contain;
+    display: block;
+}
+
+.logout-button {
+    width: 5.94vw;
+    height: 5vh;
+    border: 1px solid #B7B7B7;
+    border-radius: 0.68vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55vw;
+    text-decoration: none;
+    color: #A5A5A5;
+    font-size: 1.25vw;
+    font-weight: 400;
+}
+
+.logout-button img {
+    width: 1.04vw;
+    height: 1.04vw;
+    object-fit: contain;
+    display: block;
+}
+
+.logout-button span {
+    color: #A5A5A5;
+}
+
+/* =========================================
+   IMAGEM DE FUNDO COMUM
+========================================= */
+
+.background-illustration {
+    position: absolute;
+    left: -13.49vw;
+    top: 16.39vh;
+    width: 53.33vw;
+    height: 83.61vh;
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    position: absolute;
+    left: 2.34vw;
+    top: 15.19vh;
+    width: 19.64vw;
+    height: 76.76vh;
+    background: #FFFFFF;
+    border-radius: 1.2vw;
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.2vw rgba(0, 0, 0, 0.25);
+    z-index: 20;
+    overflow: hidden;
+}
+
+.sidebar-menu {
+    position: absolute;
+    top: 2.13vh;
+    left: 0.68vw;
+    width: 18.13vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15vh;
+}
+
+.menu-item {
+    width: 18.13vw;
+    height: 6.85vh;
+    display: flex;
+    align-items: center;
+    gap: 1.35vw;
+    padding: 0 1.25vw;
+    border-radius: 0.89vw;
+    text-decoration: none;
+    color: #C1C1C1;
+    font-size: 1.67vw;
+    font-weight: 400;
+    line-height: 1;
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+
+.menu-item img {
+    width: 2.08vw;
+    height: 2.08vw;
+    object-fit: contain;
+    flex-shrink: 0;
+    opacity: 0.75;
+}
+
+.menu-item span {
+    color: inherit;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.menu-item.active {
+    background: #4579E1;
+    color: #FFFFFF;
+}
+
+.menu-item.active img {
+    opacity: 1;
+    filter: brightness(0) invert(1);
+}
+
+.menu-item:hover {
+    background: rgba(69, 121, 225, 0.12);
+    color: #4579E1;
+}
+
+.menu-item.active:hover {
+    background: #4579E1;
+    color: #FFFFFF;
+}
+
+/* =========================================
+   RODAPÉ DA SIDEBAR
+========================================= */
+
+.sidebar-footer {
+    position: absolute;
+    left: 2.86vw;
+    bottom: 2vh;
+    width: 13.96vw;
+    text-align: center;
+}
+
+.sidebar-line {
+    width: 100%;
+    height: 1px;
+    background: #C1C1C1;
+    margin-bottom: 2vh;
+}
+
+.sidebar-footer span {
+    font-size: 0.73vw;
+    color: rgba(0, 0, 0, 0.22);
+}
+
+/* =========================================
+   ÁREA PRINCIPAL COMUM
+========================================= */
+
+.main-content {
+    position: absolute;
+    left: 25.26vw;
+    top: 15.19vh;
+    width: 61.56vw;
+    height: 76.76vh;
+    z-index: 10;
+}

@@ -1,0 +1,380 @@
+/* =========================================
+   CABOLEARN - INDEX.CSS
+   Conteúdo específico da página Início
+========================================= */
+
+/* =========================================
+   TÍTULO DA PÁGINA
+========================================= */
+
+.page-heading {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.page-heading h1 {
+    font-size: 3.33vw;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 1.65vh;
+    color: #000000;
+}
+
+.page-heading p {
+    font-size: 2.08vw;
+    font-weight: 400;
+    line-height: 1;
+    color: #000000;
+}
+
+.page-heading p span {
+    color: #4579E1;
+}
+
+/* =========================================
+   CARDS BASE DA PÁGINA INÍCIO
+========================================= */
+
+.card {
+    position: absolute;
+    background: #FFFFFF;
+    border: 2px solid #DEE6EE;
+    border-radius: 1.2vw;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.42vw;
+}
+
+.card-title img {
+    width: 1.56vw;
+    height: 1.56vw;
+    object-fit: contain;
+    display: block;
+}
+
+.card-title h2,
+.card h2 {
+    font-size: 1.25vw;
+    font-weight: 400;
+    line-height: 1;
+    color: #000000;
+    white-space: nowrap;
+}
+
+/* =========================================
+   AULAS HOJE
+========================================= */
+
+.today-classes-card {
+    left: 0;
+    top: 13.3vh;
+    width: 28.02vw;
+    height: 22.78vh;
+    padding: 1.65vh 0.94vw;
+}
+
+.today-classes-card .card-title {
+    margin-bottom: 1.45vh;
+}
+
+.class-list {
+    width: 100%;
+    height: 16.3vh;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    border-radius: 0.26vw;
+    overflow: hidden;
+    background: #FFFFFF;
+}
+
+.class-row {
+    height: 5.43vh;
+    display: grid;
+    grid-template-columns: 2.5vw 6.25vw 1fr 3.65vw;
+    align-items: center;
+    padding: 0 0.73vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.class-row:last-child {
+    border-bottom: none;
+}
+
+.subject-icon-small {
+    width: 2.08vw;
+    height: 2.08vw;
+    object-fit: contain;
+    display: block;
+}
+
+.class-time {
+    font-size: 0.78vw;
+    color: rgba(0, 0, 0, 0.42);
+    white-space: nowrap;
+}
+
+.class-info {
+    min-width: 0;
+}
+
+.class-info h3 {
+    font-size: 1.04vw;
+    font-weight: 400;
+    line-height: 1.05;
+    margin-bottom: 0.35vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.class-info p {
+    font-size: 0.78vw;
+    line-height: 1.05;
+    color: rgba(0, 0, 0, 0.58);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.class-badge {
+    justify-self: end;
+    min-width: 3.02vw;
+    height: 1.85vh;
+    border-radius: 0.16vw;
+    font-size: 0.52vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.badge-blue {
+    background: rgba(85, 142, 240, 0.4);
+    color: #558EF0;
+}
+
+.badge-green {
+    background: rgba(85, 240, 100, 0.4);
+    color: #55C965;
+}
+
+.badge-purple {
+    background: rgba(199, 85, 240, 0.4);
+    color: #C755F0;
+}
+
+/* =========================================
+   TRABALHOS
+========================================= */
+
+.pending-works-card {
+    left: 30.73vw;
+    top: 13.3vh;
+    width: 30.83vw;
+    height: 22.78vh;
+    padding: 1.65vh 1.56vw;
+}
+
+.pending-works-card h2 {
+    margin-bottom: 1.45vh;
+}
+
+.work-list {
+    width: 100%;
+    height: 16.3vh;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    border-radius: 0.26vw;
+    overflow: hidden;
+    background: #FFFFFF;
+}
+
+.work-row {
+    height: 5.43vh;
+    display: grid;
+    grid-template-columns: 2.5vw 1fr 5.47vw 3.9vw;
+    column-gap: 0.62vw;
+    align-items: center;
+    padding: 0 0.73vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.work-row:last-child {
+    border-bottom: none;
+}
+
+.work-info {
+    min-width: 0;
+}
+
+.work-info h3 {
+    font-size: 1.04vw;
+    font-weight: 400;
+    line-height: 1.05;
+    margin-bottom: 0.35vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.work-info p {
+    font-size: 0.78vw;
+    line-height: 1.05;
+    color: rgba(0, 0, 0, 0.58);
+    white-space: nowrap;
+}
+
+.work-date {
+    font-size: 0.78vw;
+    color: rgba(0, 0, 0, 0.42);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.work-status {
+    justify-self: end;
+    min-width: 3.23vw;
+    height: 1.85vh;
+    border-radius: 0.16vw;
+    font-size: 0.52vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.status-green {
+    background: rgba(85, 240, 111, 0.4);
+    color: #4BCB64;
+}
+
+.status-red,
+.work-row:nth-child(2) .work-status {
+    background: rgba(240, 85, 85, 0.4);
+    color: #E85A5A;
+}
+
+.status-blue,
+.work-row:nth-child(3) .work-status {
+    background: rgba(69, 121, 225, 0.4);
+    color: #4579E1;
+}
+
+/* =========================================
+   MINHAS DISCIPLINAS
+========================================= */
+
+.my-subjects-card {
+    left: 0;
+    top: 40.74vh;
+    width: 61.56vw;
+    height: 35.2vh;
+    padding: 1.65vh 1.35vw;
+}
+
+.my-subjects-card .card-title {
+    margin-bottom: 1.45vh;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 16.25vw);
+    grid-auto-rows: 12.15vh;
+    column-gap: 2.25vw;
+    row-gap: 1.45vh;
+    padding-left: 2.85vw;
+}
+
+.subject-card {
+    position: relative;
+    border: 2px solid #C2D8F2;
+    border-radius: 0.31vw;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+.subject-icon {
+    position: absolute;
+    left: 1.05vw;
+    top: 1.65vh;
+    width: 3vw;
+    height: 3vw;
+    object-fit: contain;
+    display: block;
+}
+
+.subject-info {
+    position: absolute;
+    left: 4.95vw;
+    top: 1.7vh;
+}
+
+.subject-info h3 {
+    font-size: 1.56vw;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0.75vh;
+    white-space: nowrap;
+    color: #000000;
+}
+
+.subject-info p {
+    font-size: 0.73vw;
+    color: rgba(0, 0, 0, 0.52);
+    white-space: nowrap;
+}
+
+.subject-progress {
+    position: absolute;
+    left: 1.25vw;
+    bottom: 1.35vh;
+    display: flex;
+    align-items: center;
+    gap: 0.65vw;
+}
+
+.subject-progress span {
+    width: 2.2vw;
+    font-size: 0.99vw;
+    line-height: 1;
+    color: #000000;
+}
+
+.progress-track {
+    width: 10.7vw;
+    height: 1.76vh;
+    background: rgba(217, 217, 217, 0.6);
+    border-radius: 0 0.83vw 0.83vw 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 0 0.83vw 0.83vw 0;
+}
+
+.progress-blue {
+    background: #558EF0;
+}
+
+.progress-green {
+    background: #55F065;
+}
+
+.progress-purple {
+    background: #C755F0;
+}
+
+.progress-pink {
+    background: #F055E8;
+}
+
+.progress-orange {
+    background: #F0A855;
+}
+
+.progress-cyan {
+    background: #55F0CE;
+}

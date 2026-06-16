@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CaboLearn - Login</title>
+
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+
+    <div class="login-page">
+        
+        <header class="login-header">
+            <div class="logo-area">
+                <img src=".\assets\img\logo.png" alt="CaboLearn" class="logo-img">
+            </div>
+
+            <div class="header-actions">
+                <div class="language">
+                    <img src=".\assets\icons\login\Language.png" alt="Idioma">
+                    <span>Português</span>
+                </div>
+
+                <span class="divider">|</span>
+
+                <div class="help">
+                    <img src=".\assets\icons\login\Help.png" alt="ajuda">
+                    <span>Ajuda</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <div class="header-line"></div>
+
+
+        <main class="login-content">
+
+            <section class="login-illustration">
+                <img src=".\assets\img\login-illustration.png" alt="Ilustração de login">
+            </section>
+
+            <section class="login-card">
+                <div class="login-title">
+                    <h2>Entrar</h2>
+                    <p>Acesse a sua conta para continuar</p>
+                </div>
+
+                <form action="index.html" method="POST" class="login-form">
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        
+                        <div class="input-box">
+                            <img src=".\assets\icons\login\Email.png" alt="email" class="input-icon">
+                            <input type="email" id="email" name="email" placeholder="exemplo@cabo.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Palavra-passe</label>
+                        <div class="input-box">
+                            <img src=".\assets\icons\login\Padlock.png" alt="palavra-passe" class="input-icon">
+                            <input type="password" id="password" name="password" placeholder="........" required>
+                        
+                            <button type="button" class="eye-button">
+                                <img src=".\assets\icons\login\Invisible.png" alt="mostrar palavra-passe">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="login-options">
+                        <label class="remember">
+                            <input type="checkbox" name="remember">
+                            <span>Lembrar-me</span>
+                        </label>
+
+                        <a href="#" class="forgot-password">Esqueceu a palavra-passe?</a>
+                    </div>
+
+                    <button type="submit" class="login-button">
+                        <img src=".\assets\icons\login\Enter.png" alt="">
+                        <span>Entrar</span>
+                    </button>
+
+                    <div class="card-divider"></div>
+
+                    <p class="institution-text">
+                        Ainda não tem conta?
+                        <a href="#">Fale com a instituição</a>
+                    </p>
+
+                </form>
+            </section>
+        </main>
+    </div>
+
+
+</body>
+</html>

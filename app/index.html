@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaboLearn - Inicio</title>
+
+    <link rel="stylesheet" href="./css/comum.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<div class="app-stage"> 
+    <div class="page inicio-page">
+        <header class="topbar">
+            <div class="logo-area">
+                <img src=".\assets\img\logo.png" alt="cabolearn" class="logo-img">
+            </div>
+
+            <div class="topbar-actions">
+                <div class="notification-area">
+                    <img src=".\assets\icons\inicio\Notification.png" alt="noti" class="notification-icon">
+                </div>
+
+                <div class="topbar-divider"></div>
+
+                <div class="user-area">
+                    <img src=".\assets\icons\inicio\perfil.png" alt="perfil" class="user-avatar">
+                    <span class="user-name">Elves Garcia</span>
+                    <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
+                </div>
+
+                <a href="./login.html" class="logout-button">
+                    <img src="./assets/icons/Logout.png" alt="sair">
+                    <span>Sair</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="header-line"></div>
+
+        <img src="./assets/img/index-illustration.png" alt="illust" class="background-illustration">
+
+        <aside class="sidebar">
+            <nav class="sidebar-menu">
+                <a href="index.html" class="menu-item active">             <img src=".\assets\icons\sidebar\Home.png" alt="inicio"> <span>Início</span></a>
+                <a href="disciplinas.html" class="menu-item">       <img src=".\assets\icons\sidebar\Books.png" alt="">      <span>Disciplinas</span></a>
+                <a href="upload.html" class="menu-item">            <img src=".\assets\icons\sidebar\Upload.png" alt="">     <span>Upload</span></a>
+                <a href="submissoes.html" class="menu-item">        <img src=".\assets\icons\sidebar\Document.png" alt="">   <span>Submissões</span></a>
+                <a href="historico.html" class="menu-item">         <img src=".\assets\icons\sidebar\Time.png" alt="">       <span>Histórico</span></a>
+                <a href="notificacoes.html" class="menu-item">      <img src=".\assets\icons\sidebar\Notification.png"alt=""><span>Notificações</span></a>
+                <a href="perfil.html" class="menu-item">            <img src=".\assets\icons\sidebar\Profile.png">           <span>Perfil</span></a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-line"></div>
+                <span>Versão 1.0</span>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="page-heading">
+                <h1>Início</h1>
+                <p>Bem-vindo, <span>Elves!</span></p>
+            </section>
+
+            <section class="card today-classes-card">
+                <div class="card-title">
+                    <img src=".\assets\icons\inicio\1\Calendar.png" alt="">
+                    <h2>Aulas hoje</h2>
+                </div>
+
+                <div class="class-list">
+                    <article class="class-row">
+                        <img src=".\assets\icons\inicio\1\mat.png" alt="matematica" class="subject-icon-small">
+                        <div class="class-time">08:00 - 09:40</div>
+                        <div class="class-info">
+                            <h3>Matemática</h3>
+                            <p>Funções e Gráficos</p>
+                        </div>
+
+                        <span class="class-badge badge-blue">Sala 101</span>
+                    </article>
+
+                    <article class="class-row">
+                        <img src=".\assets\icons\inicio\1\pt.png" alt="portugues" class="subject-icon-small">
+                        <div class="class-time">10:00 - 11:50</div>
+                        <div class="class-info">
+                            <h3>Português</h3>
+                            <p>Interpretação de texto</p>
+                        </div>
+
+                        <span class="class-badge badge-green">Sala 204</span>
+                    </article>
+
+                    <article class="class-row">
+                        <img src=".\assets\icons\inicio\1\tic.png" alt="portugues" class="subject-icon-small">
+                        <div class="class-time">13:30 - 15:10</div>
+                        <div class="class-info">
+                            <h3>TIC</h3>
+                            <p>Introdução à programação</p>
+                        </div>
+
+                        <span class="class-badge badge-purple">Online</span>
+                    </article>
+                    
+                </div>
+            </section>
+
+            <section class="card pending-works-card">
+                <h2>Trabalhos a serem submitos</h2>
+                <div class="work-list">
+                    <article class="work-row">
+                        <img src=".\assets\icons\inicio\1\mat.png" alt="mat" class="subject-icon-small">
+
+                        <div class="work-info">
+                            <h3>Lista de Exercícios 4</h3>
+                            <p>Matemática</p>
+                        </div>
+                        <span class="work-date">19/06/2026</span>
+                        <span class="work-status status-green">Em tempo</span>
+                    </article>
+
+                    <article class="work-row">
+                        <img src=".\assets\icons\inicio\2\en.png" alt="ing" class="subject-icon-small">
+
+                        <div class="work-info">
+                            <h3>Redação: Minha cidade</h3>
+                            <p>Inglês</p>
+                        </div>
+                        <span class="work-date">15/06/2026</span>
+                        <span class="work-status status-red">Atrasado</span>
+                    </article>
+
+                    <article class="work-row">
+                        <img src=".\assets\icons\inicio\2\fisica.png" alt="ing" class="subject-icon-small">
+
+                        <div class="work-info">
+                            <h3>Composição dos átomos</h3>
+                            <p>Física</p>
+                        </div>
+                        <span class="work-date">18/06/2026</span>
+                        <span class="work-status status-blue">Submetido</span>
+                    </article>
+                </div>
+            </section>
+            <!----> 
+            <section class="card my-subjects-card">
+                <div class="card-title">
+                    <img src=".\assets\icons\inicio\3\Literature.png" alt="minhas disciplinas">
+                    <h2>Minhas Disciplinas</h2>
+                </div>
+                <div class="subjects-grid">
+
+                    <article class="subject-card">
+                        <img src=".\assets\icons\inicio\3\mat.png" alt="mat5ematica" class="subject-icon">
+                        <div class="subject-info">
+                            <h3>Matemática</h3>
+                            <p>Prof: João Ferreira</p>
+                        </div>
+
+                        <div class="subject-progress">
+                            <span>70%</span>
+                            <div class="progress-track">
+                                <div class="progress-fill progress-blue" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="subject-card">
+                        <img src=".\assets\icons\inicio\3\pt.png" alt="portuges" class="subject-icon">
+                        <div class="subject-info">
+                            <h3>Português</h3>
+                            <p>Prof: Ana Oliveira</p>
+                        </div>
+
+                        <div class="subject-progress">
+                            <span>65%</span>
+                            <div class="progress-track">
+                                <div class="progress-fill progress-green" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="subject-card">
+                        <img src=".\assets\icons\inicio\3\tic.png" alt="tic" class="subject-icon">
+                        <div class="subject-info">
+                            <h3>TIC</h3>
+                            <p>Prof: Carlos Mendes</p>
+                        </div>
+
+                        <div class="subject-progress">
+                            <span>60%</span>
+                            <div class="progress-track">
+                                <div class="progress-fill progress-purple" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="subject-card">
+                        <img src=".\assets\icons\inicio\3\en.png" alt="tic" class="subject-icon">
+                        <div class="subject-info">
+                            <h3>Inglês</h3>
+                            <p>Prof: Laura Silva</p>
+                        </div>
+
+                        <div class="subject-progress">
+                            <span>50%</span>
+                            <div class="progress-track">
+                                <div class="progress-fill progress-pink" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="subject-card">
+                        <img src=".\assets\icons\inicio\3\hist.png" alt="tic" class="subject-icon">
+                        <div class="subject-info">
+                            <h3>História</h3>
+                            <p>Prof: Ricardo Lima</p>
+                        </div>
+
+                        <div class="subject-progress">
+                            <span>75%</span>
+                            <div class="progress-track">
+                                <div class="progress-fill progress-orange" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="subject-card">
+                        <img src=".\assets\icons\inicio\3\fisica.png" alt="tic" class="subject-icon">
+                        <div class="subject-info">
+                            <h3>Física</h3>
+                            <p>Prof: Marcelo Costa</p>
+                        </div>
+
+                        <div class="subject-progress">
+                            <span>50%</span>
+                            <div class="progress-track">
+                                <div class="progress-fill progress-cyan" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+
+<script src=""></script>
+</body>
+</html>
