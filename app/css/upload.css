@@ -1,0 +1,522 @@
+/* =========================================
+   CABOLEARN - UPLOAD.CSS
+   Conteúdo específico da página Upload
+========================================= */
+
+/* =========================================
+   AJUSTE DA ÁREA PRINCIPAL
+========================================= */
+
+.upload-main {
+    width: 67.3vw;
+}
+
+/* =========================================
+   TÍTULO DA PÁGINA
+========================================= */
+
+.page-heading {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.page-heading h1 {
+    font-size: 3.33vw;
+    font-weight: 400;
+    line-height: 1;
+    color: #000000;
+    margin-bottom: 0.75vh;
+}
+
+.page-heading p {
+    font-size: 1.25vw;
+    font-weight: 400;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+/* =========================================
+   LAYOUT GERAL DO UPLOAD
+========================================= */
+
+.upload-layout {
+    position: absolute;
+    left: 0;
+    top: 11.2vh;
+    width: 67.3vw;
+    height: 65.6vh;
+
+    display: grid;
+    grid-template-columns: 45.3vw 20.6vw;
+    column-gap: 1.4vw;
+}
+
+/* =========================================
+   CARD PRINCIPAL
+========================================= */
+
+.upload-card {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background: #FFFFFF;
+    border-radius: 1.2vw;
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.18vw rgba(0, 0, 0, 0.22);
+
+    padding: 2.1vh 2vw 1.9vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6vw;
+    margin-bottom: 1.35vh;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label,
+.deadline-area > label,
+.observation-area > label {
+    font-size: 1.18vw;
+    font-weight: 400;
+    line-height: 1;
+    color: #000000;
+    margin-bottom: 0.75vh;
+}
+
+.select-box {
+    position: relative;
+    width: 100%;
+    height: 4.4vh;
+}
+
+.select-box select {
+    width: 100%;
+    height: 100%;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0.32vw;
+    background: #FFFFFF;
+
+    padding: 0 2.4vw 0 1vw;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.83vw;
+    color: rgba(0, 0, 0, 0.45);
+
+    outline: none;
+}
+
+.select-box select:focus {
+    border-color: #4579E1;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 0.8vw;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 1vw;
+    height: 1vw;
+
+    object-fit: contain;
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+/* =========================================
+   PRAZO
+========================================= */
+
+.deadline-area {
+    margin-bottom: 1.85vh;
+}
+
+.deadline-row {
+    display: flex;
+    align-items: center;
+    gap: 0.95vw;
+}
+
+.deadline-box {
+    width: 15.2vw;
+    height: 4.35vh;
+
+    display: flex;
+    align-items: center;
+    gap: 1.8vw;
+
+    padding: 0 0.9vw;
+
+    border-radius: 0.32vw;
+    background: #D9D9D9;
+
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 1.08vw;
+}
+
+.deadline-box img {
+    width: 1.25vw;
+    height: 1.25vw;
+    object-fit: contain;
+    opacity: 0.45;
+}
+
+.deadline-row p {
+    font-size: 0.78vw;
+    color: rgba(0, 0, 0, 0.35);
+    white-space: nowrap;
+}
+
+/* =========================================
+   ÁREA DE UPLOAD
+========================================= */
+
+.dropzone {
+    width: 100%;
+    height: 22.7vh;
+
+    border: 2px dashed #4579E1;
+    border-radius: 1vw;
+
+    background: rgba(69, 121, 225, 0.18);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    margin-bottom: 2.25vh;
+    text-align: center;
+}
+
+.dropzone:hover {
+    background: rgba(69, 121, 225, 0.24);
+}
+
+/* Caixa dos ícones menor e com altura suficiente */
+.dropzone-icon-box {
+    width: 90px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 0.75vh;
+    flex-shrink: 0;
+}
+
+.dropzone-icon {
+    width: 110px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+}
+
+.dropzone strong {
+    font-size: 0.85vw;
+    font-weight: 700;
+    color: #4579E1;
+    margin-bottom: 0.45vh;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.dropzone span {
+    font-size: 0.86vw;
+    color: rgba(0, 0, 0, 0.48);
+    margin-bottom: 0.35vh;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.dropzone small {
+    font-size: 0.82vw;
+    color: rgba(0, 0, 0, 0.45);
+    line-height: 1.2;
+    text-align: center;
+}
+/* =========================================
+   OBSERVAÇÃO
+========================================= */
+
+.observation-area {
+    margin-bottom: 0.8vh;
+}
+
+.observation-area label span {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.textarea-box {
+    position: relative;
+    width: 100%;
+    height: 7.1vh;
+}
+
+.textarea-box textarea {
+    width: 100%;
+    height: 100%;
+
+    resize: none;
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0.32vw;
+
+    padding: 1vh 0.85vw 2.1vh;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.72vw;
+    line-height: 1.2;
+
+    color: rgba(0, 0, 0, 0.65);
+    outline: none;
+}
+
+.textarea-box textarea:focus {
+    border-color: #4579E1;
+}
+
+.textarea-box textarea::placeholder {
+    color: rgba(0, 0, 0, 0.42);
+}
+
+.textarea-box small {
+    position: absolute;
+    right: 0.55vw;
+    bottom: 0.45vh;
+
+    font-size: 0.68vw;
+    color: rgba(0, 0, 0, 0.42);
+}
+
+/* =========================================
+   CHECKBOX DE AUTORIA
+========================================= */
+
+.authorship-check {
+    display: flex;
+    align-items: center;
+    gap: 0.55vw;
+
+    font-size: 0.76vw;
+    color: rgba(0, 0, 0, 0.45);
+
+    margin-bottom: 1.4vh;
+}
+
+.authorship-check input {
+    width: 0.75vw;
+    height: 0.75vw;
+}
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.upload-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.8vw;
+
+    margin-top: auto;
+}
+
+.btn-cancelar,
+.btn-submit {
+    height: 4.2vh;
+
+    border-radius: 0.35vw;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    min-width: 6.3vw;
+
+    border: 1px solid #4579E1;
+    background: #FFFFFF;
+    color: #4579E1;
+}
+
+.btn-submit {
+    min-width: 12vw;
+
+    border: none;
+    background: #4579E1;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45vw;
+}
+
+.btn-submit img {
+    width: 1.18vw;
+    height: 1.18vw;
+    object-fit: contain;
+}
+
+.btn-cancelar:hover {
+    background: rgba(69, 121, 225, 0.08);
+}
+
+.btn-submit:hover {
+    background: #3468D1;
+}
+
+/* =========================================
+   COLUNA LATERAL
+========================================= */
+
+.upload-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7vh;
+}
+
+/* =========================================
+   CARDS LATERAIS
+========================================= */
+
+.info-card {
+    width: 100%;
+
+    background: #FFFFFF;
+    border-radius: 1.2vw;
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.18vw rgba(0, 0, 0, 0.22);
+
+    padding: 1.45vh 1.25vw;
+
+    overflow: hidden;
+}
+
+.orientation-card {
+    height: 37.2vh;
+}
+
+.summary-card {
+    height: 26.7vh;
+}
+
+.side-card-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75vw;
+
+    margin-bottom: 1.2vh;
+}
+
+.side-icon {
+    width: 2.35vw;
+    height: 2.35vw;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.side-icon img {
+    width: 1.2vw;
+    height: 1.2vw;
+    object-fit: contain;
+}
+
+.side-icon.blue {
+    background: rgba(69, 121, 225, 0.35);
+}
+
+.side-icon.purple {
+    background: rgba(199, 85, 240, 0.35);
+}
+
+.side-card-title h2 {
+    font-size: 1.05vw;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.15;
+}
+
+/* =========================================
+   ORIENTAÇÕES
+========================================= */
+
+.orientation-card ul {
+    padding-left: 1.25vw;
+    margin-top: 0.5vh;
+}
+
+.orientation-card li {
+    font-size: 0.94vw;
+    line-height: 1.35;
+    color: rgba(0, 0, 0, 0.55);
+
+    margin-bottom: 0.85vh;
+}
+
+.orientation-card li:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   RESUMO DA SUBMISSÃO
+========================================= */
+
+.summary-list {
+    margin-top: 1.55vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.85vh;
+}
+
+.summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summary-row span {
+    font-size: 0.75vw;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.summary-row strong {
+    font-size: 0.82vw;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.45);
+}

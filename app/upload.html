@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaboLearn - Upload</title>
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/comum.css">
     <link rel="stylesheet" href="./css/upload.css">
 </head>
@@ -29,7 +30,7 @@
                     <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
                 </div>
 
-                <a href="./login.html" class="logout-button">
+                <a href="/logout" class="logout-button">
                     <img src="./assets/icons/Logout.png" alt="sair">
                     <span>Sair</span>
                 </a>
@@ -57,8 +58,140 @@
             </div>
         </aside>
 
-        <main class="main-content">
-            
+        <main class="main-content upload-main">
+            <section class="page-heading">
+                <h1>Upload</h1>
+                <p>Submeta trabalhos, relatórios e execícios nas suas disciplinas</p>
+            </section>
+
+            <section class="upload-layout">
+                <form class="upload-card">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="disciplina">Disciplina</label>
+
+                            <div class="select-box">
+                                <select name="disciplina" id="disciplina">
+                                    <option value=""><--Selecione a disciplina--></option>
+                                    <option value="matemática">Matemática</option>
+                                    <option value="portugues">Português</option>
+                                    <option value="tic">TIC</option>
+                                    <option value="ingles">Inglês</option>
+                                    <option value="historia">História</option>
+                                    <option value="fisica">Física</option>
+                                </select>
+                                <img src=".\assets\icons\inicio\arrow.png" alt="" class="select-arrow">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tarefa">Tarefa/Trabalho</label>
+
+                            <div class="select-box">
+                                <select name="tarefa" id="tarefa">
+                                    <option value="">Selecione a tarefa</option>
+                                    <option value="list-exercicios">Lista de exercícios 4</option>
+                                    <option value="redacao">Redação: Minha Cidade</option>
+                                    <option value="composicao-atomos">Composição dos átomos</option>
+                                    <option value="relatorio">Relatório de aula prática</option>
+                                </select>
+                                <img src=".\assets\icons\inicio\arrow.png" alt="" class="select-arrow">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deadline-area">
+                        <label>Prazo</label>
+
+                        <div class="deadline-row">
+                            <div class="deadline-box">
+                                <img src=".\assets\icons\inicio\1\Calendar.png" alt="">
+                                <span>--/--/---- às --:--</span>
+                            </div>
+                            <p>Será preenchido automaticamente</p>
+                        </div>
+                    </div>
+
+                    <label for="file-upload" class="dropzone">
+                        <input type="file" id="file-upload" name="file-upload" hidden>
+                        <div class="dropzone-icon-box">
+                            <img src=".\assets\icons\upload(2).png" alt="" class="dropzone-icon">
+                        </div>
+                        <strong>Arraste o ficheiro aqui ou clique para selecionar</strong>
+                        <span>PDF, DOCX, PPTX, ZIP, JPG, PNG</span>
+                        <small>Tamanho máximo: 20 MB</small>
+                    </label>
+
+                    <div class="observation-area">
+                        <label for="observacao">
+                            Observação para o professor <span>(opcional)</span>
+                        </label>
+
+                        <div class="textarea-box">
+                            <textarea name="observacao" id="observacao" maxlength="500" placeholder="Escreva uma mensagem para o professor"></textarea>
+                            <small>0/500</small>
+                        </div>
+                    </div>
+
+                    <label class="authorship-check">
+                        <input type="checkbox" name="autoria">
+                        <span>Declaro que este trabalho é de minha autoria</span>
+                    </label>
+                    <div class="upload-actions">
+                        <button type="button" class="btn-cancelar">Cancelar</button>
+                        <button type="submit" class="btn-submit">
+                            <img src=".\assets\icons\Export.png" alt="">
+                            <span>Submeter trabalho</span>
+                        </button>
+                    </div>
+                </form>
+
+                <aside class="upload-side">
+                    <section class="info-card orientation-card">
+                        <div class="side-card-title">
+                            <div class="side-icon blue">
+                                <img src=".\assets\icons\disciplinas\Clipboard.png" alt="">
+                            </div>
+                            <h2>Oientações para submissão</h2>
+                        </div>
+                        <ul>
+                            <li>Verifique o prazo antes de submeter;</li>
+                            <li>Nomeie o ficheiro de forma clara;</li>
+                            <li>Confirme se o ficheiro está no formato aceito;</li>
+                            <li>Certifique-se de que o ficheiro não está corrompido;</li>
+                            <li>Após submeter, poderá acompanhar o status na seção Submissões;</li>
+                        </ul>
+                    </section>
+
+                    <section class="info-card summary-card">
+                        <div class="side-card-title">
+                            <div class="side-icon purple">
+                                <img src=".\assets\icons\disciplinas\Document(2).png" alt="">
+                            </div>
+                            <h2>Resumo da submissão</h2>
+                        </div>
+
+                        <div class="summary-list">
+                            <div class="summary-row">
+                                <span>Disciplina</span>
+                                <strong>—</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tarefa</span>
+                                <strong>—</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span>Prazo</span>
+                                <strong>—</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span>Status</span>
+                                <strong>—</strong>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </section>
         </main>
     </div>
 

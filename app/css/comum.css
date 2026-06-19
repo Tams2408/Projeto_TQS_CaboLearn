@@ -1,12 +1,31 @@
 /* =========================================
    CABOLEARN - COMMON.CSS
-   Elementos comuns a todas as páginas
+   Header, sidebar, fundo e estrutura comum
 ========================================= */
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --bg: #DDE6E9;
+    --surface: #FFFFFF;
+    --header-bg: #2D2F32;
+    --header-border: #4579E1;
+
+    --text-primary: #000000;
+    --text-secondary: rgba(0, 0, 0, 0.55);
+    --text-muted: #C1C1C1;
+
+    --accent: #4579E1;
+    --accent-hover: rgba(69, 121, 225, 0.12);
+
+    --sidebar-shadow: 0.1vw 0.74vh 0.74vh 0.2vw rgba(0, 0, 0, 0.25);
+    --card-radius: 1.2vw;
 }
 
 html,
@@ -15,33 +34,30 @@ body {
     height: 100%;
     overflow: hidden;
     font-family: "Inter", Arial, sans-serif;
-    background: #DDE6E9;
-    color: #000000;
+    background: var(--bg);
+    color: var(--text-primary);
 }
 
-body {
-    min-height: 100vh;
+/* Compatibilidade caso ainda exista app-stage no HTML */
+.app-stage {
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden;
+    background: var(--bg);
 }
 
 /* =========================================
-   CONTAINER BASE DA PÁGINA
+   CONTAINER BASE
 ========================================= */
 
 .page {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: #DDE6E9;
+    background: var(--bg);
     overflow: hidden;
     transform: none !important;
-}
-
-/* Mantém compatibilidade caso ainda exista app-stage */
-.app-stage {
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow: hidden;
-    background: #DDE6E9;
+    transform-origin: initial !important;
 }
 
 /* =========================================
@@ -50,20 +66,43 @@ body {
 
 .topbar {
     position: absolute;
-    width: 100vw;
-    height: 10.56vh;
     left: 0;
     top: 0;
-    background: #2D2F32;
+    width: 100vw;
+    height: 10.56vh;
+
+    background: var(--header-bg);
     z-index: 50;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 3.23vw 0 2.34vw;
 }
 
-.logo-area {
+.header-line {
     position: absolute;
-    left: 2.34vw;
-    top: 0.83vh;
+    left: 0;
+    top: 10.56vh;
+    width: 100vw;
+    height: 0.93vh;
+    background: var(--header-border);
+    z-index: 51;
+}
+
+/* Logo */
+
+.logo-area {
+    position: relative;
+    left: auto;
+    top: auto;
+
     width: 26.15vw;
     height: 8.89vh;
+
+    display: flex;
+    align-items: center;
 }
 
 .logo-img {
@@ -73,73 +112,105 @@ body {
     display: block;
 }
 
-.header-line {
-    position: absolute;
-    width: 100vw;
-    height: 0.93vh;
-    left: 0;
-    top: 10.56vh;
-    background: #4579E1;
-    z-index: 51;
-}
-
-/* =========================================
-   AÇÕES DO HEADER
-========================================= */
+/* Ações do header */
 
 .topbar-actions {
-    position: absolute;
-    right: 3.23vw;
-    top: 2.5vh;
-    height: 5.65vh;
+    position: relative;
+    right: auto;
+    top: auto;
+
+    height: 100%;
+
     display: flex;
     align-items: center;
-    gap: 1.85vw;
+    gap: 1.65vw;
+
     color: #FFFFFF;
 }
 
+/* Notificação */
+
 .notification-area {
     position: relative;
-    width: 3.13vw;
-    height: 5.56vh;
+
+    width: 3.15vw;
+    height: 3.15vw;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 50%;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.notification-area:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.45);
 }
 
 .notification-icon {
-    width: 3.13vw;
-    height: 3.13vw;
+    width: 2.25vw;
+    height: 2.25vw;
     object-fit: contain;
     display: block;
 }
 
 .notification-badge {
     position: absolute;
+    right: 0.15vw;
+    top: 0.08vh;
+
     width: 1.04vw;
     height: 1.04vw;
-    right: 0.2vw;
-    top: 0.1vh;
+
     background: #FE9800;
     color: #FFFFFF;
     border-radius: 50%;
-    font-size: 0.83vw;
+    border: 2px solid var(--header-bg);
+
+    font-size: 0.68vw;
+    font-weight: 700;
     line-height: 1;
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Divisor */
+
 .topbar-divider {
     width: 1px;
     height: 5.92vh;
-    background: #4B4E52;
+    background: rgba(255, 255, 255, 0.18);
 }
 
+/* Utilizador */
+
 .user-area {
+    min-height: 5.2vh;
+
     display: flex;
     align-items: center;
-    gap: 1.04vw;
+    gap: 0.75vw;
+
+    padding: 0.45vh 0.85vw;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.04);
+    cursor: pointer;
+
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.user-area:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.38);
 }
 
 .user-avatar {
@@ -152,32 +223,50 @@ body {
 
 .user-name {
     color: #FFFFFF;
-    font-size: 1.67vw;
-    font-weight: 400;
+    font-size: 1.5vw;
+    font-weight: 500;
     line-height: 1;
     white-space: nowrap;
 }
 
 .user-arrow {
-    width: 1.56vw;
-    height: 1.56vw;
+    width: 1.15vw;
+    height: 1.15vw;
     object-fit: contain;
     display: block;
+    opacity: 0.75;
 }
 
+/* Botão sair */
+
 .logout-button {
-    width: 5.94vw;
     height: 5vh;
-    border: 1px solid #B7B7B7;
+    min-width: 5.94vw;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 0.68vw;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.55vw;
+    gap: 0.45vw;
+
+    padding: 0 0.9vw;
+
     text-decoration: none;
-    color: #A5A5A5;
-    font-size: 1.25vw;
-    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+    background: transparent;
+
+    font-size: 1.15vw;
+    font-weight: 500;
+
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.logout-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.55);
 }
 
 .logout-button img {
@@ -185,10 +274,11 @@ body {
     height: 1.04vw;
     object-fit: contain;
     display: block;
+    opacity: 0.75;
 }
 
 .logout-button span {
-    color: #A5A5A5;
+    color: inherit;
 }
 
 /* =========================================
@@ -203,6 +293,7 @@ body {
     height: 83.61vh;
     object-fit: contain;
     z-index: 1;
+    pointer-events: none;
 }
 
 /* =========================================
@@ -213,11 +304,14 @@ body {
     position: absolute;
     left: 2.34vw;
     top: 15.19vh;
+
     width: 19.64vw;
     height: 76.76vh;
-    background: #FFFFFF;
-    border-radius: 1.2vw;
-    box-shadow: 0.1vw 0.74vh 0.74vh 0.2vw rgba(0, 0, 0, 0.25);
+
+    background: var(--surface);
+    border-radius: var(--card-radius);
+    box-shadow: var(--sidebar-shadow);
+
     z-index: 20;
     overflow: hidden;
 }
@@ -226,7 +320,9 @@ body {
     position: absolute;
     top: 2.13vh;
     left: 0.68vw;
+
     width: 18.13vw;
+
     display: flex;
     flex-direction: column;
     gap: 1.15vh;
@@ -235,18 +331,23 @@ body {
 .menu-item {
     width: 18.13vw;
     height: 6.85vh;
+
     display: flex;
     align-items: center;
     gap: 1.35vw;
+
     padding: 0 1.25vw;
+
     border-radius: 0.89vw;
     text-decoration: none;
-    color: #C1C1C1;
+
+    color: var(--text-muted);
     font-size: 1.67vw;
     font-weight: 400;
     line-height: 1;
+
     overflow: hidden;
-    transition: 0.2s ease;
+    transition: background 0.15s ease, color 0.15s ease;
 }
 
 .menu-item img {
@@ -263,8 +364,13 @@ body {
     text-decoration: none;
 }
 
+.menu-item:hover {
+    background: var(--accent-hover);
+    color: var(--accent);
+}
+
 .menu-item.active {
-    background: #4579E1;
+    background: var(--accent);
     color: #FFFFFF;
 }
 
@@ -273,13 +379,8 @@ body {
     filter: brightness(0) invert(1);
 }
 
-.menu-item:hover {
-    background: rgba(69, 121, 225, 0.12);
-    color: #4579E1;
-}
-
 .menu-item.active:hover {
-    background: #4579E1;
+    background: var(--accent);
     color: #FFFFFF;
 }
 
@@ -291,6 +392,7 @@ body {
     position: absolute;
     left: 2.86vw;
     bottom: 2vh;
+
     width: 13.96vw;
     text-align: center;
 }
@@ -315,7 +417,9 @@ body {
     position: absolute;
     left: 25.26vw;
     top: 15.19vh;
+
     width: 61.56vw;
     height: 76.76vh;
+
     z-index: 10;
 }

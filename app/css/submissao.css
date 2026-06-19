@@ -1,0 +1,663 @@
+/* =========================================
+   CABOLEARN - SUBMISSOES.CSS
+========================================= */
+
+.submissoes-main {
+    width: 67.5vw;
+}
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.page-heading {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.page-heading h1 {
+    font-size: 3.33vw;
+    font-weight: 400;
+    line-height: 1;
+    color: #000000;
+    margin-bottom: 1.3vh;
+}
+
+.page-heading p {
+    font-size: 1.25vw;
+    font-weight: 400;
+    line-height: 1.25;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+/* =========================================
+   PESQUISA
+========================================= */
+
+.search-box {
+    position: absolute;
+    left: 0vw;
+    top: 12.1vh;
+
+    width: 19.3vw;
+    height: 4.2vh;
+
+    background: #FFFFFF;
+    border-radius: 0.55vw;
+
+    display: flex;
+    align-items: center;
+    gap: 0.75vw;
+
+    padding: 0 1vw;
+}
+
+.search-icon {
+    font-size: 1.8vw;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.72vw;
+    font-weight: 600;
+
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.search-box input::placeholder {
+    color: rgba(0, 0, 0, 0.52);
+}
+
+/* =========================================
+   LAYOUT
+========================================= */
+
+.submissoes-layout {
+    position: absolute;
+    left: 0;
+    top: 18.5vh;
+
+    width: 67.5vw;
+    height: 58.3vh;
+
+    display: grid;
+
+    /* evita ultrapassar o limite */
+    grid-template-columns: minmax(0, 1fr) 19.8vw;
+    column-gap: 0.8vw;
+}
+
+/* =========================================
+   TABELA
+========================================= */
+
+.submissoes-table-card {
+    width: 100%;
+    height: 100%;
+
+    background: #FFFFFF;
+    border-radius: 1vw;
+    overflow: hidden;
+
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.15vw rgba(0, 0, 0, 0.2);
+}
+
+.table-header {
+    height: 5.4vh;
+
+    display: grid;
+    grid-template-columns: 1.85fr 1.2fr 1fr 1fr 1fr 1.25fr;
+    column-gap: 0.7vw;
+
+    align-items: center;
+
+    padding: 0 1.15vw;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+    font-size: 0.78vw;
+    font-weight: 700;
+    color: #000000;
+}
+
+.table-header > div:nth-child(5) {
+    text-align: center;
+}
+
+.table-header > div:nth-child(6) {
+    text-align: right;
+}
+
+.table-row {
+    height: 9.1vh;
+
+    display: grid;
+    grid-template-columns: 1.85fr 1.2fr 1fr 1fr 1fr 1.25fr;
+    column-gap: 0.7vw;
+
+    align-items: center;
+
+    padding: 0 1.15vw;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+    font-size: 0.72vw;
+}
+
+.table-row > div {
+    min-width: 0;
+}
+
+.table-row > div:nth-child(5) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-row > div:nth-child(6) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.table-header > div,
+.table-row > div {
+    min-width: 0;
+}
+
+.table-row.selected {
+    background: rgba(69, 121, 225, 0.015);
+}
+
+.file-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75vw;
+    min-width: 0;
+}
+
+.file-icon {
+    width: 2.1vw;
+    height: 2.65vw;
+
+    border-radius: 0.25vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.62vw;
+
+    flex-shrink: 0;
+}
+
+.file-icon.pdf {
+    background: #D52B1E;
+}
+
+.file-icon.word {
+    background: #174AEF;
+    font-size: 1.1vw;
+}
+
+.file-icon.ppt {
+    background: #F1563F;
+    font-size: 1.1vw;
+}
+
+.file-info,
+.subject-cell,
+.date-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35vh;
+    min-width: 0;
+}
+
+.file-info strong,
+.subject-cell strong,
+.date-cell strong {
+    font-size: 0.72vw;
+    font-weight: 700;
+    color: #000000;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-info span,
+.subject-cell span,
+.date-cell span {
+    font-size: 0.68vw;
+    color: rgba(0, 0, 0, 0.5);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.status {
+    min-width: 5.35vw;
+    height: 2.35vh;
+
+    border-radius: 999px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.72vw;
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+.status.entregue {
+    background: rgba(85, 240, 111, 0.45);
+    color: #22D851;
+}
+
+.status.analise {
+    background: rgba(69, 121, 225, 0.35);
+    color: #4579E1;
+}
+
+.status.corrigido {
+    background: rgba(199, 85, 240, 0.45);
+    color: #C755F0;
+}
+
+.status.feedback {
+    background: rgba(240, 168, 85, 0.45);
+    color: #F08A24;
+}
+
+.status.reenviar {
+    background: rgba(240, 85, 85, 0.4);
+    color: #E85A5A;
+}
+
+.feedback-cell {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.35vw;
+
+    min-width: 0;
+    overflow: hidden;
+
+    color: #4579E1;
+}
+
+.feedback-cell a {
+    max-width: 5.5vw;
+
+    display: inline-block;
+
+    white-space: normal;
+    line-height: 1.15;
+
+    color: #4579E1;
+    text-decoration: none;
+    font-size: 0.72vw;
+    font-weight: 600;
+    text-align: right;
+}
+
+.feedback-cell span {
+    font-size: 1vw;
+    flex-shrink: 0;
+}
+
+.feedback-muted {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.35vw;
+
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 0.72vw;
+    white-space: nowrap;
+}
+
+/* =========================================
+   PAGINAÇÃO
+========================================= */
+
+.pagination-area {
+    height: 6.4vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 2vw 0 3vw;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 0.65vw;
+}
+
+.pagination button,
+.pagination span {
+    width: 1.6vw;
+    height: 1.6vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.95vw;
+    font-weight: 600;
+
+    color: rgba(0, 0, 0, 0.62);
+
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background: #4579E1;
+    color: #FFFFFF;
+    border-radius: 0.28vw;
+}
+
+.pagination .page-arrow {
+    border: 1px solid rgba(69, 121, 225, 0.35);
+    border-radius: 0.28vw;
+
+    color: #4579E1;
+    font-size: 1.15vw;
+}
+
+.pagination .page-arrow:hover,
+.pagination button:not(.active):hover {
+    background: rgba(69, 121, 225, 0.1);
+    color: #4579E1;
+}
+
+.pagination-area p {
+    font-size: 0.78vw;
+    color: rgba(0, 0, 0, 0.42);
+    white-space: nowrap;
+}
+
+/* =========================================
+   CARD DETALHES - CORRIGIDO
+========================================= */
+
+.details-card {
+    width: 100%;
+    height: 100%;
+
+    background: #FFFFFF;
+    border-radius: 1vw;
+
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.15vw rgba(0, 0, 0, 0.2);
+
+    padding: 1.35vh 1vw;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+/* Título */
+.details-title {
+    display: flex;
+    align-items: center;
+    gap: 0.7vw;
+
+    margin-bottom: 1.1vh;
+    flex-shrink: 0;
+}
+
+.details-icon {
+    width: 2.15vw;
+    height: 2.15vw;
+
+    border-radius: 50%;
+    background: rgba(199, 85, 240, 0.35);
+    color: #C755F0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1vw;
+    flex-shrink: 0;
+}
+
+.details-title h2 {
+    font-size: 1.18vw;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #000000;
+    white-space: nowrap;
+}
+
+/* Ficheiro selecionado */
+.selected-file-box {
+    height: 5.8vh;
+
+    background: rgba(0, 0, 0, 0.035);
+    border-radius: 0.35vw;
+
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+
+    padding: 0 0.9vw;
+
+    margin-bottom: 1.25vh;
+    flex-shrink: 0;
+}
+
+.selected-file-box .file-icon {
+    width: 2.1vw;
+    height: 2.65vw;
+
+    border-radius: 0.25vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.62vw;
+
+    flex-shrink: 0;
+}
+
+.selected-file-box strong {
+    display: block;
+
+    font-size: 0.9vw;
+    font-weight: 400;
+    color: #000000;
+
+    margin-bottom: 0.25vh;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selected-file-box span {
+    font-size: 0.72vw;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+/* Lista de detalhes */
+.details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.78vh;
+
+    padding: 0 0.25vw 1vh;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    flex-shrink: 0;
+}
+
+.details-row {
+    display: grid;
+    grid-template-columns: 6vw 1fr;
+    align-items: center;
+    column-gap: 0.6vw;
+}
+
+.details-row span {
+    font-size: 0.72vw;
+    color: rgba(0, 0, 0, 0.42);
+    white-space: nowrap;
+}
+
+.details-row strong {
+    font-size: 0.72vw;
+    font-weight: 400;
+    color: #000000;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.details-row .grade {
+    color: #22D851;
+    font-weight: 700;
+}
+
+/* Estado dentro do card lateral */
+.details-row .status {
+    min-width: 4.8vw;
+    height: 2.15vh;
+
+    font-size: 0.68vw;
+}
+
+/* =========================================
+   FEEDBACK PROFESSOR - CORRIGIDO
+========================================= */
+
+.feedback-section {
+    margin-top: 0.9vh;
+    flex-shrink: 0;
+}
+
+.feedback-title {
+    display: flex;
+    align-items: center;
+    gap: 0.45vw;
+
+    margin-bottom: 0.65vh;
+}
+
+.feedback-title span {
+    width: 1.2vw;
+    height: 1.2vw;
+
+    border-radius: 50%;
+    background: rgba(240, 168, 85, 0.5);
+    color: #F08A24;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.62vw;
+    flex-shrink: 0;
+}
+
+.feedback-title h3 {
+    font-size: 1.02vw;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1;
+}
+
+.feedback-box {
+    background: rgba(240, 168, 85, 0.18);
+    border-radius: 0.4vw;
+
+    padding: 0.7vh 0.75vw;
+
+    margin-bottom: 1vh;
+}
+
+.feedback-box p {
+    font-size: 0.68vw;
+    line-height: 1.28;
+    color: #000000;
+
+    margin-bottom: 0.5vh;
+}
+
+.feedback-box small {
+    font-size: 0.52vw;
+    color: rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================
+   BOTÕES DETALHES - CORRIGIDO
+========================================= */
+
+.details-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vh;
+
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.btn-outline,
+.btn-primary {
+    width: 100%;
+    height: 3.25vh;
+
+    border-radius: 0.32vw;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.72vw;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.btn-outline {
+    background: #FFFFFF;
+    color: #4579E1;
+    border: 1px solid #4579E1;
+}
+
+.btn-primary {
+    background: #4579E1;
+    color: #FFFFFF;
+    border: none;
+}
+
+.btn-outline:hover {
+    background: rgba(69, 121, 225, 0.08);
+}
+
+.btn-primary:hover {
+    background: #3468D1;
+}

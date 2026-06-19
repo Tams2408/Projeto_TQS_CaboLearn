@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "nome": "Elves Garcia",
+        "email": "elves@cabolearn.com",
+        "password_hash": "scrypt:32768:8:1$hn3qMCWASLb3mfRK$2cee3e0bcd8f200e39ce215cc0b62c47c84dfe0b2a990ee9addec0686570fb8064d6d17859349e895c9b5064f9d65504e64ff571db4fed3fe930446fb9d3f079",
+        "tipo": "estudante"
+    }
+]
