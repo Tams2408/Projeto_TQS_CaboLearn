@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaboLearn - Notificações</title>
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/comum.css">
     <link rel="stylesheet" href="./css/notificacoes.css">
 </head>
@@ -29,7 +30,7 @@
                     <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
                 </div>
 
-                <a href="./login.html" class="logout-button">
+                <a href="/logout" class="logout-button">
                     <img src="./assets/icons/Logout.png" alt="sair">
                     <span>Sair</span>
                 </a>
@@ -57,13 +58,126 @@
             </div>
         </aside>
 
-        <main class="main-content">
+        <main class="main-content notificacoes-main">
             
+            <!-- TÍTULO -->
+            <section class="page-heading">
+                <h1>Notificações</h1>
+                <p>Fique a par das últimas novidades, materiais publicados e prazos pendentes</p>
+            </section>
+
+            <!-- FILTROS DE NOTIFICAÇÕES -->
+            <div class="notifications-filters">
+                <div class="filter-tabs">
+                    <button class="filter-btn active">Todas <span>(5)</span></button>
+                    <button class="filter-btn">Não lidas <span>(2)</span></button>
+                    <button class="filter-btn">Materiais</button>
+                    <button class="filter-btn">Tarefas</button>
+                </div>
+                
+                <button class="mark-all-read-btn">Marcar todas como lidas</button>
+            </div>
+
+            <!-- LISTA DE NOTIFICAÇÕES -->
+            <section class="notifications-list-card">
+                
+                <!-- Notificação 1 (Não lida - Nova Tarefa) -->
+                <article class="notification-item unread">
+                    <div class="notification-icon-wrapper math-bg">
+                        <img src=".\assets\icons\disciplinas\Clipboard.png" alt="Tarefa">
+                    </div>
+                    
+                    <div class="notification-body">
+                        <div class="notification-text">
+                            <strong>Matemática:</strong> Prof. João Ferreira publicou uma nova tarefa: <a href="#" class="notification-link">Lista de Exercícios 4</a>.
+                        </div>
+                        <span class="notification-time">Hoje, às 08:30</span>
+                    </div>
+                    
+                    <div class="notification-actions">
+                        <span class="unread-dot"></span>
+                    </div>
+                </article>
+
+                <!-- Notificação 2 (Não lida - Feedback) -->
+                <article class="notification-item unread">
+                    <div class="notification-icon-wrapper bio-bg">
+                        <img src=".\assets\icons\sidebar\Document.png" alt="Feedback">
+                    </div>
+                    
+                    <div class="notification-body">
+                        <div class="notification-text">
+                            <strong>Biologia:</strong> O seu <a href="#" class="notification-link">Relatório de Aula Prática</a> foi corrigido com a nota de 16/20.
+                        </div>
+                        <span class="notification-time">Ontem, às 16:45</span>
+                    </div>
+                    
+                    <div class="notification-actions">
+                        <span class="unread-dot"></span>
+                    </div>
+                </article>
+
+                <!-- Notificação 3 (Lida - Novo Material) -->
+                <article class="notification-item">
+                    <div class="notification-icon-wrapper tic-bg">
+                        <img src=".\assets\icons\disciplinas\Document(2).png" alt="Material">
+                    </div>
+                    
+                    <div class="notification-body">
+                        <div class="notification-text">
+                            <strong>TIC:</strong> Novo material disponível: <a href="#" class="notification-link">Slides - Introdução às Variáveis</a>.
+                        </div>
+                        <span class="notification-time">17 Jun 2026, às 11:15</span>
+                    </div>
+                    
+                    <div class="notification-actions"></div>
+                </article>
+
+                <!-- Notificação 4 (Lida - Aviso/Geral) -->
+                <article class="notification-item">
+                    <div class="notification-icon-wrapper port-bg">
+                        <img src=".\assets\icons\sidebar\Home.png" alt="Aviso">
+                    </div>
+                    
+                    <div class="notification-body">
+                        <div class="notification-text">
+                            <strong>Português:</strong> Prof. Ana Oliveira alterou o local da próxima aula. A aula será na <span class="highlight-text">Sala 204</span>.
+                        </div>
+                        <span class="notification-time">15 Jun 2026, às 09:00</span>
+                    </div>
+                    
+                    <div class="notification-actions"></div>
+                </article>
+
+                <!-- Notificação 5 (Lida - Alerta de Prazo) -->
+                <article class="notification-item warning">
+                    <div class="notification-icon-wrapper alert-bg">
+                        <img src=".\assets\icons\sidebar\Time.png" alt="Alerta">
+                    </div>
+                    
+                    <div class="notification-body">
+                        <div class="notification-text">
+                            <strong>Aviso de Prazo:</strong> O prazo limite para a entrega da redação de <span class="highlight-text">Inglês</span> termina em 24 horas.
+                        </div>
+                        <span class="notification-time">14 Jun 2026, às 23:59</span>
+                    </div>
+                    
+                    <div class="notification-actions"></div>
+                </article>
+
+                <!-- PAGINAÇÃO -->
+                <div class="pagination-area">
+                    <div class="pagination">
+                        <button class="page-arrow" type="button">‹</button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button class="page-arrow" type="button">›</button>
+                    </div>
+                    <p>Mostrando 5 de 12 notificações</p>
+                </div>
+
+            </section>
         </main>
     </div>
-
-
-
-
 </body>
 </html>
