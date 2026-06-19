@@ -1,0 +1,239 @@
+/* =========================================
+   CABOLEARN - NOTIFICACOES.CSS
+   Estilo específico da página de Notificações
+========================================= */
+
+.notificacoes-main {
+    width: 61.56vw; /* Alinhado ao padrão da sidebar comum */
+}
+
+/* =========================================
+   FILTROS DE NOTIFICAÇÕES
+========================================= */
+
+.notifications-filters {
+    position: absolute;
+    left: 0;
+    top: 12.1vh;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-tabs {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+}
+
+.filter-btn {
+    height: 4.2vh;
+    padding: 0 1.2vw;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 0.55vw;
+    
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.83vw;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    
+    display: flex;
+    align-items: center;
+    gap: 0.35vw;
+}
+
+.filter-btn span {
+    font-size: 0.75vw;
+    opacity: 0.6;
+}
+
+.filter-btn:hover {
+    background: rgba(69, 121, 225, 0.05);
+    color: var(--accent);
+    border-color: rgba(69, 121, 225, 0.35);
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    color: #FFFFFF;
+    border-color: var(--accent);
+}
+
+.mark-all-read-btn {
+    background: transparent;
+    border: none;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.88vw;
+    font-weight: 600;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.mark-all-read-btn:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   CARD DA LISTA DE NOTIFICAÇÕES
+========================================= */
+
+.notifications-list-card {
+    position: absolute;
+    left: 0;
+    top: 18.5vh;
+    width: 100%;
+    height: 58.3vh; /* Mesma altura proporcional da tabela de submissões */
+    
+    background: #FFFFFF;
+    border-radius: var(--card-radius);
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.15vw rgba(0, 0, 0, 0.2);
+    
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* =========================================
+   ITEM DE NOTIFICAÇÃO (LINHA)
+========================================= */
+
+.notification-item {
+    height: 9.1vh; /* Mantém o ritmo vertical exato da tabela de submissões */
+    display: grid;
+    grid-template-columns: 3.5vw 1fr auto;
+    column-gap: 1.2vw;
+    align-items: center;
+    padding: 0 1.8vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    transition: background 0.15s ease;
+}
+
+.notification-item:hover {
+    background: rgba(0, 0, 0, 0.015);
+}
+
+/* Destaque para não lidas */
+.notification-item.unread {
+    background: rgba(69, 121, 225, 0.03);
+}
+
+.notification-item.unread:hover {
+    background: rgba(69, 121, 225, 0.05);
+}
+
+/* =========================================
+   ÍCONES E PLANOS DE FUNDO (CORES POR DISCIPLINA)
+========================================= */
+
+.notification-icon-wrapper {
+    width: 2.6vw;
+    height: 2.6vw;
+    border-radius: 0.55vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.notification-icon-wrapper img {
+    width: 1.3vw;
+    height: 1.3vw;
+    object-fit: contain;
+}
+
+/* Cores de fundo mapeadas do disciplinas.css & perfil.css */
+.math-bg  { background: #eff3ff; color: #3b6ef5; }
+.port-bg  { background: #f0fdf4; color: #22c55e; }
+.tic-bg   { background: #faf5ff; color: #a855f7; }
+.eng-bg   { background: #fdf2f8; color: #ec4899; }
+.hist-bg  { background: #fff7ed; color: #f97316; }
+.bio-bg   { background: rgba(76, 138, 49, 0.15); color: #44802c; }
+.alert-bg { background: rgba(240, 85, 85, 0.15); color: #E85A5A; }
+
+/* Inverter cor do ícone caso necessário */
+.notification-icon-wrapper img {
+    filter: opacity(0.85);
+}
+
+/* =========================================
+   TEXTO DA NOTIFICAÇÃO
+========================================= */
+
+.notification-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4vh;
+    min-width: 0;
+}
+
+.notification-text {
+    font-size: 0.88vw;
+    color: var(--text-primary);
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notification-text strong {
+    font-weight: 700;
+}
+
+.notification-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.notification-link:hover {
+    text-decoration: underline;
+}
+
+.highlight-text {
+    font-weight: 600;
+    color: #000000;
+}
+
+.notification-time {
+    font-size: 0.73vw;
+    color: rgba(0, 0, 0, 0.42);
+}
+
+/* =========================================
+   AÇÕES / INDICADORES DOS ITEMS
+========================================= */
+
+.notification-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5vw;
+}
+
+.unread-dot {
+    width: 0.55vw;
+    height: 0.55vw;
+    background: var(--accent);
+    border-radius: 50%;
+    display: block;
+}
+
+/* Notificação do tipo Warning específica */
+.notification-item.warning .notification-text {
+    color: #b42222;
+}
+
+/* =========================================
+   ÁREA DA PAGINAÇÃO (RODAPÉ FIXO DO CARD)
+========================================= */
+
+.notifications-list-card .pagination-area {
+    margin-top: auto; /* Empurra para o fundo do card */
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
