@@ -75,7 +75,7 @@
     border: none;
     border-radius: 50%;
 
-    background: #4579E1;
+    background: #a5aab5;
     color: #FFFFFF;
 
     display: flex;
@@ -535,4 +535,67 @@
 
 .switch input:checked + span::before {
     transform: translateX(0.9vw);
+}
+
+/* =========================================
+   ÍCONES DA PÁGINA PERFIL
+========================================= */
+
+.photo-button img {
+    width: 1vw;
+    height: 1vw;
+    object-fit: contain;
+    display: block;
+}
+
+.profile-meta span,
+.profile-meta-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45vw;
+}
+
+.profile-meta img,
+.profile-meta-row img {
+    width: 1vw;
+    height: 1vw;
+    object-fit: contain;
+    display: block;
+}
+
+.status-dot {
+    width: 0.45vw;
+    height: 0.45vw;
+    border-radius: 50%;
+    background: #18B941;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.subject-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35vw;
+}
+
+.subject-item img {
+    width: 1.15vw;
+    height: 1.15vw;
+    object-fit: contain;
+    display: block;
+}
+
+.side-main-icon img {
+    width: 1.25vw;
+    height: 1.25vw;
+    object-fit: contain;
+    display: block;
+}
+
+.security-icon img,
+.preference-icon img {
+    width: 1.15vw;
+    height: 1.15vw;
+    object-fit: contain;
+    display: block;
 }
