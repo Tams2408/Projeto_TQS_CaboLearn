@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaboLearn - Histórico</title>
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/comum.css">
     <link rel="stylesheet" href="./css/historico.css">
 </head>
+
 <body>
     <div class="page inicio-page">
         <header class="topbar">
@@ -29,7 +31,7 @@
                     <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
                 </div>
 
-                <a href="./login.html" class="logout-button">
+                <a href="/logout" class="logout-button">
                     <img src="./assets/icons/Logout.png" alt="sair">
                     <span>Sair</span>
                 </a>
@@ -42,13 +44,20 @@
 
         <aside class="sidebar">
             <nav class="sidebar-menu">
-                <a href="index.html" class="menu-item">             <img src=".\assets\icons\sidebar\Home.png" alt="inicio"> <span>Início</span></a>
-                <a href="disciplinas.html" class="menu-item">       <img src=".\assets\icons\sidebar\Books.png" alt="">      <span>Disciplinas</span></a>
-                <a href="upload.html" class="menu-item">            <img src=".\assets\icons\sidebar\Upload.png" alt="">     <span>Upload</span></a>
-                <a href="submissoes.html" class="menu-item">        <img src=".\assets\icons\sidebar\Document.png" alt="">   <span>Submissões</span></a>
-                <a href="historico.html" class="menu-item active">         <img src=".\assets\icons\sidebar\Time.png" alt="">       <span>Histórico</span></a>
-                <a href="notificacoes.html" class="menu-item">      <img src=".\assets\icons\sidebar\Notification.png"alt=""><span>Notificações</span></a>
-                <a href="perfil.html" class="menu-item">            <img src=".\assets\icons\sidebar\Profile.png">           <span>Perfil</span></a>
+                <a href="/index" class="menu-item"> <img src=".\assets\icons\sidebar\Home.png" alt="inicio">
+                    <span>Início</span></a>
+                <a href="/disciplinas" class="menu-item"> <img src=".\assets\icons\sidebar\Books.png" alt="">
+                    <span>Disciplinas</span></a>
+                <a href="/upload" class="menu-item"> <img src=".\assets\icons\sidebar\Upload.png" alt="">
+                    <span>Upload</span></a>
+                <a href="/submissoes" class="menu-item"> <img src=".\assets\icons\sidebar\Document.png" alt="">
+                    <span>Submissões</span></a>
+                <a href="/historico" class="menu-item active"> <img src=".\assets\icons\sidebar\Time.png" alt="">
+                    <span>Histórico</span></a>
+                <a href="/notificacoes" class="menu-item"> <img src=".\assets\icons\sidebar\Notification.png"
+                        alt=""><span>Notificações</span></a>
+                <a href="/perfil" class="menu-item"> <img src=".\assets\icons\sidebar\Profile.png">
+                    <span>Perfil</span></a>
             </nav>
 
             <div class="sidebar-footer">
@@ -57,8 +66,279 @@
             </div>
         </aside>
 
-        <main class="main-content">
-            
+        <main class="main-content historico-main">
+            <section class="page-heading">
+                <h1>Histórico</h1>
+                <p></p>
+            </section>
+
+            <section class="history-stats">
+                <article class="history-stat-card blue">
+                    <div class="stat-icon">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="stat-info">
+                        <span>Média geral</span>
+                        <strong>15.8</strong>
+                    </div>
+                </article>
+
+                <article class="history-stat-card green">
+                    <div class="stat-icon">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="stat-info">
+                        <span>Tarefas entregues</span>
+                        <strong>32</strong>
+                    </div>
+                </article>
+
+                <article class="history-stat-card purple">
+                    <div class="stat-icon">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="stat-info">
+                        <span>Disciplinas ativas</span>
+                        <strong>7</strong>
+                    </div>
+                </article>
+
+                <article class="history-stat-card orange">
+                    <div class="stat-icon">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="stat-info">
+                        <span>Frequência</span>
+                        <strong>92%</strong>
+                    </div>
+                </article>
+            </section>
+
+            <section class="history-layout">
+                <section class="history-main-card">
+                    <div class="history-card-header">
+                        <div>
+                            <h2>Histórico de atividades</h2>
+                            <p>Registo das últimas atividades académicas</p>
+                        </div>
+
+                        <div class="history-filters">
+                            <button class="filter-btn active" type="button">Todas</button>
+                            <button class="filter-btn" type="button">Tarefas</button>
+                            <button class="filter-btn" type="button">Notas</button>
+                            <button class="filter-btn" type="button">Aulas</button>
+                        </div>
+                    </div>
+
+                    <div class="history-table">
+                        <div class="history-table-header">
+                            <div>Atividade</div>
+                            <div>Disiplina</div>
+                            <div>Data</div>
+                            <div>Resultado</div>
+                            <div>Estado</div>
+                        </div>
+
+                        <div class="history-row">
+                            <div class="activity-cell">
+                                <div class="activity-icon pdf">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="activity-text">
+                                    <strong>Relatório de biologia submetido</strong>
+                                    <span>PDF - 2.4 MB</span>
+                                </div>
+                            </div>
+                            <div class="subject-cell">
+                                <strong>Biologia</strong>
+                                <span>Prof. Ricardo Lima</span>
+                            </div>
+
+                            <div class="date-cell">
+                                <strong>14/05/2026</strong>
+                                <span>14:32</span>
+                            </div>
+
+                            <div class="result-cell grade-good">16 / 20</div>
+                            <div><span class="status done">Concluído</span></div>
+                        </div>
+
+                        <div class="history-row">
+                            <div class="activity-cell">
+                                <div class="activity-icon class">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="activity-text">
+                                    <strong>Aula de TIC assistida</strong>
+                                    <span>Introdução à programação</span>
+                                </div>
+                            </div>
+                            <div class="subject-cell">
+                                <strong>TIC</strong>
+                                <span>Prof. Carlos Mendes</span>
+                            </div>
+
+                            <div class="date-cell">
+                                <strong>13/05/2026</strong>
+                                <span>13:30</span>
+                            </div>
+
+                            <div class="result-cell neutral">Presente</div>
+                            <div><span class="status present">Registado</span></div>
+                        </div>
+
+                        <div class="history-row">
+                            <div class="activity-cell">
+                                <div class="activity-icon note">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="activity-text">
+                                    <strong>Teste de Matemática avaliado</strong>
+                                    <span>Funções e gráficos</span>
+                                </div>
+                            </div>
+                            <div class="subject-cell">
+                                <strong>Matemática</strong>
+                                <span>Prof. João Ferreira</span>
+                            </div>
+
+                            <div class="date-cell">
+                                <strong>10/05/2026</strong>
+                                <span>09:15</span>
+                            </div>
+
+                            <div class="result-cell grade-good">17 / 20</div>
+                            <div><span class="status evaluated">Avaliado</span></div>
+                        </div>
+
+                        <div class="history-row">
+                            <div class="activity-cell">
+                                <div class="activity-icon warning">
+                                    <img src=".\assets\icons\notificações\Error.png" alt="">
+                                </div>
+                                <div class="activity-text">
+                                    <strong>Trefa de Inglês pendente</strong>
+                                    <span>Present Simple - Exercícios</span>
+                                </div>
+                            </div>
+                            <div class="subject-cell">
+                                <strong>Inglês</strong>
+                                <span>Prof. Laura Silva</span>
+                            </div>
+
+                            <div class="date-cell">
+                                <strong>08/05/2026</strong>
+                                <span>23:59</span>
+                            </div>
+
+                            <div class="result-cell muted">--</div>
+                            <div><span class="status done">Pendente</span></div>
+                        </div>
+
+                        <div class="history-row">
+                            <div class="activity-cell">
+                                <div class="activity-icon material">
+                                    <img src=".\assets\icons\notificações\Error.png" alt="">
+                                </div>
+                                <div class="activity-text">
+                                    <strong>Material de Português aberto</strong>
+                                    <span>Interpretação de texto</span>
+                                </div>
+                            </div>
+                            <div class="subject-cell">
+                                <strong>Português</strong>
+                                <span>Prof. Ana Oliveira</span>
+                            </div>
+
+                            <div class="date-cell">
+                                <strong>06/05/2026</strong>
+                                <span>11:20</span>
+                            </div>
+
+                            <div class="result-cell neutral">Visualizado</div>
+                            <div><span class="status viewed">Visualizado</span></div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <aside class="history-side">
+                    <section class="side-card performance-card">
+                        <div class="side-card-title">
+                            <div class="side-main-icon blue">
+                                <img src="" alt="">
+                            </div>
+
+                            <h2>Desempenho</h2>
+                        </div>
+
+                        <div class="performance-list">
+                            <div class="performance-row">
+                                <div class="performance-top">
+                                    <span>Matemática</span>
+                                    <strong>85%</strong>
+                                </div>
+                                <div class="performance-track">
+                                    <div class="performance-fill math" style="width: 85%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="performance-row">
+                                <div class="performance-top">
+                                    <span>Português</span>
+                                    <strong>78%</strong>
+                                </div>
+                                <div class="performance-track">
+                                    <div class="performance-fill port" style="width: 78%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="performance-row">
+                                <div class="performance-top">
+                                    <span>TIC</span>
+                                    <strong>90%</strong>
+                                </div>
+                                <div class="performance-track">
+                                    <div class="performance-fill tic" style="width: 90%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="performance-row">
+                                <div class="performance-top">
+                                    <span>Biologia</span>
+                                    <strong>80%</strong>
+                                </div>
+                                <div class="performance-track">
+                                    <div class="performance-fill bio" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="side-card feedback-card">
+                        <div class="side-card-title">
+                            <div class="side-main-icon orange">
+                                <img src="" alt="">
+                            </div>
+                            <h2>Feedback recente</h2>
+                        </div>
+
+                        <div class="recent-feedback">
+                            <strong>Relatório de Biologia</strong>
+                            <p>Bom trabalho. Melhore apenas a estrutura da introdução e a formatação das referências</p>
+
+                            <div class="feedback-meta">
+                                <span>Prof. Ricardo Lima</span>
+                                <strong>16 / 20</strong>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </section>
         </main>
     </div>
 
@@ -66,4 +346,5 @@
 
 
 </body>
+
 </html>

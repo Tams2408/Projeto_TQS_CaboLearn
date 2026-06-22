@@ -1,0 +1,601 @@
+/* =========================================
+   CABOLEARN - PERFIL.CSS
+========================================= */
+
+.perfil-main {
+    width: 67.5vw;
+}
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.page-heading {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.page-heading h1 {
+    font-size: 3.33vw;
+    font-weight: 400;
+    line-height: 1;
+    color: #000000;
+}
+
+/* =========================================
+   CARD SUPERIOR
+========================================= */
+
+.profile-hero-card {
+    position: absolute;
+    left: 0;
+    top: 8.6vh;
+
+    width: 48.3vw;
+    height: 17.5vh;
+
+    background: #FFFFFF;
+    border-radius: 1vw;
+
+    display: flex;
+    align-items: center;
+    gap: 1.8vw;
+
+    padding: 1.2vh 2vw;
+
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.12vw rgba(0, 0, 0, 0.12);
+}
+
+.profile-photo-area {
+    position: relative;
+    width: 7.6vw;
+    height: 7.6vw;
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid #4579E1;
+}
+
+.photo-button {
+    position: absolute;
+    right: 0.15vw;
+    bottom: 0.25vh;
+
+    width: 1.7vw;
+    height: 1.7vw;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #a5aab5;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.8vw;
+    cursor: pointer;
+}
+
+.profile-main-info {
+    min-width: 0;
+}
+
+.profile-main-info h2 {
+    font-size: 2.35vw;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #000000;
+
+    margin-bottom: 0.85vh;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-meta,
+.profile-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+
+    font-size: 1vw;
+    color: #000000;
+
+    margin-bottom: 0.65vh;
+}
+
+.profile-badges {
+    display: flex;
+    align-items: center;
+    gap: 1.4vw;
+}
+
+.badge-active,
+.badge-regular {
+    height: 2.05vh;
+    padding: 0 0.6vw;
+
+    border-radius: 999px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.72vw;
+    line-height: 1;
+}
+
+.badge-active {
+    background: rgba(85, 240, 111, 0.45);
+    color: #18B941;
+}
+
+.badge-regular {
+    background: rgba(69, 121, 225, 0.28);
+    color: #4579E1;
+}
+
+/* =========================================
+   LAYOUT INFERIOR
+========================================= */
+
+.profile-layout {
+    position: absolute;
+    left: 0;
+    top: 27.2vh;
+
+    width: 67.5vw;
+    height: 49.55vh;
+
+    display: grid;
+    grid-template-columns: minmax(0, 42.5vw) 23.8vw;
+    column-gap: 0.9vw;
+}
+
+/* =========================================
+   CARD DE DADOS
+========================================= */
+
+.profile-data-card {
+    width: 100%;
+    height: 100%;
+
+    background: #FFFFFF;
+    border-radius: 1vw;
+
+    padding: 1.45vh 2vw;
+
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.12vw rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+}
+
+.profile-data-card h2 {
+    font-size: 1.25vw;
+    font-weight: 700;
+    color: #000000;
+
+    margin-bottom: 1.25vh;
+}
+
+.section-title-academic {
+    margin-top: 2.6vh;
+}
+
+.form-grid {
+    display: grid;
+    column-gap: 3.1vw;
+    row-gap: 1.6vh;
+}
+
+.two-columns {
+    grid-template-columns: 1fr 1fr;
+}
+
+.three-columns {
+    grid-template-columns: 1fr 0.9fr 0.95fr;
+    column-gap: 1.5vw;
+}
+
+.academic-second-row {
+    margin-top: 1.6vh;
+}
+
+.profile-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.profile-field label,
+.subjects-section > label {
+    font-size: 0.82vw;
+    color: #000000;
+    margin-bottom: 0.45vh;
+}
+
+.profile-field input {
+    width: 100%;
+    height: 3vh;
+
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 0.25vw;
+
+    background: #FFFFFF;
+
+    padding: 0 0.95vw;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.72vw;
+    color: rgba(0, 0, 0, 0.42);
+
+    outline: none;
+}
+
+.subjects-section {
+    margin-top: 1.8vh;
+}
+
+.subjects-list {
+    margin-top: 1.2vh;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.8vh 2.65vw;
+}
+
+.subject-item {
+    font-size: 0.88vw;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.subject-item.math {
+    color: #8B22FF;
+}
+
+.subject-item.port {
+    color: #FF9900;
+}
+
+.subject-item.tic {
+    color: #38D92F;
+}
+
+.subject-item.eng {
+    color: #004BFF;
+}
+
+.subject-item.hist {
+    color: #F2B31B;
+}
+
+.subject-item.fis {
+    color: #76A7FF;
+}
+
+.subject-item.bio {
+    color: #4C8A31;
+}
+
+/* =========================================
+   COLUNA DIREITA
+========================================= */
+
+.profile-side {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.35vh;
+}
+
+.side-card {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 1vw;
+
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.12vw rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+}
+
+.security-card {
+    height: 25.9vh;
+    padding: 1.65vh 1.2vw;
+}
+
+.preferences-card {
+    height: 22.2vh;
+    padding: 1.45vh 1.2vw;
+}
+
+.side-title {
+    display: flex;
+    align-items: center;
+    gap: 0.65vw;
+
+    margin-bottom: 1.15vh;
+}
+
+.side-main-icon {
+    width: 2.35vw;
+    height: 2.35vw;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.1vw;
+    flex-shrink: 0;
+}
+
+.side-main-icon.purple,
+.side-main-icon.violet {
+    background: rgba(160, 86, 255, 0.35);
+    color: #8B22FF;
+}
+
+.side-title h2 {
+    font-size: 1.25vw;
+    font-weight: 700;
+    line-height: 1;
+    color: #000000;
+}
+
+/* =========================================
+   CONTA E SEGURANÇA
+========================================= */
+
+.security-list,
+.preferences-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.security-row {
+    height: 5.45vh;
+
+    display: grid;
+    grid-template-columns: 2vw minmax(0, 1fr) auto 0.8vw;
+    column-gap: 0.65vw;
+
+    align-items: center;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.security-row:last-child {
+    border-bottom: none;
+}
+
+.security-icon,
+.preference-icon {
+    width: 1.95vw;
+    height: 1.95vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.2vw;
+
+    font-size: 1vw;
+    flex-shrink: 0;
+}
+
+.security-icon.blue {
+    background: rgba(69, 121, 225, 0.35);
+}
+
+.security-icon.green {
+    background: rgba(85, 240, 111, 0.45);
+}
+
+.security-icon.cyan {
+    background: rgba(85, 200, 240, 0.35);
+}
+
+.security-text,
+.preference-text {
+    min-width: 0;
+}
+
+.security-text strong,
+.preference-text strong {
+    display: block;
+
+    font-size: 0.78vw;
+    font-weight: 400;
+    color: #000000;
+
+    margin-bottom: 0.25vh;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.security-text span,
+.preference-text span {
+    display: block;
+
+    font-size: 0.62vw;
+    color: rgba(0, 0, 0, 0.38);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.security-row a {
+    font-size: 0.62vw;
+    font-weight: 700;
+    color: #4579E1;
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.arrow {
+    color: #4579E1;
+    font-size: 1.3vw;
+}
+
+/* =========================================
+   PREFERÊNCIAS
+========================================= */
+
+.preference-row {
+    height: 5.3vh;
+
+    display: grid;
+    grid-template-columns: 2vw minmax(0, 1fr) 2vw;
+    column-gap: 0.65vw;
+
+    align-items: center;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.preference-row:last-child {
+    border-bottom: none;
+}
+
+.preference-icon.mail {
+    background: rgba(69, 121, 225, 0.35);
+}
+
+.preference-icon.bell {
+    background: rgba(240, 168, 85, 0.45);
+}
+
+.preference-icon.light {
+    background: rgba(255, 235, 59, 0.45);
+}
+
+/* SWITCH */
+.switch {
+    position: relative;
+
+    width: 1.95vw;
+    height: 1.05vw;
+
+    display: inline-block;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch span {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 999px;
+
+    cursor: pointer;
+}
+
+.switch span::before {
+    content: "";
+
+    position: absolute;
+    width: 0.85vw;
+    height: 0.85vw;
+
+    left: 0.1vw;
+    top: 0.1vw;
+
+    background: #FFFFFF;
+    border-radius: 50%;
+
+    transition: 0.2s ease;
+}
+
+.switch input:checked + span {
+    background: #4579E1;
+}
+
+.switch input:checked + span::before {
+    transform: translateX(0.9vw);
+}
+
+/* =========================================
+   ÍCONES DA PÁGINA PERFIL
+========================================= */
+
+.photo-button img {
+    width: 1vw;
+    height: 1vw;
+    object-fit: contain;
+    display: block;
+}
+
+.profile-meta span,
+.profile-meta-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45vw;
+}
+
+.profile-meta img,
+.profile-meta-row img {
+    width: 1vw;
+    height: 1vw;
+    object-fit: contain;
+    display: block;
+}
+
+.status-dot {
+    width: 0.45vw;
+    height: 0.45vw;
+    border-radius: 50%;
+    background: #18B941;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.subject-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35vw;
+}
+
+.subject-item img {
+    width: 1.15vw;
+    height: 1.15vw;
+    object-fit: contain;
+    display: block;
+}
+
+.side-main-icon img {
+    width: 1.25vw;
+    height: 1.25vw;
+    object-fit: contain;
+    display: block;
+}
+
+.security-icon img,
+.preference-icon img {
+    width: 1.15vw;
+    height: 1.15vw;
+    object-fit: contain;
+    display: block;
+}

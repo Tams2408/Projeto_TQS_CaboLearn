@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaboLearn - Submissões</title>
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/comum.css">
     <link rel="stylesheet" href="./css/submissao.css">
 </head>
@@ -29,7 +30,7 @@
                     <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
                 </div>
 
-                <a href="./login.html" class="logout-button">
+                <a href="/logout" class="logout-button">
                     <img src="./assets/icons/Logout.png" alt="sair">
                     <span>Sair</span>
                 </a>
@@ -42,13 +43,13 @@
 
         <aside class="sidebar">
             <nav class="sidebar-menu">
-                <a href="index.html" class="menu-item">             <img src=".\assets\icons\sidebar\Home.png" alt="inicio"> <span>Início</span></a>
-                <a href="disciplinas.html" class="menu-item">       <img src=".\assets\icons\sidebar\Books.png" alt="">      <span>Disciplinas</span></a>
-                <a href="upload.html" class="menu-item">            <img src=".\assets\icons\sidebar\Upload.png" alt="">     <span>Upload</span></a>
-                <a href="submissoes.html" class="menu-item active">        <img src=".\assets\icons\sidebar\Document.png" alt="">   <span>Submissões</span></a>
-                <a href="historico.html" class="menu-item">         <img src=".\assets\icons\sidebar\Time.png" alt="">       <span>Histórico</span></a>
-                <a href="notificacoes.html" class="menu-item">      <img src=".\assets\icons\sidebar\Notification.png"alt=""><span>Notificações</span></a>
-                <a href="perfil.html" class="menu-item">            <img src=".\assets\icons\sidebar\Profile.png">           <span>Perfil</span></a>
+                <a href="/index" class="menu-item">             <img src=".\assets\icons\sidebar\Home.png" alt="inicio"> <span>Início</span></a>
+                <a href="/disciplinas" class="menu-item">       <img src=".\assets\icons\sidebar\Books.png" alt="">      <span>Disciplinas</span></a>
+                <a href="/upload" class="menu-item">            <img src=".\assets\icons\sidebar\Upload.png" alt="">     <span>Upload</span></a>
+                <a href="/submissoes" class="menu-item active">        <img src=".\assets\icons\sidebar\Document.png" alt="">   <span>Submissões</span></a>
+                <a href="/historico" class="menu-item">         <img src=".\assets\icons\sidebar\Time.png" alt="">       <span>Histórico</span></a>
+                <a href="/notificacoes" class="menu-item">      <img src=".\assets\icons\sidebar\Notification.png"alt=""><span>Notificações</span></a>
+                <a href="/perfil" class="menu-item">            <img src=".\assets\icons\sidebar\Profile.png">           <span>Perfil</span></a>
             </nav>
 
             <div class="sidebar-footer">
@@ -57,8 +58,302 @@
             </div>
         </aside>
 
-        <main class="main-content">
-            
+        <main class="main-content submissoes-main">
+           
+
+    <!-- TÍTULO -->
+    <section class="page-heading">
+        <h1>Submissão</h1>
+        <p>Acompanha os trabalhos enviados, estados de avaliação e feedback dos professores</p>
+    </section>
+
+    <!-- BARRA DE PESQUISA -->
+    <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input type="text" placeholder="Pesquisar submissões">
+    </div>
+
+    <!-- LAYOUT PRINCIPAL -->
+    <section class="submissoes-layout">
+
+        <!-- TABELA -->
+        <section class="submissoes-table-card">
+
+            <div class="table-header">
+                <div>Trabalho/ficheiro</div>
+                <div>Disciplina</div>
+                <div>Data de envio</div>
+                <div>Prazo</div>
+                <div>Estado</div>
+                <div>Feedback</div>
+            </div>
+
+            <!-- LINHA 1 -->
+            <div class="table-row selected">
+                <div class="file-cell">
+                    <div class="file-icon pdf">PDF</div>
+
+                    <div class="file-info">
+                        <strong>Relatorio_Biologia.pdf</strong>
+                        <span>PDF - 2.4 MB</span>
+                    </div>
+                </div>
+
+                <div class="subject-cell">
+                    <strong>Biologia</strong>
+                    <span>Prof. Ricardo Lima</span>
+                </div>
+
+                <div class="date-cell">
+                    <strong>14/05/2026</strong>
+                    <span>14:32</span>
+                </div>
+
+                <div class="date-cell">
+                    <strong>14/05/2026</strong>
+                    <span>14:32</span>
+                </div>
+
+                <div>
+                    <span class="status entregue">Entregue</span>
+                </div>
+
+                <div class="feedback-cell">
+                    <a href="#">Ver detalhes</a>
+                    <span>→</span>
+                </div>
+            </div>
+
+            <!-- LINHA 2 -->
+            <div class="table-row">
+                <div class="file-cell">
+                    <div class="file-icon word">W</div>
+
+                    <div class="file-info">
+                        <strong>Trabalho_Historia.docx</strong>
+                        <span>DOCX - 1.1 MB</span>
+                    </div>
+                </div>
+
+                <div class="subject-cell">
+                    <strong>História</strong>
+                    <span>Prof. Ricardo Lima</span>
+                </div>
+
+                <div class="date-cell">
+                    <strong>10/05/2026</strong>
+                    <span>09:15</span>
+                </div>
+
+                <div class="date-cell">
+                    <strong>12/05/2026</strong>
+                    <span>23:59</span>
+                </div>
+
+                <div>
+                    <span class="status analise">Em análise</span>
+                </div>
+
+                <div class="feedback-muted">
+                    ⏳ Em análise
+                </div>
+            </div>
+
+            <!-- LINHA 3 -->
+            <div class="table-row">
+                <div class="file-cell">
+                    <div class="file-icon ppt">P</div>
+
+                    <div class="file-info">
+                        <strong>Apresentacao_TIC.pptx</strong>
+                        <span>PPTX - 5.3 MB</span>
+                    </div>
+                </div>
+
+                <div class="subject-cell">
+                    <strong>TIC</strong>
+                    <span>Prof. Carlos Mendes</span>
+                </div>
+
+                <div class="date-cell">
+                    <strong>06/05/2026</strong>
+                    <span>16:40</span>
+                </div>
+
+                <div class="date-cell">
+                    <strong>08/05/2026</strong>
+                    <span>23:59</span>
+                </div>
+
+                <div>
+                    <span class="status corrigido">Corrigido</span>
+                </div>
+
+                <div class="feedback-cell">
+                    <a href="#">Ver feedback</a>
+                    <span>→</span>
+                </div>
+            </div>
+
+            <!-- LINHA 4 -->
+            <div class="table-row">
+                <div class="file-cell">
+                    <div class="file-icon pdf">PDF</div>
+
+                    <div class="file-info">
+                        <strong>Redacao_Portugues.pdf</strong>
+                        <span>PDF - 862 KB</span>
+                    </div>
+                </div>
+
+                <div class="subject-cell">
+                    <strong>Português</strong>
+                    <span>Prof. Ana Oliveira</span>
+                </div>
+
+                <div class="date-cell">
+                    <strong>02/05/2026</strong>
+                    <span>11:22</span>
+                </div>
+
+                <div class="date-cell">
+                    <strong>05/05/2026</strong>
+                    <span>23:59</span>
+                </div>
+
+                <div>
+                    <span class="status feedback">Com feedback</span>
+                </div>
+
+                <div class="feedback-cell">
+                    <a href="#">Ver comentário</a>
+                    <span>→</span>
+                </div>
+            </div>
+
+            <!-- LINHA 5 -->
+            <div class="table-row">
+                <div class="file-cell">
+                    <div class="file-icon pdf">PDF</div>
+
+                    <div class="file-info">
+                        <strong>Exercicios_Matematica.pdf</strong>
+                        <span>PDF - 1.8 MB</span>
+                    </div>
+                </div>
+
+                <div class="subject-cell">
+                    <strong>Matemática</strong>
+                    <span>Prof. João Ferreira</span>
+                </div>
+
+                <div class="date-cell">
+                    <strong>29/04/2026</strong>
+                    <span>10:05</span>
+                </div>
+
+                <div class="date-cell">
+                    <strong>30/04/2026</strong>
+                    <span>23:59</span>
+                </div>
+
+                <div>
+                    <span class="status reenviar">Reenviar</span>
+                </div>
+
+                <div class="feedback-cell">
+                    <a href="#">Corrigir ficheiro</a>
+                    <span>→</span>
+                </div>
+            </div>
+
+            <!-- PAGINAÇÃO -->
+            <div class="pagination-area">
+                <div class="pagination">
+                    <button class="page-arrow" type="button">‹</button>
+
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <span>...</span>
+                    <button>5</button>
+                    <button class="page-arrow" type="button">›</button>
+                </div>
+
+                <p>1 - 5 de 24 submissões</p>
+            </div>
+
+        </section>
+
+        <!-- DETALHES -->
+        <aside class="details-card">
+
+            <div class="details-title">
+                <div class="details-icon">▤</div>
+                <h2>Detalhes da submissão</h2>
+            </div>
+
+            <div class="selected-file-box">
+                <div class="file-icon pdf">PDF</div>
+
+                <div>
+                    <strong>Relatorio_Biologia.pdf</strong>
+                    <span>PDF - 1.8 MB</span>
+                </div>
+            </div>
+
+            <div class="details-list">
+                <div class="details-row">
+                    <span>Disciplina</span>
+                    <strong>Biologia</strong>
+                </div>
+
+                <div class="details-row">
+                    <span>Professor</span>
+                    <strong>Prof. Ricardo Lima</strong>
+                </div>
+
+                <div class="details-row">
+                    <span>Data de envio</span>
+                    <strong>14/05/2026 às 14:32</strong>
+                </div>
+
+                <div class="details-row">
+                    <span>Prazo</span>
+                    <strong>15/05/2026 às 23:59</strong>
+                </div>
+
+                <div class="details-row">
+                    <span>Estado</span>
+                    <strong><span class="status entregue">Entregue</span></strong>
+                </div>
+
+                <div class="details-row">
+                    <span>Nota</span>
+                    <strong class="grade">16 / 20</strong>
+                </div>
+            </div>
+
+            <div class="feedback-section">
+                <div class="feedback-title">
+                    <span>●</span>
+                    <h3>Feedback do professor</h3>
+                </div>
+
+                <div class="feedback-box">
+                    <p>Bom trabalho. Melhore apenas a estrutura da introdução e a formatação das referências.</p>
+                    <small>Enviado em 16/05/2026 às 10:28</small>
+                </div>
+            </div>
+
+            <div class="details-actions">
+                <button class="btn-outline">↓ Baixar ficheiro</button>
+                <button class="btn-primary">● Ver feedback completo</button>
+            </div>
+
+        </aside>
+
+    </section>
         </main>
     </div>
 

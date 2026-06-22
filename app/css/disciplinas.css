@@ -1,0 +1,471 @@
+/* =========================================
+   CABOLEARN - DISCIPLINAS.CSS
+   Cards completos ajustados ao layout atual
+========================================= */
+
+:root {
+    --surface: #ffffff;
+    --text-primary: #1a1a2e;
+    --text-secondary: #6b7280;
+    --text-muted: #9ca3af;
+    --border: #e5e7eb;
+    --accent: #3b6ef5;
+
+    --math-color: #3b6ef5;
+    --math-bg: #eff3ff;
+
+    --port-color: #22c55e;
+    --port-bg: #f0fdf4;
+
+    --tic-color: #a855f7;
+    --tic-bg: #faf5ff;
+
+    --eng-color: #ec4899;
+    --eng-bg: #fdf2f8;
+
+    --hist-color: #f97316;
+    --hist-bg: #fff7ed;
+
+    --fis-color: #14b8a6;
+    --fis-bg: #f0fdfa;
+}
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.page-heading {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.page-heading h1 {
+    font-size: 3.33vw;
+    font-weight: 400;
+    line-height: 1;
+    color: #000000;
+    margin-bottom: 1.65vh;
+}
+
+.page-heading p {
+    font-size: 1.25vw;
+    font-weight: 400;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.55);
+}
+.disciplinas-page .main-content {
+    width: 66vw;
+}
+
+/* =========================================
+   GRID DOS CARDS
+========================================= */
+
+.cards-grid {
+    position: absolute;
+    left: 0;
+    top: 13.3vh;
+
+    /* A área dos cards fica mais larga */
+    width: 74.2vw;
+    height: 69.46vh;
+
+    display: grid;
+
+    /* Cards mais largos */
+    grid-template-columns: repeat(3, 21.8vw);
+
+    /* Mantém 3 colunas bem espaçadas */
+    column-gap: 1.4vw;
+
+    /*
+       Aumenta a altura dos cards, mas reduz o espaço entre linhas
+       para manter a base alinhada com a sidebar.
+    */
+    grid-auto-rows: 28.2vh;
+    row-gap: 6.93vh;
+}
+
+/* =========================================
+   CARD BASE
+========================================= */
+
+.disc-card {
+    background: var(--surface);
+    border-radius: 1.2vw;
+    border: 1px solid var(--border);
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.12vw rgba(0, 0, 0, 0.18);
+
+    padding: 1.2vh 1.1vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.85vh;
+
+    min-width: 0;
+    overflow: visible;
+}
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75vw;
+    min-height: 4.8vh;
+}
+
+.disc-icon {
+    width: 3.25vw;
+    height: 3.25vw;
+    border-radius: 0.72vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.card-title-block {
+    flex: 1;
+    min-width: 0;
+    padding-top: 0.15vh;
+}
+
+.card-title-block h2 {
+    font-size: 1.1vw;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.35vh;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-title-block p {
+    font-size: 0.78vw;
+    color: var(--text-secondary);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* =========================================
+   TEMA ATUAL + PRÓXIMA AULA
+========================================= */
+
+.card-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.8vw;
+}
+
+.tema-row {
+    min-width: 0;
+    flex: 1;
+}
+
+.tema-row span {
+    display: block;
+    font-size: 0.58vw;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25vh;
+}
+
+.tema-row strong {
+    display: block;
+    max-width: 11vw;
+    font-size: 0.78vw;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.next-class {
+    width: 5.2vw;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.next-class-label {
+    font-size: 0.58vw;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25vh;
+    white-space: nowrap;
+}
+
+.next-class-time {
+    font-size: 0.78vw;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    margin-bottom: 0.55vh;
+}
+
+.room-badge {
+    min-width: 4.58vw;
+    height: 2.25vh;
+    padding: 0 0.7vw;
+    border-radius: 999px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.68vw;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75vw;
+
+    font-size: 0.68vw;
+    color: var(--text-secondary);
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    padding: 0.75vh 0;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.35vw;
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.stat img {
+    width: 0.88vw;
+    height: 0.88vw;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.stat span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.divider-v {
+    width: 1px;
+    height: 1.6vh;
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+/* =========================================
+   PROGRESSO
+========================================= */
+
+.progress-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45vh;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 0.62vw;
+    color: var(--text-muted);
+}
+
+.progress-label strong {
+    font-size: 0.68vw;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.progress-track {
+    height: 0.55vh;
+    background: #e9ecef;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.4s;
+}
+
+/* =========================================
+   AÇÕES
+========================================= */
+
+.card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.action-btns {
+    display: flex;
+    gap: 0.7vw;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.32vw;
+
+    font-size: 0.68vw;
+    font-weight: 500;
+    color: var(--text-secondary);
+
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.action-btn:hover {
+    color: var(--accent);
+}
+
+.action-btn img {
+    width: 0.88vw;
+    height: 0.88vw;
+    object-fit: contain;
+}
+
+.ver-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.3vw;
+
+    font-size: 0.68vw;
+    font-weight: 600;
+    color: var(--accent);
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.ver-btn span {
+    font-size: 0.95vw;
+    line-height: 1;
+}
+
+/* =========================================
+   CORES POR DISCIPLINA
+========================================= */
+
+.math .disc-icon {
+    background: var(--math-bg);
+    color: var(--math-color);
+}
+
+.math .progress-fill {
+    background: var(--math-color);
+}
+
+.math .room-badge {
+    background: var(--math-bg);
+    color: var(--math-color);
+}
+
+.port .disc-icon {
+    background: var(--port-bg);
+    color: var(--port-color);
+}
+
+.port .progress-fill {
+    background: var(--port-color);
+}
+
+.port .room-badge {
+    background: var(--port-bg);
+    color: var(--port-color);
+}
+
+.tic .disc-icon {
+    background: var(--tic-bg);
+    color: var(--tic-color);
+}
+
+.tic .progress-fill {
+    background: var(--tic-color);
+}
+
+.tic .room-badge {
+    background: var(--tic-bg);
+    color: var(--tic-color);
+}
+
+.eng .disc-icon {
+    background: var(--eng-bg);
+    color: var(--eng-color);
+}
+
+.eng .progress-fill {
+    background: var(--eng-color);
+}
+
+.eng .room-badge {
+    background: var(--eng-bg);
+    color: var(--eng-color);
+}
+
+.hist .disc-icon {
+    background: var(--hist-bg);
+    color: var(--hist-color);
+}
+
+.hist .progress-fill {
+    background: var(--hist-color);
+}
+
+.hist .room-badge {
+    background: var(--hist-bg);
+    color: var(--hist-color);
+}
+
+.fis .disc-icon {
+    background: var(--fis-bg);
+    color: var(--fis-color);
+}
+
+.fis .progress-fill {
+    background: var(--fis-color);
+}
+
+.fis .room-badge {
+    background: var(--fis-bg);
+    color: var(--fis-color);
+}

@@ -1,239 +1,469 @@
 /* =========================================
    CABOLEARN - NOTIFICACOES.CSS
-   Estilo específico da página de Notificações
+   Conteúdo específico da página Notificações
 ========================================= */
 
-.notificacoes-main {
-    width: 61.56vw; /* Alinhado ao padrão da sidebar comum */
+.notificacoes-page .main-content {
+    width: 67.5vw;
 }
 
 /* =========================================
-   FILTROS DE NOTIFICAÇÕES
+   CABEÇALHO DA PÁGINA
 ========================================= */
 
-.notifications-filters {
+.page-header {
     position: absolute;
     left: 0;
-    top: 12.1vh;
-    width: 100%;
-    
+    top: 0;
+
+    width: 67.5vw;
+
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
-.filter-tabs {
-    display: flex;
-    align-items: center;
-    gap: 0.8vw;
+.page-header-text h1 {
+    font-size: 3.33vw;
+    font-weight: 400;
+    line-height: 1;
+    color: #000000;
+
+    margin-bottom: 1.05vh;
 }
 
-.filter-btn {
-    height: 4.2vh;
-    padding: 0 1.2vw;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 0.55vw;
-    
-    font-family: "Inter", Arial, sans-serif;
-    font-size: 0.83vw;
-    font-weight: 500;
+.page-header-text p {
+    font-size: 1.25vw;
+    font-weight: 400;
+    line-height: 1.2;
     color: rgba(0, 0, 0, 0.55);
-    cursor: pointer;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-    
+}
+
+.mark-all-btn {
+    margin-top: 2.25vh;
+
+    height: 4.8vh;
+    padding: 0 1.45vw;
+
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 0.75vw;
+
+    background: #FFFFFF;
+    color: #4579E1;
+
     display: flex;
     align-items: center;
-    gap: 0.35vw;
-}
+    gap: 0.55vw;
 
-.filter-btn span {
-    font-size: 0.75vw;
-    opacity: 0.6;
-}
-
-.filter-btn:hover {
-    background: rgba(69, 121, 225, 0.05);
-    color: var(--accent);
-    border-color: rgba(69, 121, 225, 0.35);
-}
-
-.filter-btn.active {
-    background: var(--accent);
-    color: #FFFFFF;
-    border-color: var(--accent);
-}
-
-.mark-all-read-btn {
-    background: transparent;
-    border: none;
     font-family: "Inter", Arial, sans-serif;
     font-size: 0.88vw;
-    font-weight: 600;
-    color: var(--accent);
+    font-weight: 700;
+
     cursor: pointer;
+
+    box-shadow: 0 0.25vh 0.5vh rgba(0, 0, 0, 0.04);
 }
 
-.mark-all-read-btn:hover {
-    text-decoration: underline;
+.mark-all-btn svg {
+    width: 1.1vw;
+    height: 1.1vw;
+}
+
+.mark-all-btn:hover {
+    background: rgba(69, 121, 225, 0.08);
 }
 
 /* =========================================
-   CARD DA LISTA DE NOTIFICAÇÕES
+   FILTROS
 ========================================= */
 
-.notifications-list-card {
+.filter-tabs {
     position: absolute;
     left: 0;
-    top: 18.5vh;
-    width: 100%;
-    height: 58.3vh; /* Mesma altura proporcional da tabela de submissões */
-    
+    top: 12.55vh;
+
+    display: flex;
+    align-items: center;
+    gap: 0.7vw;
+}
+
+.filter-tab {
+    height: 4.35vh;
+    min-width: 5.2vw;
+
+    padding: 0 1.35vw;
+
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    border-radius: 999px;
+
     background: #FFFFFF;
-    border-radius: var(--card-radius);
-    box-shadow: 0.1vw 0.74vh 0.74vh 0.15vw rgba(0, 0, 0, 0.2);
-    
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
+    color: rgba(0, 0, 0, 0.58);
 
-/* =========================================
-   ITEM DE NOTIFICAÇÃO (LINHA)
-========================================= */
-
-.notification-item {
-    height: 9.1vh; /* Mantém o ritmo vertical exato da tabela de submissões */
-    display: grid;
-    grid-template-columns: 3.5vw 1fr auto;
-    column-gap: 1.2vw;
-    align-items: center;
-    padding: 0 1.8vw;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    transition: background 0.15s ease;
-}
-
-.notification-item:hover {
-    background: rgba(0, 0, 0, 0.015);
-}
-
-/* Destaque para não lidas */
-.notification-item.unread {
-    background: rgba(69, 121, 225, 0.03);
-}
-
-.notification-item.unread:hover {
-    background: rgba(69, 121, 225, 0.05);
-}
-
-/* =========================================
-   ÍCONES E PLANOS DE FUNDO (CORES POR DISCIPLINA)
-========================================= */
-
-.notification-icon-wrapper {
-    width: 2.6vw;
-    height: 2.6vw;
-    border-radius: 0.55vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    gap: 0.45vw;
+
+    font-size: 0.85vw;
+    font-weight: 400;
+
+    cursor: pointer;
 }
 
-.notification-icon-wrapper img {
-    width: 1.3vw;
-    height: 1.3vw;
-    object-fit: contain;
+.filter-tab.active {
+    background: #4579E1;
+    border-color: #4579E1;
+    color: #FFFFFF;
 }
 
-/* Cores de fundo mapeadas do disciplinas.css & perfil.css */
-.math-bg  { background: #eff3ff; color: #3b6ef5; }
-.port-bg  { background: #f0fdf4; color: #22c55e; }
-.tic-bg   { background: #faf5ff; color: #a855f7; }
-.eng-bg   { background: #fdf2f8; color: #ec4899; }
-.hist-bg  { background: #fff7ed; color: #f97316; }
-.bio-bg   { background: rgba(76, 138, 49, 0.15); color: #44802c; }
-.alert-bg { background: rgba(240, 85, 85, 0.15); color: #E85A5A; }
+.filter-tab .count {
+    min-width: 1.25vw;
+    height: 1.25vw;
 
-/* Inverter cor do ícone caso necessário */
-.notification-icon-wrapper img {
-    filter: opacity(0.85);
-}
+    padding: 0 0.35vw;
 
-/* =========================================
-   TEXTO DA NOTIFICAÇÃO
-========================================= */
+    border-radius: 999px;
 
-.notification-body {
-    display: flex;
-    flex-direction: column;
+    background: rgba(0, 0, 0, 0.08);
+    color: rgba(0, 0, 0, 0.58);
+
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    gap: 0.4vh;
-    min-width: 0;
-}
 
-.notification-text {
-    font-size: 0.88vw;
-    color: var(--text-primary);
-    line-height: 1.3;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.notification-text strong {
+    font-size: 0.62vw;
     font-weight: 700;
 }
 
-.notification-link {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.notification-link:hover {
-    text-decoration: underline;
-}
-
-.highlight-text {
-    font-weight: 600;
-    color: #000000;
-}
-
-.notification-time {
-    font-size: 0.73vw;
-    color: rgba(0, 0, 0, 0.42);
+.filter-tab.active .count {
+    background: rgba(255, 255, 255, 0.28);
+    color: #FFFFFF;
 }
 
 /* =========================================
-   AÇÕES / INDICADORES DOS ITEMS
+   LISTA DE NOTIFICAÇÕES
 ========================================= */
 
-.notification-actions {
+.notif-list {
+    position: absolute;
+    left: 0;
+    top: 19.35vh;
+
+    width: 61.8vw;
+    height: 57.3vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.35vh;
+
+    overflow-y: auto;
+    padding-right: 0.35vw;
+}
+
+.notif-list::-webkit-scrollbar {
+    width: 0.35vw;
+}
+
+.notif-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.notif-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 999px;
+}
+
+/* =========================================
+   CARD DA NOTIFICAÇÃO
+========================================= */
+
+.notif-card {
+    position: relative;
+
+    width: 100%;
+    min-height: 11.9vh;
+
+    background: #FFFFFF;
+    border-radius: 1vw;
+
+    display: flex;
+    align-items: center;
+    gap: 1.05vw;
+
+    padding: 1.55vh 1.65vw 1.45vh 1.45vw;
+
+    border: 1px solid rgba(0, 0, 0, 0.045);
+    box-shadow: 0.1vw 0.55vh 0.7vh rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.notif-card:hover {
+    transform: translateY(-0.15vh);
+    box-shadow: 0.1vw 0.75vh 1vh rgba(0, 0, 0, 0.12);
+}
+
+.notif-card.unread {
+    background: #F6F9FF;
+    border-left: 0.22vw solid #4579E1;
+}
+
+/* =========================================
+   ÍCONES
+========================================= */
+
+.notif-icon {
+    width: 3.15vw;
+    height: 3.15vw;
+
+    border-radius: 0.8vw;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.5vw;
+
+    flex-shrink: 0;
+
+    font-size: 1vw;
+    font-weight: 700;
+}
+
+.notif-icon svg {
+    width: 1.35vw;
+    height: 1.35vw;
+}
+
+.icon-math {
+    background: rgba(85, 142, 240, 0.22);
+    color: #558EF0;
+}
+
+.icon-port {
+    background: rgba(85, 240, 100, 0.22);
+    color: #35B94E;
+}
+
+.icon-tic {
+    background: rgba(199, 85, 240, 0.22);
+    color: #C755F0;
+}
+
+.icon-eng {
+    background: rgba(240, 85, 232, 0.22);
+    color: #E94BE1;
+}
+
+.icon-hist {
+    background: rgba(240, 168, 85, 0.22);
+    color: #F0A855;
+}
+
+.icon-fis {
+    background: rgba(85, 240, 206, 0.22);
+    color: #39CDB1;
+}
+
+.icon-alert {
+    background: rgba(239, 68, 68, 0.12);
+    color: #EF4444;
+}
+
+.icon-system {
+    background: rgba(69, 121, 225, 0.14);
+    color: #4579E1;
+}
+
+/* =========================================
+   CONTEÚDO DO CARD
+========================================= */
+
+.notif-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.notif-top-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1vw;
+
+    margin-bottom: 0.55vh;
+}
+
+.notif-title {
+    display: flex;
+    align-items: center;
+    gap: 0.55vw;
+
+    font-size: 1vw;
+    font-weight: 700;
+    color: #000000;
+
+    line-height: 1.15;
 }
 
 .unread-dot {
     width: 0.55vw;
     height: 0.55vw;
-    background: var(--accent);
+
+    background: #4579E1;
     border-radius: 50%;
-    display: block;
+
+    flex-shrink: 0;
 }
 
-/* Notificação do tipo Warning específica */
-.notification-item.warning .notification-text {
-    color: #b42222;
+.notif-time {
+    font-size: 0.72vw;
+    color: rgba(0, 0, 0, 0.42);
+
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.notif-desc {
+    font-size: 0.86vw;
+    line-height: 1.35;
+    color: rgba(0, 0, 0, 0.6);
+
+    margin-bottom: 1.25vh;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* =========================================
-   ÁREA DA PAGINAÇÃO (RODAPÉ FIXO DO CARD)
+   META / TAGS / AÇÕES
 ========================================= */
 
-.notifications-list-card .pagination-area {
-    margin-top: auto; /* Empurra para o fundo do card */
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
+.notif-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+}
+
+.notif-tag {
+    min-width: 4.6vw;
+    height: 2.05vh;
+
+    padding: 0 0.65vw;
+
+    border-radius: 999px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.66vw;
+    font-weight: 700;
+}
+
+.tag-math {
+    background: rgba(85, 142, 240, 0.2);
+    color: #558EF0;
+}
+
+.tag-port {
+    background: rgba(85, 240, 100, 0.2);
+    color: #35B94E;
+}
+
+.tag-tic {
+    background: rgba(199, 85, 240, 0.2);
+    color: #C755F0;
+}
+
+.tag-eng {
+    background: rgba(240, 85, 232, 0.2);
+    color: #E94BE1;
+}
+
+.tag-hist {
+    background: rgba(240, 168, 85, 0.2);
+    color: #F0A855;
+}
+
+.tag-fis {
+    background: rgba(85, 240, 206, 0.2);
+    color: #39CDB1;
+}
+
+.tag-alert {
+    background: rgba(239, 68, 68, 0.12);
+    color: #EF4444;
+}
+
+.tag-system {
+    background: rgba(69, 121, 225, 0.14);
+    color: #4579E1;
+}
+
+.notif-action {
+    margin-left: auto;
+
+    font-size: 0.76vw;
+    font-weight: 700;
+    color: #4579E1;
+
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.notif-action:hover {
+    text-decoration: underline;
+}
+
+.notif-dismiss {
+    width: 1.8vw;
+    height: 1.8vw;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+    color: rgba(0, 0, 0, 0.42);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.notif-dismiss:hover {
+    background: rgba(0, 0, 0, 0.06);
+    color: #000000;
+}
+
+.notif-dismiss svg {
+    width: 1vw;
+    height: 1vw;
+}
+
+.mark-all-btn img {
+    width: 1.05vw;
+    height: 1.05vw;
+    object-fit: contain;
+    display: block;
+}
+
+.notif-icon img {
+    width: 1.45vw;
+    height: 1.45vw;
+    object-fit: contain;
+    display: block;
+}
+
+.notif-dismiss img {
+    width: 0.9vw;
+    height: 0.9vw;
+    object-fit: contain;
+    display: block;
+    opacity: 0.65;
+}
+
+.notif-dismiss:hover img {
+    opacity: 1;
 }

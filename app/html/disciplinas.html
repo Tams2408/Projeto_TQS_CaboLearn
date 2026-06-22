@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaboLearn - Disciplinas</title>
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/comum.css">
     <link rel="stylesheet" href="./css/disciplinas.css">
 </head>
@@ -29,7 +30,7 @@
                     <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
                 </div>
 
-                <a href="./login.html" class="logout-button">
+                <a href="/logout" class="logout-button">
                     <img src="./assets/icons/Logout.png" alt="sair">
                     <span>Sair</span>
                 </a>
@@ -42,13 +43,13 @@
 
         <aside class="sidebar">
             <nav class="sidebar-menu">
-                <a href="index.html" class="menu-item">             <img src=".\assets\icons\sidebar\Home.png" alt="inicio"> <span>Início</span></a>
-                <a href="disciplinas.html" class="menu-item active">       <img src=".\assets\icons\sidebar\Books.png" alt="">      <span>Disciplinas</span></a>
-                <a href="upload.html" class="menu-item">            <img src=".\assets\icons\sidebar\Upload.png" alt="">     <span>Upload</span></a>
-                <a href="submissoes.html" class="menu-item">        <img src=".\assets\icons\sidebar\Document.png" alt="">   <span>Submissões</span></a>
-                <a href="historico.html" class="menu-item">         <img src=".\assets\icons\sidebar\Time.png" alt="">       <span>Histórico</span></a>
-                <a href="notificacoes.html" class="menu-item">      <img src=".\assets\icons\sidebar\Notification.png"alt=""><span>Notificações</span></a>
-                <a href="perfil.html" class="menu-item">            <img src=".\assets\icons\sidebar\Profile.png">           <span>Perfil</span></a>
+                <a href="/index" class="menu-item">             <img src=".\assets\icons\sidebar\Home.png" alt="inicio"> <span>Início</span></a>
+                <a href="/disciplinas" class="menu-item active">       <img src=".\assets\icons\sidebar\Books.png" alt="">      <span>Disciplinas</span></a>
+                <a href="/upload" class="menu-item">            <img src=".\assets\icons\sidebar\Upload.png" alt="">     <span>Upload</span></a>
+                <a href="/submissoes." class="menu-item">        <img src=".\assets\icons\sidebar\Document.png" alt="">   <span>Submissões</span></a>
+                <a href="/historico" class="menu-item">         <img src=".\assets\icons\sidebar\Time.png" alt="">       <span>Histórico</span></a>
+                <a href="/notificacoes" class="menu-item">      <img src=".\assets\icons\sidebar\Notification.png"alt=""><span>Notificações</span></a>
+                <a href="/perfil" class="menu-item">            <img src=".\assets\icons\sidebar\Profile.png">           <span>Perfil</span></a>
             </nav>
 
             <div class="sidebar-footer">
@@ -58,7 +59,350 @@
         </aside>
 
         <main class="main-content">
-            
+
+            <section class="page-heading">
+                <h1>Disciplinas</h1>
+                <p>Acompanhe conteúdos, materiais e tarefas de cada disciplina</p>
+            </section>
+
+            <section class="cards-grid">
+                <article class="disc-card math">
+                    <div class="card-header">
+                        <img src=".\assets\icons\inicio\3\mat.png" alt="matematica" class="disc-icon">
+                        <div class="card-title-block">
+                            <h2>Matemática</h2>
+                            <p>Prof: João Ferreira</p>
+                        </div>
+                    </div>
+
+                <div class="card-info-row">
+                    <div class="tema-row">
+                        <span>Tema Atual</span>
+                        <strong>Funções e Gráficos</strong>
+                    </div>
+
+                    <div class="next-class">
+                        <div class="next-class-label">Próxima aula</div>
+                        <div class="next-class-time">Hoje, 08:00</div>
+                        <span class="room-badge">Sala 101</span>
+                    </div>
+                </div>
+
+                    <div class="stats-row">
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Clipboard.png" alt="">
+                            <span>3 tarefas pendentes</span>
+                        </div>
+
+                        <div class="divider-v"></div>
+
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Document.png" alt="">
+                            <span>2 materiais novos</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-block">
+                        <div class="progress-label">
+                            <span>Progresso</span>
+                            <strong>70%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <div class="action-btns">
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Folder.png" alt="">Materiais</a>
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Clipboard.png" alt="">Tarefas</a>
+                        </div>
+                        <a href="#" class="ver-btn">Ver Disciplina <span>→</span></a>
+                    </div>
+                </article>
+
+                <article class="disc-card port">
+                    <div class="card-header">
+                        <img src=".\assets\icons\inicio\3\pt.png" alt="pt" class="disc-icon">
+                        <div class="card-title-block">
+                            <h2>Português</h2>
+                            <p>Prof: Ana Oliveira</p>
+                        </div>
+                    </div>
+
+                <div class="card-info-row">
+                    <div class="tema-row">
+                        <span>Tema Atual</span>
+                        <strong>Interpretação de texto</strong>
+                    </div>
+
+                    <div class="next-class">
+                        <div class="next-class-label">Próxima aula</div>
+                        <div class="next-class-time">Hoje, 10:00</div>
+                        <span class="room-badge">Sala 204</span>
+                    </div>
+                </div>
+
+                    <div class="stats-row">
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Clipboard(1).png" alt="">
+                            <span>3 tarefas pendentes</span>
+                        </div>
+
+                        <div class="divider-v"></div>
+
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Document(1).png" alt="">
+                            <span>2 materiais novos</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-block">
+                        <div class="progress-label">
+                            <span>Progresso</span>
+                            <strong>65%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <div class="action-btns">
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Folder.png" alt="">Materiais</a>
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Clipboard.png" alt="">Tarefas</a>
+                        </div>
+                        <a href="#" class="ver-btn">Ver Disciplina <span>→</span></a>
+                    </div>
+                </article>
+
+                <article class="disc-card tic">
+                    <div class="card-header">
+                        <img src=".\assets\icons\inicio\3\tic.png" alt="tic" class="disc-icon">
+                        <div class="card-title-block">
+                            <h2>TIC</h2>
+                            <p>Prof: Carlos Mendes</p>
+                        </div>
+                    </div>
+
+                <div class="card-info-row">
+                    <div class="tema-row">
+                        <span>Tema Atual</span>
+                        <strong>Variáveis e Estruturas</strong>
+                    </div>
+
+                    <div class="next-class">
+                        <div class="next-class-label">Próxima aula</div>
+                        <div class="next-class-time">Hoje, 13:30</div>
+                        <span class="room-badge">Online</span>
+                    </div>
+                </div>
+
+                    <div class="stats-row">
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Clipboard(2).png" alt="">
+                            <span>3 tarefas pendentes</span>
+                        </div>
+
+                        <div class="divider-v"></div>
+
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Document(2).png" alt="">
+                            <span>2 materiais novos</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-block">
+                        <div class="progress-label">
+                            <span>Progresso</span>
+                            <strong>60%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <div class="action-btns">
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Folder.png" alt="">Materiais</a>
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Clipboard.png" alt="">Tarefas</a>
+                        </div>
+                        <a href="#" class="ver-btn">Ver Disciplina <span>→</span></a>
+                    </div>
+                </article>
+
+                <article class="disc-card eng">
+                    <div class="card-header">
+                        <img src=".\assets\icons\disciplinas\en.png" alt="ingles" class="disc-icon">
+                        <div class="card-title-block">
+                            <h2>Inglês</h2>
+                            <p>Prof: Laura Silva</p>
+                        </div>
+                    </div>
+
+                <div class="card-info-row">
+                    <div class="tema-row">
+                        <span>Tema Atual</span>
+                        <strong>Present Simple</strong>
+                    </div>
+
+                    <div class="next-class">
+                        <div class="next-class-label">Próxima aula</div>
+                        <div class="next-class-time">Quinta, 09:00</div>
+                        <span class="room-badge">Sala 101</span>
+                    </div>
+                </div>
+
+                    <div class="stats-row">
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Clipboard(3).png" alt="">
+                            <span>3 tarefas pendentes</span>
+                        </div>
+
+                        <div class="divider-v"></div>
+
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Document(3).png" alt="">
+                            <span>2 materiais novos</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-block">
+                        <div class="progress-label">
+                            <span>Progresso</span>
+                            <strong>50%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 50%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <div class="action-btns">
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Folder.png" alt="">Materiais</a>
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Clipboard.png" alt="">Tarefas</a>
+                        </div>
+                        <a href="#" class="ver-btn">Ver Disciplina <span>→</span></a>
+                    </div>
+                </article>
+
+                <article class="disc-card hist">
+                    <div class="card-header">
+                        <img src=".\assets\icons\disciplinas\hist.png" alt="ingles" class="disc-icon">
+                        <div class="card-title-block">
+                            <h2>História</h2>
+                            <p>Prof: Ricardo Lima</p>
+                        </div>
+                    </div>
+
+                <div class="card-info-row">
+                    <div class="tema-row">
+                        <span>Tema Atual</span>
+                        <strong>Descobrimentos Portugueses</strong>
+                    </div>
+
+                    <div class="next-class">
+                        <div class="next-class-label">Próxima aula</div>
+                        <div class="next-class-time">Sexta, 11:00</div>
+                        <span class="room-badge">Sala 101</span>
+                    </div>
+                </div>
+
+                    <div class="stats-row">
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Clipboard(4).png" alt="">
+                            <span>3 tarefas pendentes</span>
+                        </div>
+
+                        <div class="divider-v"></div>
+
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Document(4).png" alt="">
+                            <span>2 materiais novos</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-block">
+                        <div class="progress-label">
+                            <span>Progresso</span>
+                            <strong>75%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <div class="action-btns">
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Folder.png" alt="">Materiais</a>
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Clipboard.png" alt="">Tarefas</a>
+                        </div>
+                        <a href="#" class="ver-btn">Ver Disciplina <span>→</span></a>
+                    </div>
+                </article>
+
+                <article class="disc-card fis">
+                    <div class="card-header">
+                        <img src=".\assets\icons\disciplinas\fisica.png" alt="ingles" class="disc-icon">
+                        <div class="card-title-block">
+                            <h2>Física</h2>
+                            <p>Prof: Marcelo Costa</p>
+                        </div>
+                    </div>
+
+                <div class="card-info-row">
+                    <div class="tema-row">
+                        <span>Tema Atual</span>
+                        <strong>Leis de Newton</strong>
+                    </div>
+
+                    <div class="next-class">
+                        <div class="next-class-label">Próxima aula</div>
+                        <div class="next-class-time">Sexta, 14:30</div>
+                        <span class="room-badge">Sala 206</span>
+                    </div>
+                </div>
+
+                    <div class="stats-row">
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Clipboard(5).png" alt="">
+                            <span>3 tarefas pendentes</span>
+                        </div>
+
+                        <div class="divider-v"></div>
+
+                        <div class="stat">
+                            <img src=".\assets\icons\disciplinas\Document(5).png" alt="">
+                            <span>2 materiais novos</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-block">
+                        <div class="progress-label">
+                            <span>Progresso</span>
+                            <strong>50%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 50%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <div class="action-btns">
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Folder.png" alt="">Materiais</a>
+                            <a href="#" class="action-btn"><img src=".\assets\icons\disciplinas\Clipboard.png" alt="">Tarefas</a>
+                        </div>
+                        <a href="#" class="ver-btn">Ver Disciplina <span>→</span></a>
+                    </div>
+                </article>
+
+            </section>
         </main>
     </div>
 

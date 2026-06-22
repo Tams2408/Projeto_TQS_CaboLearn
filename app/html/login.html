@@ -7,12 +7,14 @@
 
     <title>CaboLearn - Login</title>
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/login.css">
 </head>
+
 <body>
 
     <div class="login-page">
-        
+
         <header class="login-header">
             <div class="logo-area">
                 <img src=".\assets\img\logo.png" alt="CaboLearn" class="logo-img">
@@ -51,14 +53,19 @@
                     <p>Acesse a sua conta para continuar</p>
                 </div>
 
-                <form action="index.html" method="POST" class="login-form">
+                <form action="/login" method="POST" class="login-form">
 
                     <div class="form-group">
+                        {% if erro %}
+                            <div class="login-error">
+                                {{ erro }}
+                            </div>
+                        {% endif %}
                         <label for="email">Email</label>
-                        
+
                         <div class="input-box">
                             <img src=".\assets\icons\login\Email.png" alt="email" class="input-icon">
-                            <input type="email" id="email" name="email" placeholder="exemplo@cabo.com" required>
+                            <input type="email" id="email" name="email" placeholder="exemplo@cabolearn.com" required>
                         </div>
                     </div>
 
@@ -67,9 +74,9 @@
                         <div class="input-box">
                             <img src=".\assets\icons\login\Padlock.png" alt="palavra-passe" class="input-icon">
                             <input type="password" id="password" name="password" placeholder="........" required>
-                        
+
                             <button type="button" class="eye-button">
-                                <img src=".\assets\icons\login\Invisible.png" alt="mostrar palavra-passe">
+
                             </button>
                         </div>
                     </div>
@@ -102,4 +109,5 @@
 
 
 </body>
+
 </html>

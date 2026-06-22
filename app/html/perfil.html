@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaboLearn - Perfil</title>
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/comum.css">
     <link rel="stylesheet" href="./css/perfil.css">
 </head>
@@ -29,7 +30,7 @@
                     <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
                 </div>
 
-                <a href="./login.html" class="logout-button">
+                <a href="/logout" class="logout-button">
                     <img src="./assets/icons/Logout.png" alt="sair">
                     <span>Sair</span>
                 </a>
@@ -42,13 +43,13 @@
 
         <aside class="sidebar">
             <nav class="sidebar-menu">
-                <a href="index.html" class="menu-item">             <img src=".\assets\icons\sidebar\Home.png" alt="inicio"> <span>Início</span></a>
-                <a href="disciplinas.html" class="menu-item">       <img src=".\assets\icons\sidebar\Books.png" alt="">      <span>Disciplinas</span></a>
-                <a href="upload.html" class="menu-item">            <img src=".\assets\icons\sidebar\Upload.png" alt="">     <span>Upload</span></a>
-                <a href="submissoes.html" class="menu-item">        <img src=".\assets\icons\sidebar\Document.png" alt="">   <span>Submissões</span></a>
-                <a href="historico.html" class="menu-item">         <img src=".\assets\icons\sidebar\Time.png" alt="">       <span>Histórico</span></a>
-                <a href="notificacoes.html" class="menu-item">      <img src=".\assets\icons\sidebar\Notification.png"alt=""><span>Notificações</span></a>
-                <a href="perfil.html" class="menu-item active">            <img src=".\assets\icons\sidebar\Profile.png">           <span>Perfil</span></a>
+                <a href="/index" class="menu-item">             <img src=".\assets\icons\sidebar\Home.png" alt="inicio"> <span>Início</span></a>
+                <a href="/disciplinas" class="menu-item">       <img src=".\assets\icons\sidebar\Books.png" alt="">      <span>Disciplinas</span></a>
+                <a href="/upload" class="menu-item">            <img src=".\assets\icons\sidebar\Upload.png" alt="">     <span>Upload</span></a>
+                <a href="/submissoes" class="menu-item">        <img src=".\assets\icons\sidebar\Document.png" alt="">   <span>Submissões</span></a>
+                <a href="/historico" class="menu-item">         <img src=".\assets\icons\sidebar\Time.png" alt="">       <span>Histórico</span></a>
+                <a href="/notificacoes" class="menu-item">      <img src=".\assets\icons\sidebar\Notification.png"alt=""><span>Notificações</span></a>
+                <a href="/perfil" class="menu-item active">     <img src=".\assets\icons\sidebar\Profile.png">           <span>Perfil</span></a>
             </nav>
 
             <div class="sidebar-footer">
@@ -57,13 +58,239 @@
             </div>
         </aside>
 
-        <main class="main-content">
-            
-        </main>
+        <main class="main-content perfil-main">
+
+    <!-- TÍTULO -->
+    <section class="page-heading">
+        <h1>Perfil</h1>
+    </section>
+
+    <!-- CARD SUPERIOR DO PERFIL -->
+    <section class="profile-hero-card">
+        <div class="profile-photo-area">
+            <img src="./assets/img/avatar.jpg" alt="Foto do estudante" class="profile-photo">
+
+            <button class="photo-button" type="button">
+                <img src=".\assets\icons\perfil\Camera.png" alt="">
+            </button>
+        </div>
+
+        <div class="profile-main-info">
+            <h2>Elves Fernando de Pina Garcia</h2>
+
+            <div class="profile-meta">
+                <span>
+                    <img src=".\assets\icons\perfil\User.png" alt="">
+                    Estudante
+                </span>
+                
+            </div>
+
+            <div class="profile-meta-row">
+                <span>
+                    <img src=".\assets\icons\perfil\Cap.png" alt="">
+                    12º Ano
+                </span>
+                <span>
+                    <img src=".\assets\icons\perfil\Name.png" alt="">
+                    Nº de aluno: 6617</span>
+            </div>
+
+            <div class="profile-badges">
+                <span class="badge-active"><span class="status-dot"></span> Ativo</span>
+                <span class="badge-regular">Aluno regular</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYOUT INFERIOR -->
+    <section class="profile-layout">
+
+        <!-- DADOS PESSOAIS / ACADÉMICOS -->
+        <section class="profile-data-card">
+
+            <h2>Dados Pessoais</h2>
+
+            <div class="form-grid two-columns">
+                <div class="profile-field">
+                    <label>Nome completo</label>
+                    <input type="text" value="Elves Fernando de Pina Garcia" readonly>
+                </div>
+
+                <div class="profile-field">
+                    <label>Email</label>
+                    <input type="email" value="elves.garcia@cabo.com" readonly>
+                </div>
+
+                <div class="profile-field">
+                    <label>Telefone</label>
+                    <input type="text" value="+238 979 72 80" readonly>
+                </div>
+
+                <div class="profile-field">
+                    <label>Data nascimento</label>
+                    <input type="text" value="14 / 09 / 2004" readonly>
+                </div>
+            </div>
+
+            <h2 class="section-title-academic">Dados académicos</h2>
+
+            <div class="form-grid three-columns">
+                <div class="profile-field">
+                    <label>Ano de escolaridade</label>
+                    <input type="text" value="12º Ano" readonly>
+                </div>
+
+                <div class="profile-field">
+                    <label>Turma</label>
+                    <input type="text" value="12º A" readonly>
+                </div>
+
+                <div class="profile-field">
+                    <label>Ano Letivo</label>
+                    <input type="text" value="2025 / 2026" readonly>
+                </div>
+            </div>
+
+            <div class="form-grid two-columns academic-second-row">
+                <div class="profile-field">
+                    <label>Professor diretor da turma</label>
+                    <input type="text" value="Prof. João Ferreira" readonly>
+                </div>
+
+                <div class="profile-field">
+                    <label>Instituição</label>
+                    <input type="text" value="Escola Secundária Liceu Amílcar Cabral" readonly>
+                </div>
+            </div>
+
+            <div class="subjects-section">
+                <label>Disciplinas inscritas</label>
+
+                <div class="subjects-list">
+                    <span class="subject-item math"><img src=".\assets\icons\perfil\Calculator.png" alt="">Matemática</span>
+                    <span class="subject-item port"><img src=".\assets\icons\perfil\Book.png" alt="">Português</span>
+                    <span class="subject-item tic"><img src=".\assets\icons\perfil\Monitor.png" alt="">TIC</span>
+                    <span class="subject-item eng"><img src=".\assets\icons\perfil\Geography.png" alt="">Inglês</span>
+                    <span class="subject-item hist"><img src=".\assets\icons\perfil\Pillar.png" alt="">História</span>
+                    <span class="subject-item fis"><img src=".\assets\icons\perfil\Physics.png" alt="">Física</span>
+                    <span class="subject-item bio"><img src=".\assets\icons\perfil\Planting.png" alt="">Biologia</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- COLUNA DIREITA -->
+        <aside class="profile-side">
+
+            <!-- CONTA E SEGURANÇA -->
+            <section class="side-card security-card">
+                <div class="side-title">
+                    <div class="side-main-icon purple"><img src=".\assets\icons\perfil\Lock.png" alt=""></div>
+                    <h2>Conta e segurança</h2>
+                </div>
+
+                <div class="security-list">
+
+                    <div class="security-row">
+                        <div class="security-icon blue"><img src=".\assets\icons\perfil\Wrench.png" alt=""></div>
+
+                        <div class="security-text">
+                            <strong>Palavra-passe</strong>
+                            <span>Atualizada pela última vez há 3 meses</span>
+                        </div>
+
+                        <a href="#">Alterar</a>
+                        <span class="arrow">›</span>
+                    </div>
+
+                    <div class="security-row">
+                        <div class="security-icon green"><img src=".\assets\icons\perfil\Protect.png" alt=""></div>
+
+                        <div class="security-text">
+                            <strong>Autenticação</strong>
+                            <span>Verificação em duas etapas desativada</span>
+                        </div>
+
+                        <a href="#">Gerenciar</a>
+                        <span class="arrow">›</span>
+                    </div>
+
+                    <div class="security-row">
+                        <div class="security-icon cyan"><img src=".\assets\icons\perfil\iMac.png" alt=""></div>
+
+                        <div class="security-text">
+                            <strong>Sessão atual</strong>
+                            <span>Praia, Cabo Verde - Chrome no windows</span>
+                        </div>
+
+                        <a href="#">Ver detalhes</a>
+                        <span class="arrow">›</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- PREFERÊNCIAS -->
+            <section class="side-card preferences-card">
+                <div class="side-title">
+                    <div class="side-main-icon violet"><img src=".\assets\icons\perfil\Gear.png" alt=""></div>
+                    <h2>Preferências</h2>
+                </div>
+
+                <div class="preferences-list">
+
+                    <div class="preference-row">
+                        <div class="preference-icon mail"><img src=".\assets\icons\perfil\Email.png" alt=""></div>
+
+                        <div class="preference-text">
+                            <strong>Receber notificações por email</strong>
+                            <span>Receba atualizações importantes na sua caixa de email</span>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="preference-row">
+                        <div class="preference-icon bell"><img src=".\assets\icons\perfil\Doorbell.png" alt=""></div>
+
+                        <div class="preference-text">
+                            <strong>Lembretes do prazo</strong>
+                            <span>Receba lembretes antes dos prazos das tarefas</span>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="preference-row">
+                        <div class="preference-icon light"><img src=".\assets\icons\perfil\Sun.png" alt=""></div>
+
+                        <div class="preference-text">
+                            <strong>Modo claro</strong>
+                            <span>Utilizar o modo claro na plataforma</span>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                </div>
+            </section>
+
+        </aside>
+
+    </section>
+
+</main>
+        
     </div>
-
-
-
-
 </body>
 </html>

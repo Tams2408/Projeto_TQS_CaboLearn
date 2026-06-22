@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaboLearn - Notificações</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/comum.css">
+    <link rel="stylesheet" href="./css/notificacoes.css">
+</head>
+
+<body>
+    <div class="page notificacoes-page">
+        <header class="topbar">
+            <div class="logo-area">
+                <img src=".\assets\img\logo.png" alt="cabolearn" class="logo-img">
+            </div>
+
+            <div class="topbar-actions">
+                <div class="notification-area">
+                    <img src=".\assets\icons\inicio\Notification.png" alt="noti" class="notification-icon">
+                </div>
+
+                <div class="topbar-divider"></div>
+
+                <div class="user-area">
+                    <img src=".\assets\icons\inicio\perfil.png" alt="perfil" class="user-avatar">
+                    <span class="user-name">Elves Garcia</span>
+                    <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
+                </div>
+
+                <a href="/logout" class="logout-button">
+                    <img src="./assets/icons/Logout.png" alt="sair">
+                    <span>Sair</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="header-line"></div>
+
+        <img src="./assets/img/index-illustration.png" alt="illust" class="background-illustration">
+
+        <aside class="sidebar">
+            <nav class="sidebar-menu">
+                <a href="/index" class="menu-item">                 <img src=".\assets\icons\sidebar\Home.png" alt="inicio">    <span>Início</span></a>
+                <a href="/disciplinas" class="menu-item">           <img src=".\assets\icons\sidebar\Books.png" alt="">         <span>Disciplinas</span></a>
+                <a href="/upload" class="menu-item">                <img src=".\assets\icons\sidebar\Upload.png" alt="">        <span>Upload</span></a>
+                <a href="/submissoes" class="menu-item">            <img src=".\assets\icons\sidebar\Document.png" alt="">      <span>Submissões</span></a>
+                <a href="/historico" class="menu-item">             <img src=".\assets\icons\sidebar\Time.png" alt="">          <span>Histórico</span></a>
+                <a href="/notificacoes" class="menu-item active">   <img src=".\assets\icons\sidebar\Notification.png" alt="">  <span>Notificações</span></a>
+                <a href="/perfil" class="menu-item">                <img src=".\assets\icons\sidebar\Profile.png">              <span>Perfil</span></a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-line"></div>
+                <span>Versão 1.0</span>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <div class="page-header-text">
+                    <h1>Notificações</h1>
+                    <p>Fique a par de tarefas, aulas e novidades das suas disciplinas</p>
+                </div>
+
+                <button class="mark-all-btn" type="button">
+                    <img src=".\assets\icons\notificações\check.png" alt="">
+                    <span>Marcar tudo como lido</span>
+                </button>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-tab active" type="button">
+                    Todas <span class="count">8</span>
+                </button>
+
+                <button class="filter-tab" type="button">
+                    Não lidas <span class="count">3</span>
+                </button>
+                <button class="filter-tab" type="button">Tarefas</button>
+                <button class="filter-tab" type="button">Aulas</button>
+                <button class="filter-tab" type="button">Sistema</button>
+            </div>
+
+            <section class="notif-list">
+                <article class="notif-card unread">
+                    <div class="notif-icon icon-math">
+                        <img src=".\assets\icons\inicio\1\mat.png" alt="">
+                    </div>
+                    <div class="notif-body">
+                        <div class="notif-top-row">
+                            <div class="notif-title">
+                                <span class="unread-dot"></span>
+                                <span>Nova tarefa em Matemática</span>
+                            </div>
+                            <span class="notif-time">Há 10 min</span>
+                        </div>
+                        <p class="notif-desc">
+                            O Prof. João Ferreira publicou a tarefa "Funções Quadráticas" com entrega até sexta-feira.
+                        </p>
+                        <div class="notif-meta">
+                            <span class="notif-tag tag-math">Matemática</span>
+                            <a href="/upload" class="notif-action">Ver tarefa</a>
+                            <button class="notif-dismiss" type="button" aria-label="Dispensar notificação">
+                                <img src=".\assets\icons\notificações\close.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="notif-card unread">
+                    <div class="notif-icon icon-tic">
+                        <img src=".\assets\icons\inicio\3\tic.png" alt="">
+                    </div>
+                    <div class="notif-body">
+                        <div class="notif-top-row">
+                            <div class="notif-title">
+                                <span class="unread-dot"></span>
+                                <span>Aula online a começar em breve</span>
+                            </div>
+                            <span class="notif-time">Há 25 min</span>
+                        </div>
+                        <p class="notif-desc">
+                            A aula de TIC com o Prof. João Ferreira começa hoje às 13:30.
+                        </p>
+                        <div class="notif-meta">
+                            <span class="notif-tag tag-tic">TIC</span>
+                            <a href="/upload" class="notif-action">Entrar na aula</a>
+                            <button class="notif-dismiss" type="button" aria-label="Dispensar notificação">
+                                <img src=".\assets\icons\notificações\close.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="notif-card unread">
+                    <div class="notif-icon icon-alert">
+                        <img src=".\assets\icons\notificações\Error.png" alt="">
+                    </div>
+                    <div class="notif-body">
+                        <div class="notif-top-row">
+                            <div class="notif-title">
+                                <span class="unread-dot"></span>
+                                <span>Prazo de entrega a terminar</span>
+                            </div>
+                            <span class="notif-time">Há 1 hora</span>
+                        </div>
+                        <p class="notif-desc">
+                            A tarefa "Present Simple - Exercícios" de Ingês termina amanhã às 23:59.
+                        </p>
+                        <div class="notif-meta">
+                            <span class="notif-tag tag-alert">Urgente</span>
+                            <a href="/upload" class="notif-action">Submeter agora</a>
+                            <button class="notif-dismiss" type="button" aria-label="Dispensar notificação">
+                                <img src=".\assets\icons\notificações\close.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="notif-card">
+                    <div class="notif-icon icon-port">
+                        <img src=".\assets\icons\inicio\1\pt.png" alt="">
+                    </div>
+                    <div class="notif-body">
+                        <div class="notif-top-row">
+                            <div class="notif-title">
+                                <span>Novo material disponivel</span>
+                            </div>
+                            <span class="notif-time">Há 3 horas</span>
+                        </div>
+                        <p class="notif-desc">
+                            A Prof. Ana Oliveira adicionou 2 novos materiais.
+                        </p>
+                        <div class="notif-meta">
+                            <span class="notif-tag tag-port">Português</span>
+                            <a href="/upload" class="notif-action">Ver materiais</a>
+                            <button class="notif-dismiss" type="button" aria-label="Dispensar notificação">
+                                <img src=".\assets\icons\notificações\close.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="notif-card">
+                    <div class="notif-icon icon-hist">
+                        <img src=".\assets\icons\inicio\3\hist.png" alt="História">
+                    </div>
+
+                    <div class="notif-body">
+                        <div class="notif-top-row">
+                            <div class="notif-title">
+                                <span>Tarefa avaliada</span>
+                            </div>
+
+                            <span class="notif-time">Ontem</span>
+                        </div>
+
+                        <p class="notif-desc">
+                            A tarefa "Descobrimentos Portugueses - Resumo" foi corrigida. Nota: 17/20.
+                        </p>
+
+                        <div class="notif-meta">
+                            <span class="notif-tag tag-hist">História</span>
+
+                            <a href="/submissoes" class="notif-action">Ver correção</a>
+
+                            <button class="notif-dismiss" type="button" aria-label="Dispensar notificação">
+                                <img src=".\assets\icons\notificações\close.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6 - Física -->
+                <article class="notif-card">
+                    <div class="notif-icon icon-fis">
+                        <img src=".\assets\icons\inicio\3\fisica.png" alt="Física">
+                    </div>
+
+                    <div class="notif-body">
+                        <div class="notif-top-row">
+                            <div class="notif-title">
+                                <span>Aula remarcada</span>
+                            </div>
+
+                            <span class="notif-time">Ontem</span>
+                        </div>
+
+                        <p class="notif-desc">
+                            A aula de Física de sexta-feira foi alterada para a Sala 206, mantendo o horário das 14:30.
+                        </p>
+
+                        <div class="notif-meta">
+                            <span class="notif-tag tag-fis">Física</span>
+
+                            <a href="/disciplinas" class="notif-action">Ver disciplina</a>
+
+                            <button class="notif-dismiss" type="button" aria-label="Dispensar notificação">
+                                <img src=".\assets\icons\notificações\close.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7 - Inglês -->
+                <article class="notif-card">
+                    <div class="notif-icon icon-eng">
+                        <img src=".\assets\icons\inicio\3\en.png" alt="Inglês">
+                    </div>
+
+                    <div class="notif-body">
+                        <div class="notif-top-row">
+                            <div class="notif-title">
+                                <span>Lembrete de aula</span>
+                            </div>
+
+                            <span class="notif-time">2 dias atrás</span>
+                        </div>
+
+                        <p class="notif-desc">
+                            A próxima aula de Inglês com a Prof. Laura Silva é quinta-feira às 09:00, na Sala 101.
+                        </p>
+
+                        <div class="notif-meta">
+                            <span class="notif-tag tag-eng">Inglês</span>
+
+                            <a href="/disciplinas" class="notif-action">Ver disciplina</a>
+
+                            <button class="notif-dismiss" type="button" aria-label="Dispensar notificação">
+                                <img src=".\assets\icons\notificações\close.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8 - Sistema -->
+                <article class="notif-card">
+                    <div class="notif-icon icon-system">
+                        <img src=".\assets\icons\notificações\system.png" alt="Sistema">
+                    </div>
+
+                    <div class="notif-body">
+                        <div class="notif-top-row">
+                            <div class="notif-title">
+                                <span>Atualização da plataforma</span>
+                            </div>
+
+                            <span class="notif-time">3 dias atrás</span>
+                        </div>
+
+                        <p class="notif-desc">
+                            A CaboLearn foi atualizada com melhorias de desempenho e correções de pequenos erros.
+                        </p>
+
+                        <div class="notif-meta">
+                            <span class="notif-tag tag-system">Sistema</span>
+
+                            <button class="notif-dismiss" type="button" aria-label="Dispensar notificação">
+                                <img src=".\assets\icons\notificações\close.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </main>
+    </div>
+
+
+
+
+</body>
+
+</html>
