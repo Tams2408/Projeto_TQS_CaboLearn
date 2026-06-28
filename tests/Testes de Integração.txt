@@ -19,6 +19,3 @@ E as rotas testadas são
 /histórico
 /notificações
 /perfil
-
-Resultado:
-
