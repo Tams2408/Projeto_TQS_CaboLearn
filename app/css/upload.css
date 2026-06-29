@@ -1,19 +1,6 @@
-/* =========================================
-   CABOLEARN - UPLOAD.CSS
-   Conteúdo específico da página Upload
-========================================= */
-
-/* =========================================
-   AJUSTE DA ÁREA PRINCIPAL
-========================================= */
-
 .upload-main {
     width: 67.3vw;
 }
-
-/* =========================================
-   TÍTULO DA PÁGINA
-========================================= */
 
 .page-heading {
     position: absolute;
@@ -36,9 +23,46 @@
     color: rgba(0, 0, 0, 0.55);
 }
 
-/* =========================================
-   LAYOUT GERAL DO UPLOAD
-========================================= */
+.upload-feedback-area {
+    position: absolute;
+    right: 0;
+    top: 0.4vh;
+    width: 26.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65vh;
+    z-index: 30;
+}
+
+.upload-alert,
+.offline-status {
+    width: 100%;
+    min-height: 4.2vh;
+    padding: 0.9vh 1vw;
+    border-radius: 0.7vw;
+    font-size: 0.72vw;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.upload-alert.success {
+    background: rgba(34, 197, 94, 0.14);
+    color: #16A34A;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.upload-alert.error {
+    background: rgba(239, 68, 68, 0.14);
+    color: #DC2626;
+    border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.upload-alert.warning,
+.offline-status {
+    background: rgba(245, 158, 11, 0.14);
+    color: #D97706;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
 
 .upload-layout {
     position: absolute;
@@ -46,37 +70,23 @@
     top: 11.2vh;
     width: 67.3vw;
     height: 65.6vh;
-
     display: grid;
     grid-template-columns: 45.3vw 20.6vw;
     column-gap: 1.4vw;
 }
 
-/* =========================================
-   CARD PRINCIPAL
-========================================= */
-
 .upload-card {
     position: relative;
-
     width: 100%;
     height: 100%;
-
     background: #FFFFFF;
     border-radius: 1.2vw;
-    box-shadow: 0.1vw 0.74vh 0.74vh 0.18vw rgba(0, 0, 0, 0.22);
-
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.18vw rgba(0, 0, 0, 0.18);
     padding: 2.1vh 2vw 1.9vh;
-
     display: flex;
     flex-direction: column;
-
     overflow: hidden;
 }
-
-/* =========================================
-   FORMULÁRIO
-========================================= */
 
 .form-row {
     display: grid;
@@ -109,21 +119,16 @@
 .select-box select {
     width: 100%;
     height: 100%;
-
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 0.32vw;
     background: #FFFFFF;
-
     padding: 0 2.4vw 0 1vw;
-
     font-family: "Inter", Arial, sans-serif;
     font-size: 0.83vw;
-    color: rgba(0, 0, 0, 0.45);
-
+    color: rgba(0, 0, 0, 0.55);
     outline: none;
 }
 
@@ -136,21 +141,15 @@
     right: 0.8vw;
     top: 50%;
     transform: translateY(-50%);
-
     width: 1vw;
     height: 1vw;
-
     object-fit: contain;
     pointer-events: none;
     opacity: 0.65;
 }
 
-/* =========================================
-   PRAZO
-========================================= */
-
 .deadline-area {
-    margin-bottom: 1.85vh;
+    margin-bottom: 1.55vh;
 }
 
 .deadline-row {
@@ -162,107 +161,220 @@
 .deadline-box {
     width: 15.2vw;
     height: 4.35vh;
-
     display: flex;
     align-items: center;
-    gap: 1.8vw;
-
+    gap: 0.75vw;
     padding: 0 0.9vw;
-
-    border-radius: 0.32vw;
-    background: #D9D9D9;
-
-    color: rgba(0, 0, 0, 0.2);
-    font-size: 1.08vw;
+    border-radius: 0.42vw;
+    background: #F1F5F9;
+    border: 1px solid rgba(69, 121, 225, 0.18);
 }
 
 .deadline-box img {
     width: 1.25vw;
     height: 1.25vw;
     object-fit: contain;
-    opacity: 0.45;
+    opacity: 0.55;
 }
 
-.deadline-row p {
-    font-size: 0.78vw;
-    color: rgba(0, 0, 0, 0.35);
+.deadline-box span {
+    min-width: 11.5vw;
+    display: inline-block;
+    font-size: 0.82vw;
+    font-weight: 700;
+    color: #111827;
     white-space: nowrap;
 }
 
-/* =========================================
-   ÁREA DE UPLOAD
-========================================= */
+#info-tarefa {
+    max-width: 25vw;
+    font-size: 0.75vw;
+    color: rgba(0, 0, 0, 0.58);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .dropzone {
     width: 100%;
-    height: 22.7vh;
-
+    height: 20.5vh;
     border: 2px dashed #4579E1;
     border-radius: 1vw;
-
-    background: rgba(69, 121, 225, 0.18);
-
+    background: rgba(69, 121, 225, 0.12);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    padding: 1.6vh 1.6vw;
     cursor: pointer;
-
-    margin-bottom: 2.25vh;
-    text-align: center;
+    overflow: hidden;
+    margin-bottom: 1.45vh;
+    transition: 0.2s ease;
 }
 
 .dropzone:hover {
-    background: rgba(69, 121, 225, 0.24);
+    background: rgba(69, 121, 225, 0.18);
+    border-color: #3166D4;
 }
 
-/* Caixa dos ícones menor e com altura suficiente */
-.dropzone-icon-box {
-    width: 90px;
-    height: 70px;
+.dropzone.has-file {
+    background: rgba(69, 121, 225, 0.08);
+    border-style: solid;
+}
 
+.dropzone-default {
+    width: 100%;
+    height: 100%;
+    max-width: 28vw;
+    display: grid;
+    grid-template-columns: 6vw minmax(0, 1fr);
+    column-gap: 1.2vw;
+    align-items: center;
+}
+
+.dropzone-icon-box {
+    width: 5.2vw;
+    height: 5.2vw;
+    border-radius: 1vw;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin-bottom: 0.75vh;
+    background: transparent;
     flex-shrink: 0;
 }
 
 .dropzone-icon {
-    width: 110px;
-    height: 90px;
+    width: 5vw;
+    height: 5vw;
     object-fit: contain;
     display: block;
 }
 
-.dropzone strong {
-    font-size: 0.85vw;
-    font-weight: 700;
+.dropzone-default strong {
+    display: block;
+    font-size: 1vw;
+    font-weight: 800;
+    line-height: 1.25;
     color: #4579E1;
-    margin-bottom: 0.45vh;
-    line-height: 1.2;
-    text-align: center;
+    margin-bottom: 0.55vh;
+    text-align: left;
 }
 
-.dropzone span {
-    font-size: 0.86vw;
-    color: rgba(0, 0, 0, 0.48);
-    margin-bottom: 0.35vh;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.dropzone small {
+.dropzone-default span {
+    display: block;
     font-size: 0.82vw;
-    color: rgba(0, 0, 0, 0.45);
-    line-height: 1.2;
-    text-align: center;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.58);
+    margin-bottom: 0.35vh;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-/* =========================================
-   OBSERVAÇÃO
-========================================= */
+
+.dropzone-default small {
+    display: block;
+    font-size: 0.78vw;
+    color: rgba(0, 0, 0, 0.45);
+    text-align: left;
+}
+
+.selected-file-box {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 4.2vw minmax(0, 1fr) auto;
+    column-gap: 1vw;
+    align-items: center;
+    padding: 1.2vh 1.2vw;
+    border-radius: 0.8vw;
+    background: #FFFFFF;
+    border: 1px solid rgba(69, 121, 225, 0.22);
+    box-shadow: 0 0.45vh 1vh rgba(0, 0, 0, 0.08);
+}
+
+.selected-file-icon {
+    width: 3.7vw;
+    height: 3.7vw;
+    border-radius: 0.75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(69, 121, 225, 0.16);
+    color: #2563EB;
+    font-size: 0.72vw;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.selected-file-icon.file-pdf {
+    background: rgba(239, 68, 68, 0.14);
+    color: #DC2626;
+}
+
+.selected-file-icon.file-doc,
+.selected-file-icon.file-docx {
+    background: rgba(37, 99, 235, 0.14);
+    color: #2563EB;
+}
+
+.selected-file-icon.file-ppt,
+.selected-file-icon.file-pptx {
+    background: rgba(249, 115, 22, 0.14);
+    color: #EA580C;
+}
+
+.selected-file-icon.file-zip,
+.selected-file-icon.file-rar {
+    background: rgba(168, 85, 247, 0.14);
+    color: #9333EA;
+}
+
+.selected-file-icon.file-png,
+.selected-file-icon.file-jpg,
+.selected-file-icon.file-jpeg {
+    background: rgba(20, 184, 166, 0.14);
+    color: #0F766E;
+}
+
+.selected-file-info {
+    min-width: 0;
+}
+
+.selected-file-info strong {
+    display: block;
+    font-size: 1vw;
+    font-weight: 800;
+    color: #111827;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.4vh;
+}
+
+.selected-file-info span {
+    display: block;
+    font-size: 0.78vw;
+    color: rgba(0, 0, 0, 0.55);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.remove-file-btn {
+    height: 3.4vh;
+    padding: 0 0.85vw;
+    border: none;
+    border-radius: 0.5vw;
+    background: rgba(239, 68, 68, 0.12);
+    color: #DC2626;
+    font-size: 0.72vw;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.remove-file-btn:hover {
+    background: rgba(239, 68, 68, 0.22);
+}
 
 .observation-area {
     margin-bottom: 0.8vh;
@@ -281,18 +393,13 @@
 .textarea-box textarea {
     width: 100%;
     height: 100%;
-
     resize: none;
-
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 0.32vw;
-
     padding: 1vh 0.85vw 2.1vh;
-
     font-family: "Inter", Arial, sans-serif;
     font-size: 0.72vw;
     line-height: 1.2;
-
     color: rgba(0, 0, 0, 0.65);
     outline: none;
 }
@@ -309,23 +416,16 @@
     position: absolute;
     right: 0.55vw;
     bottom: 0.45vh;
-
     font-size: 0.68vw;
     color: rgba(0, 0, 0, 0.42);
 }
-
-/* =========================================
-   CHECKBOX DE AUTORIA
-========================================= */
 
 .authorship-check {
     display: flex;
     align-items: center;
     gap: 0.55vw;
-
     font-size: 0.76vw;
     color: rgba(0, 0, 0, 0.45);
-
     margin-bottom: 1.4vh;
 }
 
@@ -334,35 +434,26 @@
     height: 0.75vw;
 }
 
-/* =========================================
-   BOTÕES
-========================================= */
-
 .upload-actions {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 0.8vw;
-
     margin-top: auto;
 }
 
 .btn-cancelar,
 .btn-submit {
     height: 4.2vh;
-
     border-radius: 0.35vw;
-
     font-family: "Inter", Arial, sans-serif;
     font-size: 1vw;
     font-weight: 400;
-
     cursor: pointer;
 }
 
 .btn-cancelar {
     min-width: 6.3vw;
-
     border: 1px solid #4579E1;
     background: #FFFFFF;
     color: #4579E1;
@@ -370,11 +461,9 @@
 
 .btn-submit {
     min-width: 12vw;
-
     border: none;
     background: #4579E1;
     color: #FFFFFF;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -395,9 +484,14 @@
     background: #3468D1;
 }
 
-/* =========================================
-   COLUNA LATERAL
-========================================= */
+.btn-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.btn-submit.loading {
+    background: #9CA3AF;
+}
 
 .upload-side {
     display: flex;
@@ -405,19 +499,12 @@
     gap: 1.7vh;
 }
 
-/* =========================================
-   CARDS LATERAIS
-========================================= */
-
 .info-card {
     width: 100%;
-
     background: #FFFFFF;
     border-radius: 1.2vw;
-    box-shadow: 0.1vw 0.74vh 0.74vh 0.18vw rgba(0, 0, 0, 0.22);
-
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.18vw rgba(0, 0, 0, 0.18);
     padding: 1.45vh 1.25vw;
-
     overflow: hidden;
 }
 
@@ -433,20 +520,16 @@
     display: flex;
     align-items: flex-start;
     gap: 0.75vw;
-
     margin-bottom: 1.2vh;
 }
 
 .side-icon {
     width: 2.35vw;
     height: 2.35vw;
-
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
 }
 
@@ -471,10 +554,6 @@
     line-height: 1.15;
 }
 
-/* =========================================
-   ORIENTAÇÕES
-========================================= */
-
 .orientation-card ul {
     padding-left: 1.25vw;
     margin-top: 0.5vh;
@@ -484,7 +563,6 @@
     font-size: 0.94vw;
     line-height: 1.35;
     color: rgba(0, 0, 0, 0.55);
-
     margin-bottom: 0.85vh;
 }
 
@@ -492,13 +570,8 @@
     margin-bottom: 0;
 }
 
-/* =========================================
-   RESUMO DA SUBMISSÃO
-========================================= */
-
 .summary-list {
     margin-top: 1.55vh;
-
     display: flex;
     flex-direction: column;
     gap: 1.85vh;
@@ -508,6 +581,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1vw;
 }
 
 .summary-row span {
@@ -516,7 +590,217 @@
 }
 
 .summary-row strong {
+    max-width: 10vw;
     font-size: 0.82vw;
     font-weight: 400;
+    color: rgba(0, 0, 0, 0.55);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#resumo-status.status-ok {
+    color: #16A34A;
+}
+
+#resumo-status.status-warning {
+    color: #DC2626;
+}
+
+#resumo-status.status-empty {
+    color: rgba(0, 0, 0, 0.42);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.dropzone {
+    width: 100%;
+    height: 20.5vh;
+
+    border: 2px dashed #4579E1;
+    border-radius: 1vw;
+
+    background: rgba(69, 121, 225, 0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.4vh 1.4vw;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    margin-bottom: 1.45vh;
+
+    transition: 0.2s ease;
+}
+
+.dropzone:hover {
+    background: rgba(69, 121, 225, 0.18);
+    border-color: #3166D4;
+}
+
+.dropzone-default {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.45vh;
+
+    text-align: center;
+}
+
+.dropzone-icon-box {
+    width: 4.7vw;
+    height: 4.7vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 0.25vh;
+}
+
+.dropzone-icon {
+    width: 4.4vw;
+    height: 4.4vw;
+
+    object-fit: contain;
+    display: block;
+}
+
+.dropzone-default strong {
+    display: block;
+
+    max-width: 25vw;
+
+    font-size: 0.95vw;
+    font-weight: 800;
+    line-height: 1.2;
+
+    color: #4579E1;
+
+    text-align: center;
+}
+
+.dropzone-default span {
+    display: block;
+
+    max-width: 25vw;
+
+    font-size: 0.78vw;
+    font-weight: 600;
+
+    color: rgba(0, 0, 0, 0.55);
+
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropzone-default small {
+    display: block;
+
+    font-size: 0.72vw;
+
     color: rgba(0, 0, 0, 0.45);
+
+    text-align: center;
+}
+
+.dropzone.has-file {
+    background: rgba(69, 121, 225, 0.06);
+    border-style: solid;
+}
+
+.dropzone.has-file .dropzone-default {
+    display: none !important;
+}
+
+.selected-file-box {
+    width: 72%;
+    min-height: 6.4vh;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 1vw;
+
+    padding: 0.9vh 1vw;
+
+    border-radius: 0.7vw;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(69, 121, 225, 0.24);
+
+    box-shadow: 0 0.35vh 0.8vh rgba(0, 0, 0, 0.08);
+}
+
+.selected-file-info {
+    min-width: 0;
+}
+
+.selected-file-info strong {
+    display: block;
+
+    font-size: 0.82vw;
+    font-weight: 800;
+
+    color: #111827;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin-bottom: 0.25vh;
+}
+
+.selected-file-info span {
+    display: block;
+
+    font-size: 0.68vw;
+
+    color: rgba(0, 0, 0, 0.55);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selected-file-icon {
+    display: none !important;
+}
+
+.remove-file-btn {
+    height: 2.8vh;
+
+    padding: 0 0.7vw;
+
+    border: none;
+    border-radius: 0.42vw;
+
+    background: rgba(239, 68, 68, 0.1);
+    color: #DC2626;
+
+    font-size: 0.65vw;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.remove-file-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.hidden {
+    display: none !important;
 }

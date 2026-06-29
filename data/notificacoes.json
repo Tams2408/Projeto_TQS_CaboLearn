@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "destinatario_id": 2,
+        "destinatario_tipo": "professor",
+        "titulo": "Nova submissão recebida",
+        "mensagem": "Elves Garcia submeteu 'A' em Matemática. Submissão atrasada em 17 hora(s) e 25 minuto(s).",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": false,
+        "criada_em": "27/06/2026 14:04"
+    },
+    {
+        "id": 2,
+        "destinatario_id": 3,
+        "destinatario_tipo": "estudante",
+        "titulo": "Submissão enviada",
+        "mensagem": "A sua submissão da tarefa 'A' foi registada com sucesso.",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": false,
+        "criada_em": "27/06/2026 14:04"
+    },
+    {
+        "id": 3,
+        "destinatario_id": 2,
+        "destinatario_tipo": "professor",
+        "titulo": "Nova submissão recebida",
+        "mensagem": "Elves Garcia submeteu 'Ficha de exercício' em Matemática.",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": false,
+        "criada_em": "27/06/2026 14:14"
+    },
+    {
+        "id": 4,
+        "destinatario_id": 3,
+        "destinatario_tipo": "estudante",
+        "titulo": "Submissão enviada",
+        "mensagem": "A sua submissão da tarefa 'Ficha de exercício' foi registada com sucesso.",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": false,
+        "criada_em": "27/06/2026 14:14"
+    }
+]

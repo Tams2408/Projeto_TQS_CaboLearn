@@ -18,15 +18,20 @@
             </div>
 
             <div class="topbar-actions">
-                <div class="notification-area">
-                    <img src=".\assets\icons\inicio\Notification.png" alt="noti" class="notification-icon">
+                <div class="connection-status online" id="connection-status">
+                    <span class="connection-dot"></span>
+                    <strong id="connection-status-text">Online</strong>
                 </div>
+                <a href="/notificacoes" class="notification-area">
+                    <img src=".\assets\icons\inicio\Notification.png" alt="noti" class="notification-icon">
+                    <span class="notification-badge hidden" id="header-notification-badge">0</span>
+                </a>
 
                 <div class="topbar-divider"></div>
 
                 <div class="user-area">
-                    <img src=".\assets\icons\inicio\perfil.png" alt="perfil" class="user-avatar">
-                    <span class="user-name">Elves Garcia</span>
+                    <img src="{{ session.utilizador_avatar }}" alt="perfil" class="user-avatar">
+                    <span class="user-name">{{ session.utilizador_nome }}</span>
                     <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
                 </div>
 
@@ -64,21 +69,28 @@
                 <p>Submeta trabalhos, relatórios e execícios nas suas disciplinas</p>
             </section>
 
+            <div class="upload-alert hidden" id="upload-alert">
+                <div class="offline-status hidden" id="offline-status"></div>
+                <div class="offline-status hidden" id="offline-status">
+                    Está sem ligação à internet. A submissão será guardada localmente e sincronizada posteriormente.
+                </div>
+            </div>
+
             <section class="upload-layout">
-                <form class="upload-card">
+                <form id="upload-form" class="upload-card" action="/upload/submeter" method="POST" enctype="multipart/form-data">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="disciplina">Disciplina</label>
 
                             <div class="select-box">
-                                <select name="disciplina" id="disciplina">
+                                <select name="disciplina" id="disciplina" required>
                                     <option value=""><--Selecione a disciplina--></option>
-                                    <option value="matemática">Matemática</option>
-                                    <option value="portugues">Português</option>
-                                    <option value="tic">TIC</option>
-                                    <option value="ingles">Inglês</option>
-                                    <option value="historia">História</option>
-                                    <option value="fisica">Física</option>
+                                    <option value="Matemática">Matemática</option>
+                                    <option value="Português">Português</option>
+                                    <option value="TIC">TIC</option>
+                                    <option value="Inglês">Inglês</option>
+                                    <option value="História">História</option>
+                                    <option value="Física">Física</option>
                                 </select>
                                 <img src=".\assets\icons\inicio\arrow.png" alt="" class="select-arrow">
                             </div>
@@ -88,12 +100,8 @@
                             <label for="tarefa">Tarefa/Trabalho</label>
 
                             <div class="select-box">
-                                <select name="tarefa" id="tarefa">
+                                <select name="tarefa_id" id="tarefa" required disabled>
                                     <option value="">Selecione a tarefa</option>
-                                    <option value="list-exercicios">Lista de exercícios 4</option>
-                                    <option value="redacao">Redação: Minha Cidade</option>
-                                    <option value="composicao-atomos">Composição dos átomos</option>
-                                    <option value="relatorio">Relatório de aula prática</option>
                                 </select>
                                 <img src=".\assets\icons\inicio\arrow.png" alt="" class="select-arrow">
                             </div>
@@ -106,20 +114,36 @@
                         <div class="deadline-row">
                             <div class="deadline-box">
                                 <img src=".\assets\icons\inicio\1\Calendar.png" alt="">
-                                <span>--/--/---- às --:--</span>
+                                <span id="prazo-tarefa">--/--/---- às --:--</span>
                             </div>
-                            <p>Será preenchido automaticamente</p>
+                            <p id="info-tarefa">Será preenchido automaticamente</p>
                         </div>
                     </div>
 
-                    <label for="file-upload" class="dropzone">
-                        <input type="file" id="file-upload" name="file-upload" hidden>
-                        <div class="dropzone-icon-box">
-                            <img src=".\assets\icons\upload(2).png" alt="" class="dropzone-icon">
+                    <label for="file-upload" class="dropzone" id="dropzone">
+                        <input type="file" id="file-upload" name="ficheiro" hidden required>
+                        
+                        <div class="dropzone-default" id="dropzone-default">
+                            <div class="dropzone-icon-box">
+                                <div class="dropzone-icon-box">
+                                <img src=".\assets\icons\upload(2).png" alt="" class="dropzone-icon">
+                                </div>
+
+                                <strong>Arraste o ficheiro aqui ou clique para selecionar</strong>
+                            </div>
                         </div>
-                        <strong>Arraste o ficheiro aqui ou clique para selecionar</strong>
-                        <span>PDF, DOCX, PPTX, ZIP, JPG, PNG</span>
-                        <small>Tamanho máximo: 20 MB</small>
+
+                        <div class="selected-file-box hidden" id="selected-file-box">
+                            <div class="selected-file-info">
+                                <strong id="selected-file-name">Nenhum ficheiro</strong>
+                                <span id="selected-file-meta">--</span>
+                            </div>
+
+                            <button type="button" class="remove-file-btn" id="remove-file-btn">
+                                Remover
+                            </button>
+                        </div>
+                        
                     </label>
 
                     <div class="observation-area">
@@ -152,7 +176,7 @@
                             <div class="side-icon blue">
                                 <img src=".\assets\icons\disciplinas\Clipboard.png" alt="">
                             </div>
-                            <h2>Oientações para submissão</h2>
+                            <h2>Orientações para submissão</h2>
                         </div>
                         <ul>
                             <li>Verifique o prazo antes de submeter;</li>
@@ -174,19 +198,19 @@
                         <div class="summary-list">
                             <div class="summary-row">
                                 <span>Disciplina</span>
-                                <strong>—</strong>
+                                <strong id="resumo-disciplina">—</strong>
                             </div>
                             <div class="summary-row">
                                 <span>Tarefa</span>
-                                <strong>—</strong>
+                                <strong id="resumo-tarefa">—</strong>
                             </div>
                             <div class="summary-row">
                                 <span>Prazo</span>
-                                <strong>—</strong>
+                                <strong id="resumo-prazo">—</strong>
                             </div>
                             <div class="summary-row">
                                 <span>Status</span>
-                                <strong>—</strong>
+                                <strong id="resumo-status">Aguardando dados</strong>
                             </div>
                         </div>
                     </section>
@@ -194,8 +218,10 @@
             </section>
         </main>
     </div>
-
-
+<script src="/js/header_notificacoes.js"></script>
+<script src="/js/upload.js"></script>
+<script src="/js/upload_submit.js"></script>
+<script src="/js/connection_status.js"></script>
 
 
 </body>

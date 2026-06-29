@@ -30,10 +30,6 @@
     --fis-bg: #f0fdfa;
 }
 
-/* =========================================
-   TÍTULO
-========================================= */
-
 .page-heading {
     position: absolute;
     left: 0;
@@ -58,38 +54,24 @@
     width: 66vw;
 }
 
-/* =========================================
-   GRID DOS CARDS
-========================================= */
-
 .cards-grid {
     position: absolute;
     left: 0;
     top: 13.3vh;
 
-    /* A área dos cards fica mais larga */
     width: 74.2vw;
     height: 69.46vh;
 
     display: grid;
 
-    /* Cards mais largos */
     grid-template-columns: repeat(3, 21.8vw);
 
-    /* Mantém 3 colunas bem espaçadas */
     column-gap: 1.4vw;
 
-    /*
-       Aumenta a altura dos cards, mas reduz o espaço entre linhas
-       para manter a base alinhada com a sidebar.
-    */
     grid-auto-rows: 28.2vh;
     row-gap: 6.93vh;
 }
 
-/* =========================================
-   CARD BASE
-========================================= */
 
 .disc-card {
     background: var(--surface);
@@ -106,10 +88,6 @@
     min-width: 0;
     overflow: visible;
 }
-
-/* =========================================
-   CABEÇALHO
-========================================= */
 
 .card-header {
     display: flex;
@@ -156,10 +134,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-/* =========================================
-   TEMA ATUAL + PRÓXIMA AULA
-========================================= */
 
 .card-info-row {
     display: flex;
@@ -232,13 +206,6 @@
 }
 
 
-
-
-
-/* =========================================
-   STATS
-========================================= */
-
 .stats-row {
     display: flex;
     align-items: center;
@@ -280,9 +247,6 @@
     flex-shrink: 0;
 }
 
-/* =========================================
-   PROGRESSO
-========================================= */
 
 .progress-block {
     display: flex;
@@ -318,9 +282,6 @@
     transition: width 0.4s;
 }
 
-/* =========================================
-   AÇÕES
-========================================= */
 
 .card-actions {
     display: flex;
@@ -381,10 +342,6 @@
     font-size: 0.95vw;
     line-height: 1;
 }
-
-/* =========================================
-   CORES POR DISCIPLINA
-========================================= */
 
 .math .disc-icon {
     background: var(--math-bg);

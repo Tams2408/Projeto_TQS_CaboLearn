@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaboLearn - Submissões do Professor</title>
+
+    <link rel="stylesheet" href="/css/professor_submissoes.css">
+</head>
+
+<body>
+
+    <div class="professor-page">
+
+        <header class="professor-topbar">
+            <div>
+                <h1>CaboLearn</h1>
+                <span>Painel do Professor</span>
+            </div>
+
+            <div class="professor-user-area">
+                <div class="professor-user-info">
+                    <strong>{{ professor_nome }}</strong>
+                    <span>{{ disciplina_professor }}</span>
+                </div>
+
+                <a href="/professor/tarefas" class="topbar-link">Tarefas</a>
+                <a href="/logout" class="logout-btn">Sair</a>
+            </div>
+        </header>
+
+        <main class="professor-container">
+
+            <section class="professor-heading">
+                <div>
+                    <h2>Correção de Submissões</h2>
+                    <p>Veja ficheiros enviados pelos alunos, corrija, atribua nota, feedback e estado.</p>
+                </div>
+
+                <div class="discipline-badge">
+                    <span>Disciplina</span>
+                    <strong>{{ disciplina_professor }}</strong>
+                </div>
+            </section>
+
+            <section class="submissions-card">
+
+                <div class="card-header">
+                    <div>
+                        <h3>Submissões recebidas</h3>
+                        <p>{{ submissoes|length }} submissão(ões) encontrada(s).</p>
+                    </div>
+                </div>
+
+                <div class="submissions-list">
+
+                    {% for submissao in submissoes %}
+
+                    <article class="submission-item">
+
+                        <div class="submission-main">
+
+                            <div class="submission-file">
+                                <div class="file-icon">
+                                    {{ submissao.ficheiro_original.split(".")[-1].upper() }}
+                                </div>
+
+                                <div>
+                                    <h4>{{ submissao.ficheiro_original }}</h4>
+                                    <span>{{ submissao.tamanho_mb }} MB</span>
+                                </div>
+                            </div>
+
+                            <div class="submission-meta">
+                                <div>
+                                    <span>Aluno</span>
+                                    <strong>{{ submissao.aluno_nome }}</strong>
+                                </div>
+
+                                <div>
+                                    <span>Tarefa</span>
+                                    <strong>{{ submissao.tarefa_titulo }}</strong>
+                                </div>
+
+                                <div>
+                                    <span>Data de envio</span>
+                                    <strong>{{ submissao.data_envio }}</strong>
+                                </div>
+
+                                <div>
+                                    <span>Estado atual</span>
+                                    <strong>
+                                        <span class="status">
+                                            {{ submissao.estado }}
+                                        </span>
+                                    </strong>
+                                </div>
+
+                                {% if submissao.atrasada %}
+                                        <div class="late-warning">
+                                            <strong>Submissão atrasada</strong>
+                                            <span>Enviada com {{ submissao.tempo_atraso }} de atraso</span>
+                                        </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="file-actions">
+                                <a href="/professor/submissoes/{{ submissao.id }}/ficheiro" target="_blank">
+                                    Ver ficheiro
+                                </a>
+
+                                <a href="/professor/submissoes/{{ submissao.id }}/baixar">
+                                    Baixar
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <form action="/professor/submissoes/{{ submissao.id }}/corrigir" method="POST"
+                            class="correction-form">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Estado</label>
+
+                                    <select name="estado" required>
+                                        <option value="Entregue" {% if submissao.estado=="Entregue" %}selected{% endif
+                                            %}>
+                                            Entregue
+                                        </option>
+
+                                        <option value="Em análise" {% if submissao.estado=="Em análise" %}selected{%
+                                            endif %}>
+                                            Em análise
+                                        </option>
+
+                                        <option value="Corrigido" {% if submissao.estado=="Corrigido" %}selected{% endif
+                                            %}>
+                                            Corrigido
+                                        </option>
+
+                                        <option value="Com feedback" {% if submissao.estado=="Com feedback" %}selected{%
+                                            endif %}>
+                                            Com feedback
+                                        </option>
+
+                                        <option value="Reenviar" {% if submissao.estado=="Reenviar" %}selected{% endif
+                                            %}>
+                                            Reenviar
+                                        </option>
+
+                                        <option value="Rejeitado" {% if submissao.estado=="Rejeitado" %}selected{% endif
+                                            %}>
+                                            Rejeitado
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group small">
+                                    <label>Nota</label>
+
+                                    <input type="number" name="nota" min="0" max="20" step="0.1"
+                                        value="{{ submissao.nota or '' }}" placeholder="0-20">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Feedback</label>
+
+                                <textarea name="feedback"
+                                    placeholder="Escreva o feedback para o aluno...">{{ submissao.feedback or '' }}</textarea>
+                            </div>
+
+                            {% if submissao.corrigido_em %}
+                            <p class="last-update">
+                                Última correção: {{ submissao.corrigido_em }}
+                            </p>
+                            {% endif %}
+
+                            <button type="submit" class="save-btn">
+                                Guardar correção
+                            </button>
+
+                        </form>
+
+                    </article>
+
+                    {% else %}
+
+                    <div class="empty-state">
+                        Nenhuma submissão recebida ainda.
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

@@ -6,9 +6,6 @@
     width: 67.5vw;
 }
 
-/* =========================================
-   TÍTULO
-========================================= */
 
 .page-heading {
     position: absolute;
@@ -31,9 +28,6 @@
     color: rgba(0, 0, 0, 0.55);
 }
 
-/* =========================================
-   CARDS DE RESUMO
-========================================= */
 
 .history-stats {
     position: absolute;
@@ -115,10 +109,6 @@
     color: #000000;
 }
 
-/* =========================================
-   LAYOUT PRINCIPAL
-========================================= */
-
 .history-layout {
     position: absolute;
     left: 0;
@@ -131,10 +121,6 @@
     grid-template-columns: minmax(0, 47vw) 19.5vw;
     column-gap: 1vw;
 }
-
-/* =========================================
-   CARD PRINCIPAL
-========================================= */
 
 .history-main-card,
 .side-card {
@@ -200,10 +186,6 @@
     border-color: #4579E1;
     color: #FFFFFF;
 }
-
-/* =========================================
-   TABELA DE HISTÓRICO
-========================================= */
 
 .history-table {
     width: 100%;
@@ -344,10 +326,6 @@
     color: rgba(0, 0, 0, 0.35);
 }
 
-/* =========================================
-   STATUS
-========================================= */
-
 .status {
     min-width: 5.3vw;
     height: 2.35vh;
@@ -389,9 +367,6 @@
     color: #14B8A6;
 }
 
-/* =========================================
-   COLUNA DIREITA
-========================================= */
 
 .history-side {
     width: 100%;
@@ -454,9 +429,6 @@
     color: #000000;
 }
 
-/* =========================================
-   DESEMPENHO
-========================================= */
 
 .performance-list {
     display: flex;
@@ -517,9 +489,6 @@
     background: #4C8A31;
 }
 
-/* =========================================
-   FEEDBACK RECENTE
-========================================= */
 
 .recent-feedback {
     background: rgba(240, 168, 85, 0.16);
@@ -560,4 +529,23 @@
     font-size: 0.72vw;
     color: #22C55E;
     margin: 0;
+}
+
+.empty-history {
+    padding: 2vh 1vw;
+    text-align: center;
+    font-size: 0.82vw;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#history-rows {
+    width: 100%;
+}
+
+.history-row {
+    transition: background 0.2s ease;
+}
+
+.history-row:hover {
+    background: #F7FAFF;
 }

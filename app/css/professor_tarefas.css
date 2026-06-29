@@ -1,0 +1,493 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #EEF3F8;
+    color: #111827;
+}
+
+.professor-page {
+    min-height: 100vh;
+}
+
+/* ===============================
+   TOPBAR
+================================ */
+
+.professor-topbar {
+    height: 74px;
+    background: #2D2F32;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 42px;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+.professor-topbar h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.professor-topbar span {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.professor-user-area {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.professor-user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.professor-user-info strong {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+
+.professor-user-info span {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.logout-btn {
+    text-decoration: none;
+    background: #4579E1;
+    color: #FFFFFF;
+
+    height: 38px;
+    padding: 0 18px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: background 0.15s ease;
+}
+
+.logout-btn:hover {
+    background: #3166D4;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+
+.professor-container {
+    max-width: 1180px;
+    margin: 34px auto;
+    padding: 0 24px;
+}
+
+.professor-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 26px;
+}
+
+.professor-heading h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.professor-heading p {
+    font-size: 15px;
+    color: #6B7280;
+}
+
+.discipline-badge {
+    min-width: 180px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(69, 121, 225, 0.18);
+    border-radius: 14px;
+
+    padding: 14px 18px;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+}
+
+.discipline-badge span {
+    display: block;
+    font-size: 12px;
+    color: #6B7280;
+    margin-bottom: 5px;
+}
+
+.discipline-badge strong {
+    font-size: 18px;
+    color: #4579E1;
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+
+.professor-layout {
+    display: grid;
+    grid-template-columns: 400px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.professor-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    padding: 24px;
+}
+
+.card-header {
+    margin-bottom: 22px;
+}
+
+.card-header h3 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.card-header p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #6B7280;
+}
+
+/* ===============================
+   FORMULÁRIO
+================================ */
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #D1D5DB;
+    border-radius: 9px;
+
+    padding: 11px 12px;
+
+    font-size: 14px;
+    color: #111827;
+
+    outline: none;
+
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4579E1;
+    box-shadow: 0 0 0 3px rgba(69, 121, 225, 0.12);
+}
+
+.form-group textarea {
+    min-height: 105px;
+    resize: vertical;
+    line-height: 1.4;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+
+    font-size: 12px;
+    color: #6B7280;
+}
+
+.fixed-field {
+    width: 100%;
+
+    border: 1px solid rgba(69, 121, 225, 0.22);
+    border-radius: 9px;
+
+    background: #F3F6FB;
+    color: #4579E1;
+
+    padding: 11px 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 130px;
+    gap: 14px;
+}
+
+.submit-btn {
+    height: 46px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #4579E1;
+    color: #FFFFFF;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.submit-btn:hover {
+    background: #3166D4;
+    transform: translateY(-1px);
+}
+
+/* ===============================
+   TABELA
+================================ */
+
+.table-card {
+    min-height: 520px;
+}
+
+.table-header-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.task-count {
+    background: rgba(69, 121, 225, 0.12);
+    color: #4579E1;
+
+    border-radius: 999px;
+
+    padding: 6px 12px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.tasks-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tasks-table thead th {
+    text-align: left;
+
+    font-size: 12px;
+    font-weight: 700;
+    color: #6B7280;
+
+    padding: 0 10px 12px 10px;
+
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.tasks-table tbody td {
+    padding: 15px 10px;
+
+    border-bottom: 1px solid #E5E7EB;
+
+    font-size: 14px;
+    color: #111827;
+
+    vertical-align: top;
+}
+
+.tasks-table tbody tr:hover {
+    background: #F8FAFF;
+}
+
+.tasks-table td strong {
+    display: block;
+
+    font-size: 14px;
+    color: #111827;
+
+    margin-bottom: 5px;
+}
+
+.tasks-table td span {
+    display: block;
+
+    font-size: 13px;
+    line-height: 1.35;
+    color: #6B7280;
+}
+
+.file-rules span {
+    font-size: 13px;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.file-rules small {
+    font-size: 12px;
+    color: #6B7280;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 24px;
+    min-width: 60px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status.active {
+    background: rgba(34, 197, 94, 0.13);
+    color: #16A34A;
+}
+
+.status.inactive {
+    background: rgba(107, 114, 128, 0.13);
+    color: #6B7280;
+}
+
+.empty-row {
+    text-align: center;
+    padding: 34px !important;
+    color: #6B7280 !important;
+}
+
+/* ===============================
+   RESPONSIVO
+================================ */
+
+@media (max-width: 1000px) {
+    .professor-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .professor-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .discipline-badge {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .professor-topbar {
+        height: auto;
+        padding: 18px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .professor-user-area {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .professor-user-info {
+        align-items: flex-start;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .professor-heading h2 {
+        font-size: 28px;
+    }
+}
+
+.secondary-btn {
+    background: #FFFFFF;
+    color: #4579E1;
+}
+
+.secondary-btn:hover {
+    background: #EAF1FF;
+}
+
+.table-action {
+    border: none;
+    border-radius: 7px;
+    padding: 7px 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.table-action.danger {
+    background: rgba(239, 68, 68, 0.12);
+    color: #DC2626;
+}
+
+.table-action.danger:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.table-action.success {
+    background: rgba(34, 197, 94, 0.13);
+    color: #16A34A;
+}
+
+.table-action.success:hover {
+    background: rgba(34, 197, 94, 0.22);
+}

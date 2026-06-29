@@ -11,22 +11,27 @@
     <link rel="stylesheet" href="./css/perfil.css">
 </head>
 <body>
-    <div class="page inicio-page">
+    <div class="page perfil-page">
         <header class="topbar">
             <div class="logo-area">
                 <img src=".\assets\img\logo.png" alt="cabolearn" class="logo-img">
             </div>
 
             <div class="topbar-actions">
-                <div class="notification-area">
-                    <img src=".\assets\icons\inicio\Notification.png" alt="noti" class="notification-icon">
+                <div class="connection-status online" id="connection-status">
+                    <span class="connection-dot"></span>
+                    <strong id="connection-status-text">Online</strong>
                 </div>
+                <a href="/notificacoes" class="notification-area">
+                    <img src=".\assets\icons\inicio\Notification.png" alt="noti" class="notification-icon">
+                    <span class="notification-badge hidden" id="header-notification-badge">0</span>
+                </a>
 
                 <div class="topbar-divider"></div>
 
                 <div class="user-area">
-                    <img src=".\assets\icons\inicio\perfil.png" alt="perfil" class="user-avatar">
-                    <span class="user-name">Elves Garcia</span>
+                    <img src="{{ session.utilizador_avatar }}" alt="perfil" class="user-avatar">
+                    <span class="user-name">{{ session.utilizador_nome }}</span>
                     <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
                 </div>
 
@@ -65,10 +70,22 @@
         <h1>Perfil</h1>
     </section>
 
+    {% if perfil_sucesso %}
+        <div class="profile-alert success">
+            {{ perfil_sucesso }}
+        </div>
+    {% endif %}
+
+    {% if perfil_erro %}
+        <div class="profile-alert error">
+            {{ perfil_erro }}
+        </div>
+    {% endif %}
+
     <!-- CARD SUPERIOR DO PERFIL -->
     <section class="profile-hero-card">
         <div class="profile-photo-area">
-            <img src="./assets/img/avatar.jpg" alt="Foto do estudante" class="profile-photo">
+            <img src="{{ session.utilizador_avatar }}" alt="Foto do estudante" class="profile-photo">
 
             <button class="photo-button" type="button">
                 <img src=".\assets\icons\perfil\Camera.png" alt="">
@@ -76,12 +93,12 @@
         </div>
 
         <div class="profile-main-info">
-            <h2>Elves Fernando de Pina Garcia</h2>
+            <h2>{{ utilizador.nome_completo or utilizador.nome }}</h2>
 
             <div class="profile-meta">
                 <span>
                     <img src=".\assets\icons\perfil\User.png" alt="">
-                    Estudante
+                    {{ utilizador.tipo|capitalize }}
                 </span>
                 
             </div>
@@ -89,16 +106,16 @@
             <div class="profile-meta-row">
                 <span>
                     <img src=".\assets\icons\perfil\Cap.png" alt="">
-                    12º Ano
+                    {{ utilizador.ano_escolaridade or '--' }}
                 </span>
                 <span>
                     <img src=".\assets\icons\perfil\Name.png" alt="">
-                    Nº de aluno: 6617</span>
+                    Nº de aluno: {{ utilizador.numero_aluno or '--' }}</span>
             </div>
 
             <div class="profile-badges">
-                <span class="badge-active"><span class="status-dot"></span> Ativo</span>
-                <span class="badge-regular">Aluno regular</span>
+                <span class="badge-active"><span class="status-dot"></span> {{ utilizador.estado or 'Ativo' }} </span>
+                <span class="badge-regular"> {{ utilizador.categoria or 'Aluno regular' }} </span>
             </div>
         </div>
     </section>
@@ -114,22 +131,22 @@
             <div class="form-grid two-columns">
                 <div class="profile-field">
                     <label>Nome completo</label>
-                    <input type="text" value="Elves Fernando de Pina Garcia" readonly>
+                    <input type="text" value="{{ utilizador.nome_completo or utilizador.nome }}" readonly>
                 </div>
 
                 <div class="profile-field">
                     <label>Email</label>
-                    <input type="email" value="elves.garcia@cabo.com" readonly>
+                    <input type="email" value="{{ utilizador.email }}" readonly>
                 </div>
 
                 <div class="profile-field">
                     <label>Telefone</label>
-                    <input type="text" value="+238 979 72 80" readonly>
+                    <input type="text" value="{{ utilizador.telefone or '--' }}" readonly>
                 </div>
 
                 <div class="profile-field">
                     <label>Data nascimento</label>
-                    <input type="text" value="14 / 09 / 2004" readonly>
+                    <input type="text" value="{{ utilizador.data_nascimento or '--' }}" readonly>
                 </div>
             </div>
 
@@ -138,29 +155,29 @@
             <div class="form-grid three-columns">
                 <div class="profile-field">
                     <label>Ano de escolaridade</label>
-                    <input type="text" value="12º Ano" readonly>
+                    <input type="text" value="{{ utilizador.ano_escolaridade or '--' }}" readonly>
                 </div>
 
                 <div class="profile-field">
                     <label>Turma</label>
-                    <input type="text" value="12º A" readonly>
+                    <input type="text" value="{{ utilizador.turma or '--' }}" readonly>
                 </div>
 
                 <div class="profile-field">
                     <label>Ano Letivo</label>
-                    <input type="text" value="2025 / 2026" readonly>
+                    <input type="text" value="{{ utilizador.ano_letivo or '--' }}" readonly>
                 </div>
             </div>
 
             <div class="form-grid two-columns academic-second-row">
                 <div class="profile-field">
                     <label>Professor diretor da turma</label>
-                    <input type="text" value="Prof. João Ferreira" readonly>
+                    <input type="text" value="{{ utilizador.professor_diretor or ''}}" readonly>
                 </div>
 
                 <div class="profile-field">
                     <label>Instituição</label>
-                    <input type="text" value="Escola Secundária Liceu Amílcar Cabral" readonly>
+                    <input type="text" value="{{ utilizador.instituicao or '--' }}" readonly>
                 </div>
             </div>
 
@@ -168,13 +185,16 @@
                 <label>Disciplinas inscritas</label>
 
                 <div class="subjects-list">
-                    <span class="subject-item math"><img src=".\assets\icons\perfil\Calculator.png" alt="">Matemática</span>
-                    <span class="subject-item port"><img src=".\assets\icons\perfil\Book.png" alt="">Português</span>
-                    <span class="subject-item tic"><img src=".\assets\icons\perfil\Monitor.png" alt="">TIC</span>
-                    <span class="subject-item eng"><img src=".\assets\icons\perfil\Geography.png" alt="">Inglês</span>
-                    <span class="subject-item hist"><img src=".\assets\icons\perfil\Pillar.png" alt="">História</span>
-                    <span class="subject-item fis"><img src=".\assets\icons\perfil\Physics.png" alt="">Física</span>
-                    <span class="subject-item bio"><img src=".\assets\icons\perfil\Planting.png" alt="">Biologia</span>
+                    {% for disciplina in disciplinas %}
+                        <span class="subject-item {{ disciplina.classe }}">
+                            <img src="{{ disciplina.icone }}" alt="">
+                            {{ disciplina.nome }}
+                        </span>
+                    {% else %}
+                        <span class="subject-item">
+                            Nenhuma disciplina inscrita.
+                        </span>
+                    {% endfor %}
                 </div>
             </div>
 
@@ -200,8 +220,8 @@
                             <span>Atualizada pela última vez há 3 meses</span>
                         </div>
 
-                        <a href="#">Alterar</a>
-                        <span class="arrow">›</span>
+                        <button type="button" class="security-action-btn" id="abrir-password-modal">Alterar
+                        <span class="arrow">›</span></button>
                     </div>
 
                     <div class="security-row">
@@ -292,5 +312,58 @@
 </main>
         
     </div>
+
+    <div class="password-modal" id="password-modal">
+        <div class="password-modal-card">
+
+            <div class="password-modal-header">
+                <div>
+                    <h2>Alterar palavra-passe</h2>
+                    <p>Defina uma palavra-passe forte para proteger a sua conta</p>
+                </div>
+
+                <button type="button" class="modal-close-btn" id="fechar-password-modal">x</button>
+            </div>
+
+            <form action="/perfil/alterar-password" method="POST" class="password-form">
+
+                <div class="password-field">
+                    <label for="senha_atual">Palavra-passe atual</label>
+                    <input type="password" id="senha_atual" name="senha_atual" required>
+                </div>
+
+                <div class="password-field">
+                    <label for="nova_senha">Nova palavra-passe</label>
+                    <input type="password" id="nova_senha" name="nova_senha" required>
+                </div>
+
+                <div class="password-field">
+                    <label for="confirmar_senha">Confirmar nova palavra-passe</label>
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" required>
+                </div>
+
+                <div class="password-rules">
+                    <strong>Regras da palavra-passe</strong>
+                    <ul>
+                        <li>Mínimo de 10 caracteres;</li>
+                        <li>Pelo menos uma letra maiúscula;</li>
+                        <li>Pelo menos uma letra minúscula;</li>
+                        <li>Pelo menos um número;</li>
+                        <li>Pelo menos um simbolo: ! @ # $ % & * _ - + = ? .</li>
+                        <li>Não pode conter o seu nome ou email;</li>
+                        <li>Não pode ser igual à palavra-passe atual.</li>
+                    </ul>
+                </div>
+
+                <div class="password-actions">
+                    <button type="button" class="password-cancel-btn" id="cancelar-password-modal">Cancelar</button>
+                    <button type="submit" class="password-submit-btn">Guardar nova palavra-passe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="/js/header_notificacoes.js"></script>
+<script src="/js/perfil_password.js"></script>
+<script src="/js/connection_status.js"></script>
 </body>
 </html>

@@ -19,15 +19,20 @@
             </div>
 
             <div class="topbar-actions">
-                <div class="notification-area">
-                    <img src=".\assets\icons\inicio\Notification.png" alt="noti" class="notification-icon">
+                <div class="connection-status online" id="connection-status">
+                    <span class="connection-dot"></span>
+                    <strong id="connection-status-text">Online</strong>
                 </div>
+                <a href="/notificacoes" class="notification-area">
+                    <img src=".\assets\icons\inicio\Notification.png" alt="noti" class="notification-icon">
+                    <span class="notification-badge hidden" id="header-notification-badge">0</span>
+                </a>
 
                 <div class="topbar-divider"></div>
 
                 <div class="user-area">
-                    <img src=".\assets\icons\inicio\perfil.png" alt="perfil" class="user-avatar">
-                    <span class="user-name">Elves Garcia</span>
+                    <img src="{{ session.utilizador_avatar}}" alt="perfil" class="user-avatar">
+                    <span class="user-name">{{ session.utilizador_nome }}</span>
                     <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
                 </div>
 
@@ -113,7 +118,7 @@
 
                     <div class="stat-info">
                         <span>Frequência</span>
-                        <strong>92%</strong>
+                        <strong>0</strong>
                     </div>
                 </article>
             </section>
@@ -127,10 +132,10 @@
                         </div>
 
                         <div class="history-filters">
-                            <button class="filter-btn active" type="button">Todas</button>
-                            <button class="filter-btn" type="button">Tarefas</button>
-                            <button class="filter-btn" type="button">Notas</button>
-                            <button class="filter-btn" type="button">Aulas</button>
+                            <button class="filter-btn active" type="button" data-filter="todos">Todas</button>
+                            <button class="filter-btn" type="button" data-filter="submissao">Submissões</button>
+                            <button class="filter-btn" type="button" data-filter="feedback">Feedback</button>
+                            <button class="filter-btn" type="button" data-filter="tarefa">Tarefas</button>
                         </div>
                     </div>
 
@@ -144,126 +149,12 @@
                         </div>
 
                         <div class="history-row">
-                            <div class="activity-cell">
-                                <div class="activity-icon pdf">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="activity-text">
-                                    <strong>Relatório de biologia submetido</strong>
-                                    <span>PDF - 2.4 MB</span>
-                                </div>
+                            <div class="activity-row">
+                                <div style="grid-column: 1 / -1; text-align: center;">
+                                    Carregando histórico
+                                </div>                                
                             </div>
-                            <div class="subject-cell">
-                                <strong>Biologia</strong>
-                                <span>Prof. Ricardo Lima</span>
-                            </div>
-
-                            <div class="date-cell">
-                                <strong>14/05/2026</strong>
-                                <span>14:32</span>
-                            </div>
-
-                            <div class="result-cell grade-good">16 / 20</div>
-                            <div><span class="status done">Concluído</span></div>
                         </div>
-
-                        <div class="history-row">
-                            <div class="activity-cell">
-                                <div class="activity-icon class">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="activity-text">
-                                    <strong>Aula de TIC assistida</strong>
-                                    <span>Introdução à programação</span>
-                                </div>
-                            </div>
-                            <div class="subject-cell">
-                                <strong>TIC</strong>
-                                <span>Prof. Carlos Mendes</span>
-                            </div>
-
-                            <div class="date-cell">
-                                <strong>13/05/2026</strong>
-                                <span>13:30</span>
-                            </div>
-
-                            <div class="result-cell neutral">Presente</div>
-                            <div><span class="status present">Registado</span></div>
-                        </div>
-
-                        <div class="history-row">
-                            <div class="activity-cell">
-                                <div class="activity-icon note">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="activity-text">
-                                    <strong>Teste de Matemática avaliado</strong>
-                                    <span>Funções e gráficos</span>
-                                </div>
-                            </div>
-                            <div class="subject-cell">
-                                <strong>Matemática</strong>
-                                <span>Prof. João Ferreira</span>
-                            </div>
-
-                            <div class="date-cell">
-                                <strong>10/05/2026</strong>
-                                <span>09:15</span>
-                            </div>
-
-                            <div class="result-cell grade-good">17 / 20</div>
-                            <div><span class="status evaluated">Avaliado</span></div>
-                        </div>
-
-                        <div class="history-row">
-                            <div class="activity-cell">
-                                <div class="activity-icon warning">
-                                    <img src=".\assets\icons\notificações\Error.png" alt="">
-                                </div>
-                                <div class="activity-text">
-                                    <strong>Trefa de Inglês pendente</strong>
-                                    <span>Present Simple - Exercícios</span>
-                                </div>
-                            </div>
-                            <div class="subject-cell">
-                                <strong>Inglês</strong>
-                                <span>Prof. Laura Silva</span>
-                            </div>
-
-                            <div class="date-cell">
-                                <strong>08/05/2026</strong>
-                                <span>23:59</span>
-                            </div>
-
-                            <div class="result-cell muted">--</div>
-                            <div><span class="status done">Pendente</span></div>
-                        </div>
-
-                        <div class="history-row">
-                            <div class="activity-cell">
-                                <div class="activity-icon material">
-                                    <img src=".\assets\icons\notificações\Error.png" alt="">
-                                </div>
-                                <div class="activity-text">
-                                    <strong>Material de Português aberto</strong>
-                                    <span>Interpretação de texto</span>
-                                </div>
-                            </div>
-                            <div class="subject-cell">
-                                <strong>Português</strong>
-                                <span>Prof. Ana Oliveira</span>
-                            </div>
-
-                            <div class="date-cell">
-                                <strong>06/05/2026</strong>
-                                <span>11:20</span>
-                            </div>
-
-                            <div class="result-cell neutral">Visualizado</div>
-                            <div><span class="status viewed">Visualizado</span></div>
-                        </div>
-
-                    </div>
                 </section>
 
                 <aside class="history-side">
@@ -327,14 +218,10 @@
                             <h2>Feedback recente</h2>
                         </div>
 
-                        <div class="recent-feedback">
-                            <strong>Relatório de Biologia</strong>
-                            <p>Bom trabalho. Melhore apenas a estrutura da introdução e a formatação das referências</p>
-
-                            <div class="feedback-meta">
-                                <span>Prof. Ricardo Lima</span>
-                                <strong>16 / 20</strong>
-                            </div>
+                        <div class="recent-feedback" id="recent-feedback">
+                            <strong>Sem feedback recente</strong>
+                            <p>Ainda não existe feedback registado.</p>
+                            
                         </div>
                     </section>
                 </aside>
@@ -342,8 +229,9 @@
         </main>
     </div>
 
-
-
+<script src="/js/historico.js"></script>
+<script src="/js/header_notificacoes.js"></script>
+<script src="/js/connection_status.js"></script>
 
 </body>
 

@@ -11,22 +11,27 @@
     <link rel="stylesheet" href="./css/notificacoes.css">
 </head>
 <body>
-    <div class="page inicio-page">
+    <div class="page notificacoes-page">
         <header class="topbar">
             <div class="logo-area">
                 <img src=".\assets\img\logo.png" alt="cabolearn" class="logo-img">
             </div>
 
             <div class="topbar-actions">
-                <div class="notification-area">
-                    <img src=".\assets\icons\inicio\Notification.png" alt="noti" class="notification-icon">
+                <div class="connection-status online" id="connection-status">
+                    <span class="connection-dot"></span>
+                    <strong id="connection-status-text">Online</strong>
                 </div>
+                <a href="/notificacoes" class="notification-area">
+                    <img src=".\assets\icons\inicio\Notification.png" alt="noti" class="notification-icon">
+                    <span class="notification-badge hidden" id="header-notification-badge">0</span>
+                </a>
 
                 <div class="topbar-divider"></div>
 
                 <div class="user-area">
-                    <img src=".\assets\icons\inicio\perfil.png" alt="perfil" class="user-avatar">
-                    <span class="user-name">Elves Garcia</span>
+                    <img src="{{ session.utilizador_avatar }}" alt="perfil" class="user-avatar">
+                    <span class="user-name">{{ session.utilizador_nome }}</span>
                     <img src=".\assets\icons\inicio\arrow.png" alt="abrir op" class="user-arrow">
                 </div>
 
@@ -69,17 +74,17 @@
             <!-- FILTROS DE NOTIFICAÇÕES -->
             <div class="notifications-filters">
                 <div class="filter-tabs">
-                    <button class="filter-btn active">Todas <span>(5)</span></button>
-                    <button class="filter-btn">Não lidas <span>(2)</span></button>
-                    <button class="filter-btn">Materiais</button>
-                    <button class="filter-btn">Tarefas</button>
+                    <button class="filter-btn active" type="button" data-filter="todas">Todas (<span id="count-todas">0</span>)</button>
+                    <button class="filter-btn" type="button" data-filter="nao_lidas">Não lidas (<span id="count-nao-lidas">0</span>)</button>
+                    <button class="filter-btn" type="button" data-filter="material">Materiais (<span id="count-materiais">0</span>)</button>
+                    <button class="filter-btn" type="button" data-filter="tarefa">Tarefas (<span id="count-tarefas">0</span>)</button>
                 </div>
                 
-                <button class="mark-all-read-btn">Marcar todas como lidas</button>
+                <button class="mark-all-read-btn" id="mark-all-read-btn" type="button">Marcar todas como lidas</button>
             </div>
 
             <!-- LISTA DE NOTIFICAÇÕES -->
-            <section class="notifications-list-card">
+            <section class="notifications-list-card" id="notifications-list">
                 
                 <!-- Notificação 1 (Não lida - Nova Tarefa) -->
                 <article class="notification-item unread">
@@ -179,5 +184,8 @@
             </section>
         </main>
     </div>
+<script src="/js/header_notificacoes.js"></script>
+<script src="/js/notificacoes.js"></script>
+<script src="/js/connection_status.js"></script>
 </body>
 </html>

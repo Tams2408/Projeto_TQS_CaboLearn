@@ -94,6 +94,13 @@
     column-gap: 0.8vw;
 }
 
+.empty-details {
+    padding: 2vh 1vw;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 0.85vw;
+    line-height: 1.4;
+}
+
 /* =========================================
    TABELA
 ========================================= */
@@ -660,4 +667,275 @@
 
 .btn-primary:hover {
     background: #3468D1;
+}
+
+#submissoes-container .table-row {
+    cursor: pointer;
+}
+
+#submissoes-container .table-row:hover {
+    background: rgba(69, 121, 225, 0.06);
+}
+
+#submissoes-container .table-row.selected {
+    background: rgba(69, 121, 225, 0.12);
+}
+/* ===============================
+   ÍCONE DO TIPO DE FICHEIRO
+================================ */
+
+.file-icon {
+    width: 2.75vw;
+    height: 2.75vw;
+
+    border-radius: 0.45vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+}
+
+.file-icon img {
+    width: 1.65vw;
+    height: 1.65vw;
+    object-fit: contain;
+    display: block;
+}
+
+.file-icon.pdf {
+    background: rgba(239, 68, 68, 0.12);
+}
+
+.file-icon.word {
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.file-icon.ppt {
+    background: rgba(249, 115, 22, 0.12);
+}
+
+.file-icon.zip {
+    background: rgba(168, 85, 247, 0.12);
+}
+
+.file-icon.image {
+    background: rgba(20, 184, 166, 0.12);
+}
+
+.file-icon.file {
+    background: rgba(107, 114, 128, 0.12);
+}
+
+/* ===============================
+   CORES DOS ESTADOS
+================================ */
+
+.status.entregue {
+    background: rgba(69, 121, 225, 0.18);
+    color: #2563EB;
+}
+
+.status.analise {
+    background: rgba(245, 158, 11, 0.18);
+    color: #D97706;
+}
+
+.status.corrigido {
+    background: rgba(168, 85, 247, 0.18);
+    color: #A855F7;
+}
+
+.status.feedback {
+    background: rgba(20, 184, 166, 0.18);
+    color: #0F766E;
+}
+
+.status.reenviar {
+    background: rgba(249, 115, 22, 0.18);
+    color: #EA580C;
+}
+
+.status.rejeitado {
+    background: rgba(239, 68, 68, 0.18);
+    color: #DC2626;
+}
+
+/* ===============================
+   BOTÃO BAIXAR COMO LINK
+================================ */
+
+.details-actions a.btn-outline {
+    text-decoration: none;
+}
+
+.details-actions .btn-outline,
+.details-actions .btn-primary {
+    width: 100%;
+    height: 3.35vh;
+
+    border-radius: 0.45vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.8vw;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.details-actions .btn-outline {
+    border: 1px solid #4579E1;
+    background: #FFFFFF;
+    color: #4579E1;
+}
+
+.details-actions .btn-outline:hover {
+    background: rgba(69, 121, 225, 0.08);
+}
+
+.details-actions .btn-primary {
+    border: none;
+    background: #4579E1;
+    color: #FFFFFF;
+}
+
+.details-actions .btn-primary:hover {
+    background: #3166D4;
+}
+
+#submissoes-container .table-row {
+    cursor: pointer;
+}
+
+#submissoes-container .table-row:hover {
+    background: rgba(69, 121, 225, 0.06);
+}
+
+#submissoes-container .table-row.selected {
+    background: rgba(69, 121, 225, 0.12);
+}
+
+/* Ícones dos ficheiros */
+
+.file-icon {
+    width: 2.75vw;
+    height: 2.75vw;
+    border-radius: 0.45vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.file-icon img {
+    width: 1.65vw;
+    height: 1.65vw;
+    object-fit: contain;
+    display: block;
+}
+
+.file-icon.pdf {
+    background: rgba(239, 68, 68, 0.12);
+}
+
+.file-icon.word {
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.file-icon.ppt {
+    background: rgba(249, 115, 22, 0.12);
+}
+
+.file-icon.zip {
+    background: rgba(168, 85, 247, 0.12);
+}
+
+.file-icon.image {
+    background: rgba(20, 184, 166, 0.12);
+}
+
+.file-icon.file {
+    background: rgba(107, 114, 128, 0.12);
+}
+
+/* Estados */
+
+.status.entregue {
+    background: rgba(69, 121, 225, 0.18);
+    color: #2563EB;
+}
+
+.status.analise {
+    background: rgba(245, 158, 11, 0.18);
+    color: #D97706;
+}
+
+.status.corrigido {
+    background: rgba(168, 85, 247, 0.18);
+    color: #A855F7;
+}
+
+.status.feedback {
+    background: rgba(20, 184, 166, 0.18);
+    color: #0F766E;
+}
+
+.status.reenviar {
+    background: rgba(249, 115, 22, 0.18);
+    color: #EA580C;
+}
+
+.status.rejeitado {
+    background: rgba(239, 68, 68, 0.18);
+    color: #DC2626;
+}
+
+/* Botão baixar como link */
+
+.details-actions a.btn-outline {
+    text-decoration: none;
+}
+
+.details-actions .btn-outline,
+.details-actions .btn-primary {
+    width: 100%;
+    height: 3.35vh;
+
+    border-radius: 0.45vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.8vw;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.details-actions .btn-outline {
+    border: 1px solid #4579E1;
+    background: #FFFFFF;
+    color: #4579E1;
+}
+
+.details-actions .btn-outline:hover {
+    background: rgba(69, 121, 225, 0.08);
+}
+
+.details-actions .btn-primary {
+    border: none;
+    background: #4579E1;
+    color: #FFFFFF;
+}
+
+.details-actions .btn-primary:hover {
+    background: #3166D4;
 }

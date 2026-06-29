@@ -1,20 +1,13 @@
-# Dependências
-node_modules/
-vendor/
+__pycache__/
+*.pyc
 
-# Ambiente
-.env
-.env.local
+.venv/
+venv/
+env/
 
-# Builds
-dist/
-build/
-target/
+.pytest_cache/
 
-# IDE
-.vscode/
-.idea/
-
-# Sistema
 .DS_Store
 Thumbs.db
+
+uploads/

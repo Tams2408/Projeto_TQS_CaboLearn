@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "professor_id": 2,
+        "professor_nome": "João Ferreira",
+        "disciplina": "Matemática",
+        "titulo": "Ficha de exercício",
+        "descricao": "Os alunos devem resolver os exercicios 1 a 9",
+        "prazo": "2026-06-30T19:59",
+        "tipos_aceitos": [
+            ".png"
+        ],
+        "tamanho_maximo_mb": 20.0,
+        "ativa": true,
+        "criada_em": "26/06/2026 20:00"
+    },
+    {
+        "id": 2,
+        "professor_id": 2,
+        "professor_nome": "João Ferreira",
+        "disciplina": "Matemática",
+        "titulo": "A",
+        "descricao": "qualquer coisa",
+        "prazo": "2026-06-26T20:39",
+        "tipos_aceitos": [
+            ".pdf",
+            ".docx",
+            ".pptx",
+            ".zip",
+            ".png",
+            ".jpg",
+            ".jpeg"
+        ],
+        "tamanho_maximo_mb": 20.0,
+        "ativa": true,
+        "criada_em": "26/06/2026 20:38"
+    },
+    {
+        "id": 3,
+        "professor_id": 2,
+        "professor_nome": "João Ferreira",
+        "disciplina": "Matemática",
+        "titulo": "qualquer coisa",
+        "descricao": "aassad",
+        "prazo": "2026-06-26T12:32",
+        "tipos_aceitos": [
+            ".pdf",
+            ".docx",
+            ".pptx",
+            ".zip",
+            ".png",
+            ".jpg",
+            ".jpeg"
+        ],
+        "tamanho_maximo_mb": 20.0,
+        "ativa": true,
+        "criada_em": "27/06/2026 12:32"
+    }
+]

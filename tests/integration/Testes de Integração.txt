@@ -1,0 +1,45 @@
+=====Testes de Integração==========
+ Ao todo foram executados 10 testes.
+ 
+ Os testes realizados cobrem:
+
+ -test_login_com_credenciais_validas
+
+ -test_login_com_credenciais_invalidas
+
+ -test_submissao_sem_credenciais
+
+ -test_professor_nao_pode_submeter_trabalho
+
+ -test_api_tarefas
+
+ -test_submissao_bem_sucedida
+
+ -test_submissao_com_formato_invalido
+
+ -test_submissao_fora_do_prazo
+
+ -test_submissao_com_tarefa_de_outra_disicplina
+
+ -test_submissao_sem ficheiro
+
+ Resultado dos testes
+ PS C:\Users\elves\OneDrive\Desktop\Projeto_TQS_CaboLearn-main> python -m pytest tests/integration/test_upload.py -v            
+===================================================================== test session starts ======================================================================
+platform win32 -- Python 3.14.4, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\elves\AppData\Local\Python\pythoncore-3.14-64\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\elves\OneDrive\Desktop\Projeto_TQS_CaboLearn-main
+collected 10 items                                                                                                                                              
+
+tests/integration/test_upload.py::test_login_com_credenciais_validas_redireciona_para_area_do_estudante PASSED                                            [ 10%]
+tests/integration/test_upload.py::test_login_com_credenciais_invalidas_mostra_erro PASSED                                                                 [ 20%]
+tests/integration/test_upload.py::test_submissao_sem_autenticacao_bloqueia_e_redireciona_para_login PASSED                                                [ 30%]
+tests/integration/test_upload.py::test_professor_nao_pode_submeter_trabalho PASSED                                                                        [ 40%]
+tests/integration/test_upload.py::test_api_tarefas_retorna_apenas_tarefas_ativas_da_disciplina PASSED                                                     [ 50%]
+tests/integration/test_upload.py::test_submissao_bem_sucedida_guarda_ficheiro_submissao_notificacao_e_email PASSED                                        [ 60%]
+tests/integration/test_upload.py::test_submissao_com_formato_invalido_e_rejeitada PASSED                                                                  [ 70%]
+tests/integration/test_upload.py::test_submissao_fora_do_prazo_e_aceite_mas_marcada_como_atrasada PASSED                                                  [ 80%]
+tests/integration/test_upload.py::test_submissao_com_tarefa_de_outra_disciplina_e_rejeitada PASSED                                                        [ 90%]
+tests/integration/test_upload.py::test_submissao_sem_ficheiro_e_rejeitada PASSED                                                                          [100%]
+
+====================================================================== 10 passed in 6.69s ======================================================================

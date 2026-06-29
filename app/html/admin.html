@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administração</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+    <main class="admin-page">
+        
+        <section class="admin-header">
+            <div>
+                <h1>Administração</h1>
+                <p>Gestão de utilizadores da plataforma Cabo Learn</p>
+            </div>
+
+            <div class="admin-actions">
+                <span>{{ session.utilizador_nome }}</span>
+                <a href="/logout">Sair</a>
+            </div>
+        </section>
+
+        {% if mensagem %}
+            <div class="alert success">{{ mensagem }}</div>
+        {% endif %}
+
+        {% if erro %}
+            <div class="alert error">{{ erro }}</div>
+        {% endif %}
+
+        <section class="admin-layout">
+
+            <article class="form-card">
+                <h2>Criar utilizador</h2>
+
+                <form action="/admin" method="POST">
+
+                    <div class="form-grid two">
+                        <div class="form-group">
+                            <label for="">Nome</label>
+                            <input type="text" name="nome_completo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="email" name="email" placeholder="email@cabolearn.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grid two">
+                        <div class="form-group">
+                            <label for="">Palavra-passe inicial</label>
+                            <input type="password" name="senha" placeholder="CaboLearn@2026" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Tipo de utilizador</label>
+                            <select name="tipo" id="tipo" required>
+                                <option value="">Selecione</option>
+                                <option value="estudante">Estudante</option>
+                                <option value="professor">Professor</option>
+                                <option value="admin">Administrador</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group professor-only">
+                        <label for="">Disciplina do professor</label>
+                        <select name="disciplina">
+                            <option value="">Selecione</option>
+                            <option value="Matemática">Matemática</option>
+                            <option value="Português">Português</option>
+                            <option value="TIC">TIC</option>
+                            <option value="Inglês">Inglês</option>
+                            <option value="História">História</option>
+                            <option value="Física">Biologia</option>
+                        </select>
+                    </div>
+
+                    <section class="student-fields">
+                        <h3>Dados do estudante</h3>
+
+                        <div class="form-grid two">
+                            <div class="form-group">
+                                <label for="">Telefone</label>
+                                <input type="text" name="telefone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Data de nascimento</label>
+                                <input type="text" name="data_nascimento" placeholder="dia/mês/ano">
+                            </div>
+                        </div>
+
+                        <div class="form-grid three">
+                            <div class="form-group">
+                                <label for="">Ano escolaridade</label>
+                                <input type="text" name="ano_escolaridade">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Turma</label>
+                                <input type="text" name="turma">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Ano letivo</label>
+                                <input type="text" name="ano_letivo">
+                            </div>
+                        </div>
+
+                        <div class="form-grid two">
+                            <div class="form-group">
+                                <label for="">Nº de aluno</label>
+                                <input type="text" name="numero_aluno">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Professor diretor</label>
+                                <select name="professor_diretor_id" id="">
+                                    <option value="">Selecione o professor diretor</option>
+
+                                    {% for professor in professores %}
+                                        <option value="{{ professor.id }}">
+                                            {{ professor.nome_completo or professor.nome }}
+                                            {% if professor.disciplina %}
+                                                -{{ professor.disciplina }}
+                                            {% endif %}
+                                        </option>
+                                    {% else %}
+                                        <option value="" disabled>
+                                            Nenhum professor registado
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Instituição</label>
+                            <input type="text" name="instituicao">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Disciplinas inscritas</label>
+
+                            <div class="checkbox-grid">
+                                <label><input type="checkbox" name="disciplinas" value="Matemática">Matemática</label>
+                                <label><input type="checkbox" name="disciplinas" value="Português">Português</label>
+                                <label><input type="checkbox" name="disciplinas" value="TIC">TIC</label>
+                                <label><input type="checkbox" name="disciplinas" value="Inglês">Inglês</label>
+                                <label><input type="checkbox" name="disciplinas" value="História">História</label>
+                                <label><input type="checkbox" name="disciplinas" value="Física">Física</label>
+                                <label><input type="checkbox" name="disciplinas" value="Biologia">Biologia</label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <button type="submit" class="submit-btn">Criar Utilizador</button>
+                </form>
+            </article>
+
+            <article class="users-card">
+                <h2>Utilizadores Registados</h2>
+
+                <div class="users-list">
+                    {% for utilizador in utilizadores %}
+                        <div class="user-row">
+                            <div>
+                                <strong>{{ utilizador.nome_completo or utilizador.nome }}</strong>
+                                <span>{{ utilizador.email }}</span>
+                            </div>
+
+                            <div class="user-meta">
+                                <span class="badge {{ utilizador.tipo }}">{{ utilizador.tipo }}</span>
+
+                                {% if utilizador.disciplina %}
+                                    <small>{{ utilizador.disciplina }}</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% else %}
+                        <p class="empty">Nenhum utilizador criado</p>
+                    {% endfor %}
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="/js/admin.js"></script>
+</body>
+</html>

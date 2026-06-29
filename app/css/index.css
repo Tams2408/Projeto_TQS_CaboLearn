@@ -1,10 +1,15 @@
 /* =========================================
    CABOLEARN - INDEX.CSS
-   Conteúdo específico da página Início
+   Página Início - versão refinada
 ========================================= */
 
+/* Área principal da página Início */
+.inicio-main {
+    width: 63.1vw;
+}
+
 /* =========================================
-   TÍTULO DA PÁGINA
+   TÍTULO
 ========================================= */
 
 .page-heading {
@@ -14,93 +19,119 @@
 }
 
 .page-heading h1 {
-    font-size: 3.33vw;
-    font-weight: 400;
+    font-size: 3.05vw;
+    font-weight: 500;
     line-height: 1;
-    margin-bottom: 1.55vh;
-    color: #000000;
+    margin-bottom: 1.1vh;
+    color: #050505;
 }
 
 .page-heading p {
-    font-size: 2.08vw;
+    font-size: 1.05vw;
     font-weight: 400;
-    line-height: 1;
-    color: #000000;
+    color: rgba(0, 0, 0, 0.58);
 }
 
 .page-heading p span {
     color: #4579E1;
+    font-weight: 700;
 }
 
 /* =========================================
-   CARDS BASE DA PÁGINA INÍCIO
+   BASE DOS CARDS
 ========================================= */
 
 .card {
     position: absolute;
-    background: #FFFFFF;
-    border: 2px solid #DEE6EE;
-    border-radius: 1.2vw;
+
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(69, 121, 225, 0.16);
+    border-radius: 1vw;
+
     overflow: hidden;
+
+    box-shadow: 0 0.65vh 1.35vh rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-0.25vh);
+    box-shadow: 0 0.9vh 1.8vh rgba(0, 0, 0, 0.16);
 }
 
 .card-title {
     display: flex;
     align-items: center;
-    gap: 0.5vw;
+    gap: 0.55vw;
 }
 
 .card-title img {
-    width: 1.65vw;
-    height: 1.65vw;
+    width: 1.45vw;
+    height: 1.45vw;
     object-fit: contain;
     display: block;
 }
 
 .card-title h2,
 .card h2 {
-    font-size: 1.32vw;
-    font-weight: 400;
+    font-size: 1.28vw;
+    font-weight: 700;
     line-height: 1;
-    color: #000000;
+    color: #111827;
     white-space: nowrap;
 }
 
 /* =========================================
-   AULAS HOJE
+   CARD - AULAS HOJE
 ========================================= */
 
 .today-classes-card {
     left: 0;
-    top: 13.3vh;
-    width: 28.85vw;
-    height: 24.4vh;
-    padding: 1.65vh 1.15vw 1.4vh 1.15vw;
+    top: 12.8vh;
+
+    width: 28.95vw;
+    height: 23.6vh;
+
+    padding: 1.55vh 1.25vw;
 }
 
 .today-classes-card .card-title {
-    margin-bottom: 1.35vh;
+    margin-bottom: 1.25vh;
 }
 
 .class-list {
     width: 100%;
-    height: 17.6vh;
-    border: 1px solid rgba(0, 0, 0, 0.22);
-    border-radius: 0.34vw;
+    height: 16.75vh;
+
+    border: 1px solid rgba(69, 121, 225, 0.18);
+    border-radius: 0.65vw;
+
     overflow: hidden;
+
     background: #FFFFFF;
+
     display: flex;
     flex-direction: column;
 }
 
 .class-row {
     flex: 1;
+
     display: grid;
-    grid-template-columns: 2.2vw 6vw minmax(0, 1fr) 4vw;
+    grid-template-columns: 2.55vw 6.3vw minmax(0, 1fr) 3.75vw;
     align-items: center;
     column-gap: 0.8vw;
-    padding: 0 0.95vw;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+
+    padding: 0 0.85vw;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    transition: background 0.2s ease;
+}
+
+.class-row:hover {
+    background: #F7FAFF;
 }
 
 .class-row:last-child {
@@ -108,41 +139,47 @@
 }
 
 .subject-icon-small {
-    width: 1.95vw;
-    height: 1.95vw;
+    width: 2.05vw;
+    height: 2.05vw;
     object-fit: contain;
     display: block;
 }
 
 .class-time {
-    font-size: 0.88vw;
-    color: rgba(0, 0, 0, 0.42);
+    font-size: 0.76vw;
+    color: rgba(0, 0, 0, 0.48);
     white-space: nowrap;
     line-height: 1;
 }
 
 .class-info {
     min-width: 0;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .class-info h3 {
-    font-size: 0.98vw;
-    font-weight: 400;
+    font-size: 0.95vw;
+    font-weight: 700;
     line-height: 1.15;
-    margin-bottom: 0.35vh;
+
+    margin-bottom: 0.3vh;
+
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #000000;
+
+    color: #111827;
 }
 
 .class-info p {
-    font-size: 0.78vw;
+    font-size: 0.7vw;
     line-height: 1.15;
-    color: rgba(0, 0, 0, 0.58);
+
+    color: rgba(0, 0, 0, 0.55);
+
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -150,65 +187,85 @@
 
 .class-badge {
     justify-self: end;
-    min-width: 3.2vw;
-    height: 2vh;
-    padding: 0 0.45vw;
-    border-radius: 0.22vw;
-    font-size: 0.56vw;
+
+    min-width: 3.05vw;
+    height: 1.85vh;
+    padding: 0 0.42vw;
+
+    border-radius: 999px;
+
+    font-size: 0.54vw;
+    font-weight: 700;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     white-space: nowrap;
 }
 
 .badge-blue {
-    background: rgba(85, 142, 240, 0.4);
-    color: #558EF0;
+    background: rgba(85, 142, 240, 0.16);
+    color: #4579E1;
 }
 
 .badge-green {
-    background: rgba(85, 240, 100, 0.4);
-    color: #55C965;
+    background: rgba(34, 197, 94, 0.16);
+    color: #16A34A;
 }
 
 .badge-purple {
-    background: rgba(199, 85, 240, 0.4);
-    color: #C755F0;
+    background: rgba(199, 85, 240, 0.16);
+    color: #A855F7;
 }
 
 /* =========================================
-   TRABALHOS
+   CARD - TRABALHOS
 ========================================= */
 
 .pending-works-card {
-    left: 31.1vw;
-    top: 13.3vh;
+    left: 31.15vw;
+    top: 12.8vh;
+
     width: 31.95vw;
-    height: 24.4vh;
-    padding: 1.65vh 1.35vw;
+    height: 23.6vh;
+
+    padding: 1.55vh 1.35vw;
 }
 
 .pending-works-card h2 {
-    margin-bottom: 1.45vh;
+    margin-bottom: 1.2vh;
 }
 
 .work-list {
     width: 100%;
-    height: 17.45vh;
-    border: 1px solid rgba(0, 0, 0, 0.22);
-    border-radius: 0.34vw;
+    height: 16.8vh;
+
+    border: 1px solid rgba(69, 121, 225, 0.18);
+    border-radius: 0.65vw;
+
     overflow: hidden;
+
     background: #FFFFFF;
 }
 
 .work-row {
-    height: 5.82vh;
+    height: 5.6vh;
+
     display: grid;
-    grid-template-columns: 2.6vw 1fr 5.35vw 3.95vw;
-    column-gap: 0.8vw;
+    grid-template-columns: 2.65vw minmax(0, 1fr) 4.9vw 4vw;
+    column-gap: 0.85vw;
     align-items: center;
-    padding: 0 0.8vw;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+
+    padding: 0 0.85vw;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    transition: background 0.2s ease;
+}
+
+.work-row:hover {
+    background: #F7FAFF;
 }
 
 .work-row:last-child {
@@ -220,98 +277,129 @@
 }
 
 .work-info h3 {
-    font-size: 1.08vw;
-    font-weight: 400;
+    font-size: 0.98vw;
+    font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 0.45vh;
+
+    margin-bottom: 0.35vh;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #111827;
+}
+
+.work-info p {
+    font-size: 0.72vw;
+    line-height: 1.1;
+
+    color: rgba(0, 0, 0, 0.55);
+
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.work-info p {
-    font-size: 0.8vw;
-    line-height: 1.1;
-    color: rgba(0, 0, 0, 0.58);
-    white-space: nowrap;
-}
-
 .work-date {
-    font-size: 0.8vw;
-    color: rgba(0, 0, 0, 0.42);
+    font-size: 0.72vw;
+    color: rgba(0, 0, 0, 0.48);
     text-align: center;
     white-space: nowrap;
 }
 
 .work-status {
     justify-self: end;
+
     min-width: 3.35vw;
-    height: 2.05vh;
+    height: 1.9vh;
     padding: 0 0.45vw;
-    border-radius: 0.2vw;
-    font-size: 0.56vw;
+
+    border-radius: 999px;
+
+    font-size: 0.53vw;
+    font-weight: 800;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     white-space: nowrap;
 }
 
 .status-green {
-    background: rgba(85, 240, 111, 0.4);
-    color: #4BCB64;
+    background: rgba(34, 197, 94, 0.16);
+    color: #16A34A;
 }
 
 .status-red,
 .work-row:nth-child(2) .work-status {
-    background: rgba(240, 85, 85, 0.4);
-    color: #E85A5A;
+    background: rgba(239, 68, 68, 0.16);
+    color: #DC2626;
 }
 
 .status-blue,
 .work-row:nth-child(3) .work-status {
-    background: rgba(69, 121, 225, 0.4);
-    color: #4579E1;
+    background: rgba(69, 121, 225, 0.16);
+    color: #2563EB;
 }
 
 /* =========================================
-   MINHAS DISCIPLINAS
+   CARD - MINHAS DISCIPLINAS
 ========================================= */
 
 .my-subjects-card {
     left: 0;
-    top: 41.4vh;
-    width: 63.05vw;
-    height: 35.35vh;
-    padding: 1.65vh 1.55vw;
+    top: 39.2vh;
+
+    width: 63.1vw;
+    height: 37.2vh;
+
+    padding: 1.65vh 1.65vw;
 }
 
 .my-subjects-card .card-title {
-    margin-bottom: 1.55vh;
+    margin-bottom: 1.65vh;
 }
 
 .subjects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 16.95vw);
-    grid-auto-rows: 12.65vh;
-    column-gap: 2.15vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 12.4vh;
+
+    column-gap: 1.45vw;
     row-gap: 1.55vh;
-    padding-left: 2.6vw;
+
+    padding: 0 2.55vw;
 }
 
 .subject-card {
     position: relative;
-    border: 2px solid #C2D8F2;
-    border-radius: 0.38vw;
-    background: #FFFFFF;
+
+    border: 1px solid rgba(69, 121, 225, 0.28);
+    border-radius: 0.75vw;
+
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%);
+
     overflow: hidden;
+
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-0.25vh);
+    border-color: rgba(69, 121, 225, 0.55);
+    box-shadow: 0 0.5vh 1.2vh rgba(69, 121, 225, 0.12);
 }
 
 .subject-icon {
     position: absolute;
-    left: 1.05vw;
-    top: 1.45vh;
-    width: 3.15vw;
-    height: 3.15vw;
+    left: 1.15vw;
+    top: 1.55vh;
+
+    width: 3.05vw;
+    height: 3.05vw;
+
     object-fit: contain;
     display: block;
 }
@@ -319,24 +407,29 @@
 .subject-info {
     position: absolute;
     left: 5vw;
-    top: 1.45vh;
-    max-width: 10.8vw;
+    top: 1.65vh;
+
+    max-width: 10.3vw;
 }
 
 .subject-info h3 {
-    font-size: 1.55vw;
-    font-weight: 400;
+    font-size: 1.42vw;
+    font-weight: 700;
     line-height: 1.05;
-    margin-bottom: 0.8vh;
+
+    margin-bottom: 0.75vh;
+
     white-space: nowrap;
-    color: #000000;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    color: #111827;
 }
 
 .subject-info p {
-    font-size: 0.76vw;
+    font-size: 0.72vw;
     color: rgba(0, 0, 0, 0.52);
+
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -346,31 +439,38 @@
     position: absolute;
     left: 1.25vw;
     right: 1.25vw;
-    bottom: 1.35vh;
+    bottom: 1.45vh;
+
     display: flex;
     align-items: center;
-    gap: 0.75vw;
+    gap: 0.8vw;
 }
 
 .subject-progress span {
-    width: 2.15vw;
+    width: 2.1vw;
     flex-shrink: 0;
-    font-size: 1vw;
+
+    font-size: 0.92vw;
+    font-weight: 700;
     line-height: 1;
-    color: #000000;
+
+    color: #111827;
 }
 
 .progress-track {
     flex: 1;
-    height: 1.65vh;
-    background: rgba(217, 217, 217, 0.6);
-    border-radius: 0 0.83vw 0.83vw 0;
+
+    height: 1.1vh;
+
+    background: rgba(217, 217, 217, 0.7);
+    border-radius: 999px;
+
     overflow: hidden;
 }
 
 .progress-fill {
     height: 100%;
-    border-radius: 0 0.83vw 0.83vw 0;
+    border-radius: 999px;
 }
 
 .progress-blue {
@@ -378,7 +478,7 @@
 }
 
 .progress-green {
-    background: #55F065;
+    background: #55D96A;
 }
 
 .progress-purple {
@@ -394,5 +494,5 @@
 }
 
 .progress-cyan {
-    background: #55F0CE;
+    background: #55DCC4;
 }

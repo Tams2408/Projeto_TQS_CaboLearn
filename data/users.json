@@ -1,9 +1,45 @@
 [
     {
         "id": 1,
-        "nome": "Elves Garcia",
+        "nome_completo": "Administrador CaboLearn",
+        "email": "admin@cabolearn.com",
+        "password_hash": "scrypt:32768:8:1$NXybyG8PLOVOE96u$916ca5c6091c8e00213266843634753804bcfe94d9932b8ffe673d4eefbe6f17c12dd82f72cbfea0e8184c7f1827b99be44f088f54c8559c0fdec9590085e278",
+        "tipo": "admin",
+        "avatar": "./assets/img/avatar.jpg"
+    },
+    {
+        "id": 2,
+        "nome_completo": "João Ferreira",
+        "email": "jferreira@cabolearn.com",
+        "password_hash": "scrypt:32768:8:1$ARojxaO9T9mldSe3$130f3974a5277755443d5899200fcdaee481b44de2f6bbcdf51d758e44e3fea5593277e4a73587bc6132090f8f4049e68c8a1ff934dfd45fe863ea6c1afe1732",
+        "tipo": "professor",
+        "disciplina": "Matemática"
+    },
+    {
+        "id": 3,
+        "nome_completo": "Elves Fernando de Pina Garcia",
         "email": "elves@cabolearn.com",
-        "password_hash": "scrypt:32768:8:1$hn3qMCWASLb3mfRK$2cee3e0bcd8f200e39ce215cc0b62c47c84dfe0b2a990ee9addec0686570fb8064d6d17859349e895c9b5064f9d65504e64ff571db4fed3fe930446fb9d3f079",
-        "tipo": "estudante"
+        "password_hash": "scrypt:32768:8:1$uiKqAhnIQmsMdUwp$ab4e71eb0cad20077dd1b016f70dc610b153a2a0b1716cb59b3516d9341c80d2e780fa690243002a691a726fe7ef307fa160633cece8b031cdff95a539d0a2c4",
+        "tipo": "estudante",
+        "telefone": "+238 979 72 80",
+        "data_nascimento": "14/09/2004",
+        "ano_escolaridade": "12º",
+        "turma": "12º A",
+        "ano_letivo": "2025/2026",
+        "numero_aluno": "6617",
+        "professor_diretor_id": "2",
+        "professor_diretor": "João Ferreira",
+        "instituicao": "Liceu Amílcar Cabral",
+        "estado": "Ativo",
+        "categoria": "Aluno regular",
+        "disciplinas": [
+            "Matemática",
+            "Português",
+            "TIC",
+            "Inglês",
+            "História",
+            "Física",
+            "Biologia"
+        ]
     }
 ]

@@ -38,7 +38,7 @@ body {
     color: var(--text-primary);
 }
 
-/* Compatibilidade caso ainda exista app-stage no HTML */
+
 .app-stage {
     width: 100vw !important;
     height: 100vh !important;
@@ -46,9 +46,6 @@ body {
     background: var(--bg);
 }
 
-/* =========================================
-   CONTAINER BASE
-========================================= */
 
 .page {
     position: relative;
@@ -60,9 +57,7 @@ body {
     transform-origin: initial !important;
 }
 
-/* =========================================
-   HEADER
-========================================= */
+
 
 .topbar {
     position: absolute;
@@ -91,7 +86,6 @@ body {
     z-index: 51;
 }
 
-/* Logo */
 
 .logo-area {
     position: relative;
@@ -112,7 +106,6 @@ body {
     display: block;
 }
 
-/* Ações do header */
 
 .topbar-actions {
     position: relative;
@@ -128,7 +121,6 @@ body {
     color: #FFFFFF;
 }
 
-/* Notificação */
 
 .notification-area {
     position: relative;
@@ -181,7 +173,6 @@ body {
     justify-content: center;
 }
 
-/* Divisor */
 
 .topbar-divider {
     width: 1px;
@@ -189,7 +180,7 @@ body {
     background: rgba(255, 255, 255, 0.18);
 }
 
-/* Utilizador */
+
 
 .user-area {
     min-height: 5.2vh;
@@ -237,7 +228,6 @@ body {
     opacity: 0.75;
 }
 
-/* Botão sair */
 
 .logout-button {
     height: 5vh;
@@ -281,10 +271,6 @@ body {
     color: inherit;
 }
 
-/* =========================================
-   IMAGEM DE FUNDO COMUM
-========================================= */
-
 .background-illustration {
     position: absolute;
     left: -13.49vw;
@@ -296,9 +282,6 @@ body {
     pointer-events: none;
 }
 
-/* =========================================
-   SIDEBAR
-========================================= */
 
 .sidebar {
     position: absolute;
@@ -384,10 +367,6 @@ body {
     color: #FFFFFF;
 }
 
-/* =========================================
-   RODAPÉ DA SIDEBAR
-========================================= */
-
 .sidebar-footer {
     position: absolute;
     left: 2.86vw;
@@ -409,10 +388,6 @@ body {
     color: rgba(0, 0, 0, 0.22);
 }
 
-/* =========================================
-   ÁREA PRINCIPAL COMUM
-========================================= */
-
 .main-content {
     position: absolute;
     left: 25.26vw;
@@ -422,4 +397,112 @@ body {
     height: 76.76vh;
 
     z-index: 10;
+}
+
+/* =========================================
+   BADGE DE NOTIFICAÇÕES NO HEADER
+========================================= */
+
+.notification-area {
+    position: relative;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -0.35vh;
+    right: -0.35vw;
+
+    min-width: 1.25vw;
+    height: 1.25vw;
+
+    padding: 0 0.28vw;
+
+    border-radius: 999px;
+
+    background: #EF4444;
+    color: #FFFFFF;
+
+    font-size: 0.65vw;
+    font-weight: 800;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #2B2F33;
+}
+
+.notification-badge.hidden {
+    display: none;
+}
+
+/* =========================================
+   INDICADOR ONLINE / OFFLINE
+========================================= */
+
+.connection-status {
+    height: 3.7vh;
+
+    padding: 0 0.85vw;
+
+    border-radius: 999px;
+
+    display: flex;
+    align-items: center;
+    gap: 0.45vw;
+
+    font-size: 0.72vw;
+    font-weight: 800;
+
+    transition: 0.2s ease;
+
+    border: 1px solid transparent;
+}
+
+.connection-dot {
+    width: 0.55vw;
+    height: 0.55vw;
+
+    border-radius: 50%;
+
+    display: block;
+    flex-shrink: 0;
+}
+
+.connection-status.online {
+    background: rgba(34, 197, 94, 0.12);
+    color: #16A34A;
+    border-color: rgba(34, 197, 94, 0.25);
+}
+
+.connection-status.online .connection-dot {
+    background: #22C55E;
+    box-shadow: 0 0 0 0.18vw rgba(34, 197, 94, 0.16);
+}
+
+.connection-status.offline {
+    background: rgba(239, 68, 68, 0.14);
+    color: #DC2626;
+    border-color: rgba(239, 68, 68, 0.28);
+}
+
+.connection-status.offline .connection-dot {
+    background: #EF4444;
+    box-shadow: 0 0 0 0.18vw rgba(239, 68, 68, 0.18);
+}
+
+.connection-status.syncing {
+    background: rgba(245, 158, 11, 0.14);
+    color: #D97706;
+    border-color: rgba(245, 158, 11, 0.28);
+}
+
+.connection-status.syncing .connection-dot {
+    background: #F59E0B;
+    box-shadow: 0 0 0 0.18vw rgba(245, 158, 11, 0.18);
 }

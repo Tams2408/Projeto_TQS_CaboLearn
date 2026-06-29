@@ -18,7 +18,6 @@ body {
     overflow: hidden;
 }
 
-/* Página */
 .login-page {
     position: relative;
     width: 100vw;
@@ -27,9 +26,6 @@ body {
     overflow: hidden;
 }
 
-/* ================================
-   HEADER
-================================ */
 
 .login-header {
     position: absolute;
@@ -56,7 +52,6 @@ body {
     display: block;
 }
 
-/* Ações do header */
 .header-actions {
     position: absolute;
     right: 6.25vw;
@@ -113,9 +108,6 @@ body {
     z-index: 10;
 }
 
-/* ================================
-   CONTEÚDO
-================================ */
 
 .login-content {
     position: absolute;
@@ -140,10 +132,6 @@ body {
     object-fit: contain;
     display: block;
 }
-
-/* ================================
-   CARD DE LOGIN
-================================ */
 
 .login-card {
     position: absolute;
@@ -174,9 +162,6 @@ body {
     margin-bottom: 4vh;
 }
 
-/* ================================
-   FORMULÁRIO
-================================ */
 
 .login-form {
     width: 100%;
@@ -248,9 +233,6 @@ body {
     font-size: 0;
 }
 
-/* ================================
-   OPÇÕES
-================================ */
 
 .login-options {
     width: 36.67vw;
@@ -287,9 +269,6 @@ body {
     text-decoration: underline;
 }
 
-/* ================================
-   BOTÃO ENTRAR
-================================ */
 
 .login-button {
     width: 36.67vw;  /* 704px */
@@ -319,9 +298,6 @@ body {
     background: #356AD0;
 }
 
-/* ================================
-   RODAPÉ DO CARD
-================================ */
 
 .card-divider {
     position: absolute;

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>CaboLearn - Professor</title>
+        <link rel="icon" href="./app/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/css/professor_tarefas.css">
+    </head>
+    <body>
+        <div class="professor-page">
+            <header class="professor-topbar">
+                <div>
+                    <h1>CaboLearn</h1>
+                    <span>Painel do Professor</span>
+                </div>
+
+                <div class="professor-user-area">
+                    <div class="professor-user-info">
+                        <span>{{ professor_name }}</span>
+                        <span>{{ disciplina_professor }}</span>
+                    </div>
+
+                    <a href="/professor/submissoes" class="logout-btn secondary-btn">Submissões</a>
+                    <a href="/logout" class="logout-btn">Sair</a>
+                </div>
+            </header>
+
+            <main class="professor-container">
+                <section class="professor-heading">
+                    <div>
+                        <h2>Gestão de tarefas</h2>
+                        <p>Crie tarefas para os alunos submeterem na plataforma.</p>
+                    </div>
+
+                    <div class="disciplina-badge">
+                        <span>Disciplina</span>
+                        <strong>{{ disciplina_professor }}</strong>
+                    </div>
+                </section>
+
+                <section class="professor-layout">
+                    <article class="professor-card form-card">
+
+                        <div class="card-header">
+                            <h3>Criar nova tarefa</h3>
+                        </div>
+
+                        <form action="/professor/tarefas" method="POST" class="task-form">
+                            <div class="form-group">
+                                <label>Disciplina:</label>
+                                <div class="fixed-field">
+                                    {{ disciplina_professor }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="titulo">Título da tarefa</label>
+                                <input type="text" id="titulo" name="titulo" placeholder="Digite o  titulo" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="descricao">Descrição</label>
+                                <textarea name="descricao" id="descricao" placeholder="Explique o que o aluno deve entregar"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prazo">Prazo de entrega</label>
+                                <input type="datetime-local" id="prazo" name="prazo" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="tipos_aceitos">Tipos aceitos</label>
+                                    <input type="text" id="tipos_aceitos" name="tipos_aceitos" value=".pdf,.docx,.pptx,.zip,.png,.jpg,.jpeg" required>
+                                    <small>Separe por vírgula. Ex: .pdf,.docx,.png</small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="tamanho_maximo">Tamanho máximo</label>
+                                    <input type="number" id="tamanho_maximo" name="tamanho_maximo" min="1" step="0.1" value="20" required>
+                                    <small>Valor em MB</small>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                Criar tarefa
+                            </button>
+                        </form>
+                    </article>
+
+                    <article class="professor-card table-card">
+                        <div class="card-header table-header-title">
+                            <div>
+                                <h3>Tarefas criadas</h3>
+                                <p>Lista de tarefas associadas à sua disciplina</p>
+                            </div>
+
+                            <span class="task-count">{{ tarefas|length }} tarefas(s)</span>
+                        </div>
+
+                        <div class="tasks-table-wrapper">
+                            <table class="tasks-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Tarefa</th>
+                                        <th>Prazo</th>
+                                        <th>Ficheiros</th>
+                                        <th>Estados</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    {% for tarefa in tarefas %}
+                                    <tr>
+                                        <td>#{{ tarefa.id }}</td>
+
+                                        <td>
+                                            <strong>{{ tarefa.titulo }}</strong>
+                                            <span>{{ tarefa.descricao if tarefa.descricao else "Sem descrição" }}</span>
+                                        </td>
+
+                                        <td>
+                                            {{ tarefa.prazo }}
+                                        </td>
+
+                                        <td>
+                                            <div class="file-rules">
+                                                <span>{{ tarefa.tipos_aceitos | join(", ") }}</span>
+                                                <small>Máx. {{ tarefa.tamanho_maximo_mb }} MB</small>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            {% if tarefa.ativa %}
+                                                <form action="/professor/tarefas/{{ tarefa.id }}/alterar-estado" method="POST">
+                                                    <input type="hidden" name="acao" value="desativar">
+                                                    <button type="submit" class="table-action danger">
+                                                        Remover do Upload
+                                                    </button>
+                                                </form>
+                                            {% else %}
+                                                <form action="/professor/tarefas/{{ tarefa.id }}/alterar-estado" method="POST">
+                                                    <input type="hidden" name="acao" value="ativar">
+                                                    <button type="submit" class="table-action success">
+                                                        Reativar
+                                                    </button>
+                                                </form>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    {% else %}
+                                    <tr>
+                                        <td colspan="5" class="empty-row">
+                                            Nenhuma tarefa criada ainda.
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

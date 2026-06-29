@@ -599,3 +599,569 @@
     object-fit: contain;
     display: block;
 }
+
+/* =========================================
+   CORREÇÃO FINAL - PERFIL
+   Ajuste dos cards inferiores
+========================================= */
+
+/* Layout inferior mais equilibrado */
+.profile-layout {
+    position: absolute;
+    left: 0;
+    top: 27.2vh;
+
+    width: 67.5vw;
+    height: 49.8vh;
+
+    display: grid;
+    grid-template-columns: minmax(0, 42.8vw) 23.8vw;
+    column-gap: 0.9vw;
+    align-items: stretch;
+}
+
+/* =========================================
+   CARD PRINCIPAL DE DADOS
+========================================= */
+
+.profile-data-card {
+    width: 100%;
+    height: 100%;
+
+    background: #FFFFFF;
+    border-radius: 1vw;
+
+    padding: 1.35vh 2vw 1.15vh 2vw;
+
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.12vw rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+}
+
+.profile-data-card h2 {
+    font-size: 1.22vw;
+    font-weight: 700;
+    color: #000000;
+
+    margin-bottom: 1vh;
+}
+
+.section-title-academic {
+    margin-top: 1.8vh;
+}
+
+.form-grid {
+    display: grid;
+    column-gap: 3vw;
+    row-gap: 1.15vh;
+}
+
+.two-columns {
+    grid-template-columns: 1fr 1fr;
+}
+
+.three-columns {
+    grid-template-columns: 1fr 0.9fr 0.95fr;
+    column-gap: 1.45vw;
+}
+
+.academic-second-row {
+    margin-top: 1.2vh;
+}
+
+.profile-field label,
+.subjects-section > label {
+    font-size: 0.78vw;
+    color: #000000;
+    margin-bottom: 0.32vh;
+}
+
+.profile-field input {
+    width: 100%;
+    height: 2.85vh;
+
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 0.25vw;
+
+    background: #FFFFFF;
+
+    padding: 0 0.85vw;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.68vw;
+    color: rgba(0, 0, 0, 0.45);
+
+    outline: none;
+}
+
+/* Disciplinas */
+.subjects-section {
+    margin-top: 1.35vh;
+}
+
+.subjects-list {
+    margin-top: 0.85vh;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1.1vh 2.35vw;
+}
+
+.subject-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35vw;
+
+    font-size: 0.82vw;
+    white-space: nowrap;
+}
+
+.subject-item img {
+    width: 1vw;
+    height: 1vw;
+    object-fit: contain;
+    display: block;
+}
+
+/* =========================================
+   COLUNA DIREITA
+========================================= */
+
+.profile-side {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vh;
+}
+
+.side-card {
+    width: 100%;
+
+    background: #FFFFFF;
+    border-radius: 1vw;
+
+    box-shadow: 0.1vw 0.74vh 0.74vh 0.12vw rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+}
+
+/* Alturas ajustadas para não cortar conteúdo */
+.security-card {
+    height: 25.1vh;
+    padding: 1.35vh 1.15vw;
+}
+
+.preferences-card {
+    height: 23.4vh;
+    padding: 1.25vh 1.15vw;
+}
+
+/* Títulos dos cards laterais */
+.side-title {
+    display: flex;
+    align-items: center;
+    gap: 0.65vw;
+
+    margin-bottom: 0.85vh;
+}
+
+.side-main-icon {
+    width: 2.25vw;
+    height: 2.25vw;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.side-main-icon img {
+    width: 1.15vw;
+    height: 1.15vw;
+    object-fit: contain;
+    display: block;
+}
+
+.side-title h2 {
+    font-size: 1.2vw;
+    font-weight: 700;
+    line-height: 1;
+    color: #000000;
+}
+
+/* =========================================
+   CONTA E SEGURANÇA
+========================================= */
+
+.security-list,
+.preferences-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Linhas menores para caberem no card */
+.security-row {
+    height: 4.85vh;
+
+    display: grid;
+    grid-template-columns: 1.9vw minmax(0, 1fr) auto 0.65vw;
+    column-gap: 0.62vw;
+
+    align-items: center;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.security-row:last-child {
+    border-bottom: none;
+}
+
+.security-icon,
+.preference-icon {
+    width: 1.85vw;
+    height: 1.85vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.25vw;
+
+    flex-shrink: 0;
+}
+
+.security-icon img,
+.preference-icon img {
+    width: 1.05vw;
+    height: 1.05vw;
+    object-fit: contain;
+    display: block;
+}
+
+.security-text strong,
+.preference-text strong {
+    display: block;
+
+    font-size: 0.72vw;
+    font-weight: 500;
+    color: #000000;
+
+    margin-bottom: 0.18vh;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.security-text span,
+.preference-text span {
+    display: block;
+
+    font-size: 0.58vw;
+    color: rgba(0, 0, 0, 0.42);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.security-row a {
+    font-size: 0.58vw;
+    font-weight: 700;
+    color: #4579E1;
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.arrow {
+    color: #4579E1;
+    font-size: 1.1vw;
+}
+
+/* =========================================
+   PREFERÊNCIAS
+========================================= */
+
+.preference-row {
+    height: 4.55vh;
+
+    display: grid;
+    grid-template-columns: 1.9vw minmax(0, 1fr) 1.9vw;
+    column-gap: 0.62vw;
+
+    align-items: center;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.preference-row:last-child {
+    border-bottom: none;
+}
+
+/* Switch menor para caber bem */
+.switch {
+    position: relative;
+
+    width: 1.85vw;
+    height: 1vw;
+
+    display: inline-block;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch span {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 999px;
+
+    cursor: pointer;
+}
+
+.switch span::before {
+    content: "";
+
+    position: absolute;
+
+    width: 0.8vw;
+    height: 0.8vw;
+
+    left: 0.1vw;
+    top: 0.1vw;
+
+    background: #FFFFFF;
+    border-radius: 50%;
+
+    transition: 0.2s ease;
+}
+
+.switch input:checked + span {
+    background: #4579E1;
+}
+
+.switch input:checked + span::before {
+    transform: translateX(0.84vw);
+}
+
+/* =========================================
+   ALTERAÇÃO DE PALAVRA-PASSE
+========================================= */
+
+.security-action-btn {
+    border: none;
+    background: transparent;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.62vw;
+    font-weight: 700;
+    color: #4579E1;
+
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.security-action-btn:hover {
+    text-decoration: underline;
+}
+
+.profile-alert {
+    position: absolute;
+    left: 0;
+    top: 6.4vh;
+
+    width: 48.3vw;
+
+    padding: 0.9vh 1vw;
+
+    border-radius: 0.65vw;
+
+    font-size: 0.82vw;
+    font-weight: 700;
+    z-index: 20;
+}
+
+.profile-alert.success {
+    background: rgba(34, 197, 94, 0.14);
+    color: #16A34A;
+    border: 1px solid rgba(34, 197, 94, 0.24);
+}
+
+.profile-alert.error {
+    background: rgba(239, 68, 68, 0.14);
+    color: #DC2626;
+    border: 1px solid rgba(239, 68, 68, 0.24);
+}
+
+.password-modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.42);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+.password-modal.show {
+    display: flex;
+}
+
+.password-modal-card {
+    width: 34vw;
+    min-width: 420px;
+
+    background: #FFFFFF;
+    border-radius: 1vw;
+
+    padding: 1.6vh 1.6vw;
+
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.28);
+}
+
+.password-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1vw;
+
+    margin-bottom: 1.5vh;
+}
+
+.password-modal-header h2 {
+    font-size: 1.45vw;
+    font-weight: 700;
+    color: #000000;
+
+    margin-bottom: 0.4vh;
+}
+
+.password-modal-header p {
+    font-size: 0.78vw;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.modal-close-btn {
+    width: 2vw;
+    height: 2vw;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.06);
+    color: #000000;
+
+    font-size: 1.25vw;
+    cursor: pointer;
+}
+
+.password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1vh;
+}
+
+.password-field label {
+    display: block;
+
+    font-size: 0.78vw;
+    font-weight: 700;
+    color: #000000;
+
+    margin-bottom: 0.45vh;
+}
+
+.password-field input {
+    width: 100%;
+    height: 4.2vh;
+
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 0.45vw;
+
+    padding: 0 0.9vw;
+
+    font-size: 0.82vw;
+    outline: none;
+}
+
+.password-field input:focus {
+    border-color: #4579E1;
+    box-shadow: 0 0 0 3px rgba(69, 121, 225, 0.14);
+}
+
+.password-rules {
+    background: #F8FAFF;
+    border: 1px solid rgba(69, 121, 225, 0.16);
+    border-radius: 0.65vw;
+
+    padding: 1vh 1vw;
+
+    font-size: 0.72vw;
+    color: rgba(0, 0, 0, 0.66);
+}
+
+.password-rules strong {
+    display: block;
+    color: #000000;
+    margin-bottom: 0.6vh;
+}
+
+.password-rules ul {
+    padding-left: 1.2vw;
+}
+
+.password-rules li {
+    margin-bottom: 0.35vh;
+}
+
+.password-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.8vw;
+
+    margin-top: 0.6vh;
+}
+
+.password-cancel-btn,
+.password-submit-btn {
+    height: 4vh;
+    padding: 0 1.1vw;
+
+    border-radius: 0.5vw;
+
+    font-size: 0.78vw;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.password-cancel-btn {
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background: #FFFFFF;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.password-submit-btn {
+    border: none;
+    background: #4579E1;
+    color: #FFFFFF;
+}
+
+.password-submit-btn:hover {
+    background: #3166D4;
+}
