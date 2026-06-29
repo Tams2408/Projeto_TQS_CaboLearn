@@ -24,12 +24,9 @@ SUBMISSOES_FILE = os.path.join(BASE_DIR, "data", "submissoes.json")
 NOTIFICACOES_FILE = os.path.join(BASE_DIR, "data", "notificacoes.json")
 UPLOADS_DIR = os.path.join(BASE_DIR, "uploads")
 EMAILS_FILE = os.path.join(BASE_DIR, "data", "emails.json")
-<<<<<<< HEAD
 AVATARS_DIR = os.path.join(BASE_DIR, "app", "assets", "uploads", "avatars")
 AVATAR_EXT_PERMITIDAS = [".png", ".jpg", ".jpeg", ".webp"]
 AVATAR_TAMANHO_MAXIMO_MB = 5
-=======
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 
 PASSWORDS_COMUNS={
     "123456",
@@ -43,7 +40,6 @@ PASSWORDS_COMUNS={
     "cabolearn",
     "cabolearn123"
 }
-<<<<<<< HEAD
 def extensao_permitida_avatar(nome_ficheiro):
     extensao = os.path.splitext(nome_ficheiro.lower())[1]
     return extensao in AVATAR_EXT_PERMITIDAS
@@ -54,8 +50,6 @@ def tamanho_ficheiro_mb_generico(ficheiro):
     ficheiro.stream.seek(0)
 
     return tamanho_bytes / (1024 * 1024)
-=======
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 
 def pedido_json():
     aceita_json= "application/json" in request.headers.get("Accept", "")
@@ -418,11 +412,7 @@ def login():
             session["utilizador_email"] = utilizador["email"]
             session["utilizador_tipo"] = utilizador["tipo"]
             session["utilizador_disciplina"] = utilizador.get("disciplina")
-<<<<<<< HEAD
             session["utilizador_avatar"] = utilizador.get("avatar", "/assets/img/avatar3.jpg")
-=======
-            session["utilizador_avatar"] = utilizador.get("avatar", "./assets/img/avatar3.jpg")
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 
             if utilizador["tipo"] == "admin":
                 return redirect(url_for("admin"))
@@ -552,7 +542,6 @@ def professor_submissoes():
         disciplina_professor=session.get("utilizador_disciplina")
     )
 
-<<<<<<< HEAD
 @app.route("/perfil/avatar", methods=["POST"])
 @login_obrigatorio
 def alterar_avatar():
@@ -612,8 +601,6 @@ def alterar_avatar():
     return redirect(url_for("perfil"))
 
 
-=======
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 @app.route("/professor/submissoes/<int:submissao_id>/corrigir", methods=["POST"])
 @professor_obrigatorio
 def corrigir_submissao(submissao_id):
@@ -625,10 +612,7 @@ def corrigir_submissao(submissao_id):
 
     estados_validos= [
         "Entregue",
-<<<<<<< HEAD
         "Atualizado",
-=======
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
         "Em análise",
         "Corrigido",
         "Com feedback",
@@ -748,13 +732,8 @@ def submeter_upload():
     observacao = request.form.get("observacao", "").strip()
     ficheiro = request.files.get("ficheiro")
 
-<<<<<<< HEAD
     if not disciplina or not tarefa_id:
         return resposta_erro_upload("Selecione a disciplina e a tarefa.", 400)
-=======
-    if not disciplina or not tarefa_id or not ficheiro:
-        return resposta_erro_upload("Dados incompletos para submissão.", 400)
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 
     tarefas = carregar_json(TAREFAS_FILE)
 
@@ -772,7 +751,6 @@ def submeter_upload():
     if tarefa.get("disciplina", "").lower() != disciplina.lower():
         return resposta_erro_upload("A tarefa selecionada não pertence à disciplina escolhida.", 400)
 
-<<<<<<< HEAD
     submissoes = carregar_json(SUBMISSOES_FILE)
 
     submissao_existente = next(
@@ -894,78 +872,6 @@ def submeter_upload():
     mensagem_professor = (
         f"{session.get('utilizador_nome')} "
         f"{'atualizou' if submissao_existente else 'submeteu'} "
-=======
-    nome_original = secure_filename(ficheiro.filename)
-
-    if not nome_original:
-        return resposta_erro_upload("Nenhum ficheiro selecionado.", 400)
-
-    extensao = obter_extensao(nome_original)
-    tipos_aceitos = tarefa.get("tipos_aceitos", [])
-
-    if extensao not in tipos_aceitos:
-        return resposta_erro_upload(
-            f"Tipo de ficheiro inválido. Tipos aceitos: {', '.join(tipos_aceitos)}",
-            400
-        )
-
-    tamanho_mb = tamanho_ficheiro_mb(ficheiro)
-    tamanho_maximo = float(tarefa.get("tamanho_maximo_mb", 0))
-
-    if tamanho_mb > tamanho_maximo:
-        return resposta_erro_upload(
-            f"O ficheiro excede o limite de {tamanho_maximo} MB.",
-            400
-        )
-
-    os.makedirs(UPLOADS_DIR, exist_ok=True)
-
-    data_nome = datetime.now().strftime("%Y%m%d_%H%M%S")
-    nome_guardado = f"{session['utilizador_id']}_{data_nome}_{nome_original}"
-
-    caminho_guardado = os.path.join(UPLOADS_DIR, nome_guardado)
-
-    try:
-        ficheiro.save(caminho_guardado)
-    except Exception:
-        return resposta_erro_upload(
-            "Ocorreu uma falha ao guardar o ficheiro. Tente submeter novamente.",
-            500
-        )
-
-    submissoes = carregar_json(SUBMISSOES_FILE)
-
-    dados_atraso = verificar_atraso_submissao(tarefa.get("prazo"))
-
-    nova_submissao = {
-        "id": gerar_proximo_id(submissoes),
-        "aluno_id": session["utilizador_id"],
-        "aluno_nome": session["utilizador_nome"],
-        "tarefa_id": tarefa["id"],
-        "tarefa_titulo": tarefa["titulo"],
-        "disciplina": tarefa["disciplina"],
-        "professor_id": tarefa["professor_id"],
-        "professor_nome": tarefa["professor_nome"],
-        "prazo": tarefa.get("prazo"),
-        "ficheiro_original": nome_original,
-        "ficheiro_guardado": nome_guardado,
-        "tamanho_mb": round(tamanho_mb, 2),
-        "observacao": observacao,
-        "data_envio": datetime.now().strftime("%d/%m/%Y %H:%M"),
-        "estado": "Entregue",
-        "feedback": None,
-        "nota": None,
-        "atrasada": dados_atraso["atrasada"],
-        "tempo_atraso": dados_atraso["tempo_atraso"],
-        "minutos_atraso": dados_atraso["minutos_atraso"]
-    }
-
-    submissoes.append(nova_submissao)
-    guardar_json(SUBMISSOES_FILE, submissoes)
-
-    mensagem_professor = (
-        f"{session['utilizador_nome']} submeteu "
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
         f"'{tarefa['titulo']}' em {tarefa['disciplina']}."
     )
 
@@ -975,11 +881,7 @@ def submeter_upload():
     criar_notificacao(
         destinatario_id=tarefa["professor_id"],
         destinatario_tipo="professor",
-<<<<<<< HEAD
         titulo=titulo_notificacao_professor,
-=======
-        titulo="Nova submissão recebida",
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
         mensagem=mensagem_professor,
         tipo="submissao",
         disciplina=tarefa["disciplina"]
@@ -988,13 +890,8 @@ def submeter_upload():
     criar_notificacao(
         destinatario_id=session["utilizador_id"],
         destinatario_tipo="estudante",
-<<<<<<< HEAD
         titulo="Submissão atualizada" if submissao_existente else "Submissão enviada",
         mensagem=f"A sua submissão da tarefa '{tarefa['titulo']}' foi atualizada com sucesso." if submissao_existente else f"A sua submissão da tarefa '{tarefa['titulo']}' foi registada com sucesso.",
-=======
-        titulo="Submissão enviada",
-        mensagem=f"A sua submissão da tarefa '{tarefa['titulo']}' foi registada com sucesso.",
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
         tipo="submissao",
         disciplina=tarefa["disciplina"]
     )
@@ -1002,7 +899,6 @@ def submeter_upload():
     enviar_email_confirmacao_submissao(
         utilizador_email=session.get("utilizador_email"),
         utilizador_nome=session.get("utilizador_nome"),
-<<<<<<< HEAD
         submissao=submissao_final
     )
 
@@ -1056,16 +952,6 @@ def api_minha_submissao(tarefa_id):
         }
     })
 
-=======
-        submissao=nova_submissao
-    )
-
-    return resposta_sucesso_upload(
-        "Submissão registada com sucesso. Foi enviado um email de confirmação.",
-        nova_submissao
-    )
-
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 
 @app.route("/api/tarefas")
 @login_obrigatorio
