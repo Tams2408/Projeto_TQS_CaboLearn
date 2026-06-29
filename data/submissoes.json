@@ -2,6 +2,30 @@
     {
         "id": 1,
         "aluno_id": 3,
+<<<<<<< HEAD
+        "aluno_nome": "Elves Fernando de Pina Garcia",
+        "tarefa_id": 1,
+        "tarefa_titulo": "Ficha de exercicio",
+        "disciplina": "Matemática",
+        "professor_id": 2,
+        "professor_nome": "João Ferreira",
+        "prazo": "2026-06-29T18:06",
+        "ficheiro_original": "Components-of-Selenium.png-2.jpg",
+        "ficheiro_guardado": "3_20260629_180543_Components-of-Selenium.png-2.jpg",
+        "tamanho_mb": 0.06,
+        "observacao": "Aqui está",
+        "data_envio": "29/06/2026 18:05",
+        "primeira_submissao_em": "29/06/2026 18:05",
+        "estado": "Corrigido",
+        "feedback": "Bem feito",
+        "nota": 17.0,
+        "atrasada": false,
+        "tempo_atraso": null,
+        "minutos_atraso": 0,
+        "numero_edicoes": 1,
+        "atualizado_em": "29/06/2026 18:05",
+        "corrigido_em": "29/06/2026 18;07"
+=======
         "aluno_nome": "Elves Garcia",
         "tarefa_id": 2,
         "tarefa_titulo": "A",
@@ -42,5 +66,6 @@
         "atrasada": false,
         "tempo_atraso": null,
         "minutos_atraso": 0
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     }
 ]

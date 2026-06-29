@@ -25,6 +25,15 @@
 
 .upload-feedback-area {
     position: absolute;
+<<<<<<< HEAD
+    left: 39vw;
+    top: 1.15vh;
+    width: 28.2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vh;
+    z-index: 40;
+=======
     right: 0;
     top: 0.4vh;
     width: 26.5vw;
@@ -32,11 +41,35 @@
     flex-direction: column;
     gap: 0.65vh;
     z-index: 30;
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 }
 
 .upload-alert,
 .offline-status {
     width: 100%;
+<<<<<<< HEAD
+    min-height: 3.7vh;
+    padding: 0.75vh 1vw;
+    border-radius: 0.65vw;
+    font-size: 0.72vw;
+    font-weight: 700;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0.35vh 0.9vh rgba(0, 0, 0, 0.08);
+}
+
+.upload-alert.success {
+    background: #ECFDF3;
+    color: #15803D;
+    border: 1px solid rgba(34, 197, 94, 0.32);
+}
+
+.upload-alert.error {
+    background: #FEF2F2;
+    color: #DC2626;
+    border: 1px solid rgba(239, 68, 68, 0.32);
+=======
     min-height: 4.2vh;
     padding: 0.9vh 1vw;
     border-radius: 0.7vw;
@@ -55,13 +88,20 @@
     background: rgba(239, 68, 68, 0.14);
     color: #DC2626;
     border: 1px solid rgba(239, 68, 68, 0.25);
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 }
 
 .upload-alert.warning,
 .offline-status {
+<<<<<<< HEAD
+    background: #FFFBEB;
+    color: #B45309;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+=======
     background: rgba(245, 158, 11, 0.14);
     color: #D97706;
     border: 1px solid rgba(245, 158, 11, 0.25);
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 }
 
 .upload-layout {
@@ -204,7 +244,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
+    padding: 1.4vh 1.4vw;
+=======
     padding: 1.6vh 1.6vw;
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     cursor: pointer;
     overflow: hidden;
     margin-bottom: 1.45vh;
@@ -216,6 +260,31 @@
     border-color: #3166D4;
 }
 
+<<<<<<< HEAD
+.dropzone-default {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45vh;
+    text-align: center;
+}
+
+.dropzone-icon-box {
+    width: 4.7vw;
+    height: 4.7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25vh;
+}
+
+.dropzone-icon {
+    width: 4.4vw;
+    height: 4.4vw;
+=======
 .dropzone.has-file {
     background: rgba(69, 121, 225, 0.08);
     border-style: solid;
@@ -245,27 +314,45 @@
 .dropzone-icon {
     width: 5vw;
     height: 5vw;
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     object-fit: contain;
     display: block;
 }
 
 .dropzone-default strong {
     display: block;
+<<<<<<< HEAD
+    max-width: 25vw;
+    font-size: 0.95vw;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #4579E1;
+    text-align: center;
+=======
     font-size: 1vw;
     font-weight: 800;
     line-height: 1.25;
     color: #4579E1;
     margin-bottom: 0.55vh;
     text-align: left;
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 }
 
 .dropzone-default span {
     display: block;
+<<<<<<< HEAD
+    max-width: 25vw;
+    font-size: 0.78vw;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.55);
+    text-align: center;
+=======
     font-size: 0.82vw;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.58);
     margin-bottom: 0.35vh;
     text-align: left;
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -273,6 +360,38 @@
 
 .dropzone-default small {
     display: block;
+<<<<<<< HEAD
+    font-size: 0.72vw;
+    color: rgba(0, 0, 0, 0.45);
+    text-align: center;
+}
+
+.dropzone.has-file {
+    background: rgba(69, 121, 225, 0.06);
+    border-style: solid;
+}
+
+.dropzone.has-file .dropzone-default {
+    display: none;
+}
+
+.selected-file-box {
+    width: 62%;
+    min-height: 5.8vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 1vw;
+    padding: 0.85vh 0.95vw;
+    border-radius: 0.7vw;
+    background: #FFFFFF;
+    border: 1px solid rgba(69, 121, 225, 0.24);
+    box-shadow: 0 0.35vh 0.8vh rgba(0, 0, 0, 0.08);
+}
+
+.selected-file-icon {
+    display: none;
+=======
     font-size: 0.78vw;
     color: rgba(0, 0, 0, 0.45);
     text-align: left;
@@ -334,6 +453,7 @@
 .selected-file-icon.file-jpeg {
     background: rgba(20, 184, 166, 0.14);
     color: #0F766E;
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 }
 
 .selected-file-info {
@@ -342,18 +462,30 @@
 
 .selected-file-info strong {
     display: block;
+<<<<<<< HEAD
+    font-size: 0.8vw;
+=======
     font-size: 1vw;
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     font-weight: 800;
     color: #111827;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+<<<<<<< HEAD
+    margin-bottom: 0.22vh;
+=======
     margin-bottom: 0.4vh;
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 }
 
 .selected-file-info span {
     display: block;
+<<<<<<< HEAD
+    font-size: 0.66vw;
+=======
     font-size: 0.78vw;
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     color: rgba(0, 0, 0, 0.55);
     white-space: nowrap;
     overflow: hidden;
@@ -361,6 +493,15 @@
 }
 
 .remove-file-btn {
+<<<<<<< HEAD
+    height: 2.7vh;
+    padding: 0 0.65vw;
+    border: none;
+    border-radius: 0.42vw;
+    background: rgba(239, 68, 68, 0.1);
+    color: #DC2626;
+    font-size: 0.64vw;
+=======
     height: 3.4vh;
     padding: 0 0.85vw;
     border: none;
@@ -368,12 +509,17 @@
     background: rgba(239, 68, 68, 0.12);
     color: #DC2626;
     font-size: 0.72vw;
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     font-weight: 800;
     cursor: pointer;
 }
 
 .remove-file-btn:hover {
+<<<<<<< HEAD
+    background: rgba(239, 68, 68, 0.2);
+=======
     background: rgba(239, 68, 68, 0.22);
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 }
 
 .observation-area {
@@ -613,6 +759,8 @@
 
 .hidden {
     display: none !important;
+<<<<<<< HEAD
+=======
 }
 
 .dropzone {
@@ -803,4 +951,5 @@
 
 .hidden {
     display: none !important;
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 }

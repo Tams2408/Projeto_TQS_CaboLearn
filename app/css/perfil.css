@@ -1164,4 +1164,26 @@
 
 .password-submit-btn:hover {
     background: #3166D4;
+<<<<<<< HEAD
+}
+
+.avatar-form {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.avatar-form input[type="file"] {
+    display: none;
+}
+
+.avatar-form .photo-button {
+    background: #4579E1;
+}
+
+.avatar-form .photo-button:hover {
+    background: #3166D4;
+=======
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 }

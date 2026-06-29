@@ -548,4 +548,26 @@
 
 .history-row:hover {
     background: #F7FAFF;
+<<<<<<< HEAD
+}
+
+#history-rows {
+    width: 100%;
+}
+
+.empty-history {
+    padding: 2vh 1vw;
+    text-align: center;
+    font-size: 0.82vw;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.history-row {
+    transition: background 0.2s ease;
+}
+
+.history-row:hover {
+    background: #F7FAFF;
+=======
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 }

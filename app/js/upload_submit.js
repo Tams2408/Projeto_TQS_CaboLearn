@@ -76,8 +76,14 @@ document.addEventListener("DOMContentLoaded", () => {
             tarefa_id: formData.get("tarefa_id"),
             observacao: formData.get("observacao") || "",
             autoria: formData.get("autoria") || "",
+<<<<<<< HEAD
+            ficheiro: ficheiro && ficheiro.name ? ficheiro : null,
+            ficheiro_nome: ficheiro && ficheiro.name ? ficheiro.name : "",
+            submissao_existente: formData.get("submissao_existente") || "0",
+=======
             ficheiro: ficheiro,
             ficheiro_nome: ficheiro ? ficheiro.name : "",
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
             criada_em: new Date().toISOString(),
             estado: "pendente"
         };
@@ -132,7 +138,15 @@ document.addEventListener("DOMContentLoaded", () => {
             formData.append("autoria", item.autoria);
         }
 
+<<<<<<< HEAD
+        formData.append("submissao_existente", item.submissao_existente || "0");
+
+        if (item.ficheiro) {
+            formData.append("ficheiro", item.ficheiro, item.ficheiro_nome);
+        }
+=======
         formData.append("ficheiro", item.ficheiro, item.ficheiro_nome);
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 
         return formData;
     }
@@ -240,8 +254,20 @@ document.addEventListener("DOMContentLoaded", () => {
             const formData = new FormData(form);
             const ficheiro = formData.get("ficheiro");
 
+<<<<<<< HEAD
+            const jaExisteSubmissao = formData.get("submissao_existente") === "1";
+
+            if (!formData.get("disciplina") || !formData.get("tarefa_id")) {
+                mostrarMensagem("error", "Selecione a disciplina e a tarefa antes de submeter.");
+                return;
+            }
+
+            if ((!ficheiro || !ficheiro.name) && !jaExisteSubmissao) {
+                mostrarMensagem("error", "Selecione um ficheiro antes de submeter.");
+=======
             if (!formData.get("disciplina") || !formData.get("tarefa_id") || !ficheiro || !ficheiro.name) {
                 mostrarMensagem("error", "Selecione a disciplina, a tarefa e o ficheiro antes de submeter.");
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
                 return;
             }
 

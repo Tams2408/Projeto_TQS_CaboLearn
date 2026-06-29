@@ -4,6 +4,13 @@
         "professor_id": 2,
         "professor_nome": "João Ferreira",
         "disciplina": "Matemática",
+<<<<<<< HEAD
+        "titulo": "Ficha de exercicio",
+        "descricao": "Resolver os exercicios",
+        "prazo": "2026-06-29T18:06",
+        "tipos_aceitos": [
+            ".pdf",
+=======
         "titulo": "Ficha de exercício",
         "descricao": "Os alunos devem resolver os exercicios 1 a 9",
         "prazo": "2026-06-30T19:59",
@@ -27,12 +34,16 @@
             ".docx",
             ".pptx",
             ".zip",
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
             ".png",
             ".jpg",
             ".jpeg"
         ],
         "tamanho_maximo_mb": 20.0,
         "ativa": true,
+<<<<<<< HEAD
+        "criada_em": "29/06/2026 18:04"
+=======
         "criada_em": "26/06/2026 20:38"
     },
     {
@@ -55,5 +66,6 @@
         "tamanho_maximo_mb": 20.0,
         "ativa": true,
         "criada_em": "27/06/2026 12:32"
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     }
 ]

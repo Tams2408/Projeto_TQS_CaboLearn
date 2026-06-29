@@ -1,6 +1,82 @@
 [
     {
         "id": 1,
+<<<<<<< HEAD
+        "destinatario_id": 3,
+        "destinatario_tipo": "estudante",
+        "titulo": "Nova tarefa publicada",
+        "mensagem": "João Ferreira publicou a tarefa 'Ficha de exercicio' em Matemática.",
+        "tipo": "tarefa",
+        "disciplina": "Matemática",
+        "lida": true,
+        "criada_em": "29/06/2026 18:04"
+    },
+    {
+        "id": 2,
+        "destinatario_id": 2,
+        "destinatario_tipo": "professor",
+        "titulo": "Nova submissão recebida",
+        "mensagem": "Elves Garcia submeteu 'Ficha de exercicio' em Matemática.",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": false,
+        "criada_em": "29/06/2026 18:05"
+    },
+    {
+        "id": 3,
+        "destinatario_id": 3,
+        "destinatario_tipo": "estudante",
+        "titulo": "Submissão enviada",
+        "mensagem": "A sua submissão da tarefa 'Ficha de exercicio' foi registada com sucesso.",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": true,
+        "criada_em": "29/06/2026 18:05"
+    },
+    {
+        "id": 4,
+        "destinatario_id": 2,
+        "destinatario_tipo": "professor",
+        "titulo": "Submissão atualizada",
+        "mensagem": "Elves Garcia atualizou 'Ficha de exercicio' em Matemática.",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": false,
+        "criada_em": "29/06/2026 18:05"
+    },
+    {
+        "id": 5,
+        "destinatario_id": 3,
+        "destinatario_tipo": "estudante",
+        "titulo": "Submissão atualizada",
+        "mensagem": "A sua submissão da tarefa 'Ficha de exercicio' foi atualizada com sucesso.",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": true,
+        "criada_em": "29/06/2026 18:05"
+    },
+    {
+        "id": 6,
+        "destinatario_id": 3,
+        "destinatario_tipo": "estudante",
+        "titulo": "Submissão atualizada",
+        "mensagem": "A sua submissão da tarefa 'Ficha de exercicio' foi atualizada pelo professor",
+        "tipo": "feedback",
+        "disciplina": "Matemática",
+        "lida": true,
+        "criada_em": "29/06/2026 18:07"
+    },
+    {
+        "id": 7,
+        "destinatario_id": 3,
+        "destinatario_tipo": "estudante",
+        "titulo": "Submissão atualizada",
+        "mensagem": "A sua submissão da tarefa 'Ficha de exercicio' foi atualizada pelo professor",
+        "tipo": "feedback",
+        "disciplina": "Matemática",
+        "lida": true,
+        "criada_em": "29/06/2026 18:07"
+=======
         "destinatario_id": 2,
         "destinatario_tipo": "professor",
         "titulo": "Nova submissão recebida",
@@ -42,5 +118,6 @@
         "disciplina": "Matemática",
         "lida": false,
         "criada_em": "27/06/2026 14:14"
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     }
 ]

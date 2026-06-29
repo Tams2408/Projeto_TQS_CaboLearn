@@ -18,5 +18,38 @@
         "submissao_id": 2,
         "estado": "simulado",
         "criado_em": "27/06/2026 14:14"
+<<<<<<< HEAD
+    },
+    {
+        "id": 3,
+        "destinatario": "elves@cabolearn.com",
+        "assunto": "Confirmação de submissão - CaboLearn",
+        "mensagem": "Olá Elves Garcia,\n\nA sua submissão foi registada com sucesso.\n\nTarefa: Ficha de exercício\nDisciplina: Matemática\nFicheiro: teste_integracao_1.png\nData de envio: 29/06/2026 15:13\nEstado: Entregue\n\nCaboLearn",
+        "tipo": "confirmacao_submissao",
+        "submissao_id": 3,
+        "estado": "simulado",
+        "criado_em": "29/06/2026 15:13"
+    },
+    {
+        "id": 4,
+        "destinatario": "elves@cabolearn.com",
+        "assunto": "Confirmação de submissão - CaboLearn",
+        "mensagem": "Olá Elves Garcia,\n\nA sua submissão foi registada com sucesso.\n\nTarefa: Ficha de exercicio\nDisciplina: Matemática\nFicheiro: frameworks_selenium_cypress_playwright_10paginas_visual.pdf\nData de envio: 29/06/2026 18:05\nEstado: Entregue\n\nCaboLearn",
+        "tipo": "confirmacao_submissao",
+        "submissao_id": 1,
+        "estado": "simulado",
+        "criado_em": "29/06/2026 18:05"
+    },
+    {
+        "id": 5,
+        "destinatario": "elves@cabolearn.com",
+        "assunto": "Confirmação de submissão - CaboLearn",
+        "mensagem": "Olá Elves Garcia,\n\nA sua submissão foi registada com sucesso.\n\nTarefa: Ficha de exercicio\nDisciplina: Matemática\nFicheiro: Components-of-Selenium.png-2.jpg\nData de envio: 29/06/2026 18:05\nEstado: Atualizado\n\nCaboLearn",
+        "tipo": "confirmacao_submissao",
+        "submissao_id": 1,
+        "estado": "simulado",
+        "criado_em": "29/06/2026 18:05"
+=======
+>>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     }
 ]
