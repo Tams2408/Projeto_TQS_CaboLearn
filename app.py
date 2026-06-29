@@ -4,27 +4,32 @@ from functools import wraps
 import json
 import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 app = Flask(
     __name__,
-    template_folder="app",
-    static_folder="app",
+    template_folder=os.path.join(BASE_DIR, "app", "html"),
+    static_folder=os.path.join(BASE_DIR, "app"),
     static_url_path=""
 )
 
 app.secret_key= "cabolearn_chave_secreta_trocar_depois"
 
-USERS_FILE= "data/users.json"
+USERS_FILE= os.path.join(BASE_DIR, "data", "users.json")
 
 def carregar_utilizadores():
     if not os.path.exists(USERS_FILE):
         return []
     
     with open(USERS_FILE, "r", encoding="utf-8") as file:
-        return json.load(file)
-    
+        try:
+            return json.load(file)
+        except json.JSONDecodeError:
+            return []
 
 def procurar_utilizador_por_email(email):
     utilizadores = carregar_utilizadores()
+
     for utilizador in utilizadores:
         if utilizador["email"].lower() == email.lower():
             return utilizador
