@@ -18,5 +18,25 @@
         "submissao_id": 1,
         "estado": "simulado",
         "criado_em": "30/06/2026 11:20"
+    },
+    {
+        "id": 3,
+        "destinatario": "elves@cabolearn.com",
+        "assunto": "Confirmação de submissão - CaboLearn",
+        "mensagem": "Olá Elves Garcia,\n\nA sua submissão foi registada com sucesso.\n\nTarefa: Ficha de exercicio\nDisciplina: Matemática\nFicheiro: TQS-2026-_Modulos_I_a_VIII_-Aula_1_a_20.pdf\nData de envio: 30/06/2026 19:18\nEstado: Atualizado\nAtenção: a submissão foi enviada com 1 dia(s) e 1 hora(s) de atraso.\n\nCaboLearn",
+        "tipo": "confirmacao_submissao",
+        "submissao_id": 1,
+        "estado": "simulado",
+        "criado_em": "30/06/2026 19:18"
+    },
+    {
+        "id": 4,
+        "destinatario": "elves@cabolearn.com",
+        "assunto": "Confirmação de submissão - CaboLearn",
+        "mensagem": "Olá Elves Garcia,\n\nA sua submissão foi registada com sucesso.\n\nTarefa: Ficha de exercicio\nDisciplina: Matemática\nFicheiro: TQS-2026-_Modulos_I_a_VIII_-Aula_1_a_20.pdf\nData de envio: 30/06/2026 19:18\nEstado: Atualizado\nAtenção: a submissão foi enviada com 1 dia(s) e 1 hora(s) de atraso.\n\nCaboLearn",
+        "tipo": "confirmacao_submissao",
+        "submissao_id": 1,
+        "estado": "simulado",
+        "criado_em": "30/06/2026 19:18"
     }
 ]
