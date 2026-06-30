@@ -10,10 +10,6 @@
     <link rel="stylesheet" href="./css/comum.css">
     <link rel="stylesheet" href="./css/perfil.css">
 </head>
-<<<<<<< HEAD
-
-=======
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 <body>
     <div class="page perfil-page">
         <header class="topbar">
@@ -52,7 +48,6 @@
 
         <aside class="sidebar">
             <nav class="sidebar-menu">
-<<<<<<< HEAD
                 <a href="/index" class="menu-item"> <img src=".\assets\icons\sidebar\Home.png" alt="inicio">
                     <span>Início</span></a>
                 <a href="/disciplinas" class="menu-item"> <img src=".\assets\icons\sidebar\Books.png" alt="">
@@ -67,15 +62,6 @@
                         alt=""><span>Notificações</span></a>
                 <a href="/perfil" class="menu-item active"> <img src=".\assets\icons\sidebar\Profile.png">
                     <span>Perfil</span></a>
-=======
-                <a href="/index" class="menu-item">             <img src=".\assets\icons\sidebar\Home.png" alt="inicio"> <span>Início</span></a>
-                <a href="/disciplinas" class="menu-item">       <img src=".\assets\icons\sidebar\Books.png" alt="">      <span>Disciplinas</span></a>
-                <a href="/upload" class="menu-item">            <img src=".\assets\icons\sidebar\Upload.png" alt="">     <span>Upload</span></a>
-                <a href="/submissoes" class="menu-item">        <img src=".\assets\icons\sidebar\Document.png" alt="">   <span>Submissões</span></a>
-                <a href="/historico" class="menu-item">         <img src=".\assets\icons\sidebar\Time.png" alt="">       <span>Histórico</span></a>
-                <a href="/notificacoes" class="menu-item">      <img src=".\assets\icons\sidebar\Notification.png"alt=""><span>Notificações</span></a>
-                <a href="/perfil" class="menu-item active">     <img src=".\assets\icons\sidebar\Profile.png">           <span>Perfil</span></a>
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
             </nav>
 
             <div class="sidebar-footer">
@@ -86,7 +72,6 @@
 
         <main class="main-content perfil-main">
 
-<<<<<<< HEAD
 
             <section class="page-heading">
                 <h1>Perfil</h1>
@@ -148,61 +133,6 @@
             <span class="badge-regular"> {{ utilizador.categoria or 'Aluno regular' }} </span>
         </div>
     </div>
-=======
-    <!-- TÍTULO -->
-    <section class="page-heading">
-        <h1>Perfil</h1>
-    </section>
-
-    {% if perfil_sucesso %}
-        <div class="profile-alert success">
-            {{ perfil_sucesso }}
-        </div>
-    {% endif %}
-
-    {% if perfil_erro %}
-        <div class="profile-alert error">
-            {{ perfil_erro }}
-        </div>
-    {% endif %}
-
-    <!-- CARD SUPERIOR DO PERFIL -->
-    <section class="profile-hero-card">
-        <div class="profile-photo-area">
-            <img src="{{ session.utilizador_avatar }}" alt="Foto do estudante" class="profile-photo">
-
-            <button class="photo-button" type="button">
-                <img src=".\assets\icons\perfil\Camera.png" alt="">
-            </button>
-        </div>
-
-        <div class="profile-main-info">
-            <h2>{{ utilizador.nome_completo or utilizador.nome }}</h2>
-
-            <div class="profile-meta">
-                <span>
-                    <img src=".\assets\icons\perfil\User.png" alt="">
-                    {{ utilizador.tipo|capitalize }}
-                </span>
-                
-            </div>
-
-            <div class="profile-meta-row">
-                <span>
-                    <img src=".\assets\icons\perfil\Cap.png" alt="">
-                    {{ utilizador.ano_escolaridade or '--' }}
-                </span>
-                <span>
-                    <img src=".\assets\icons\perfil\Name.png" alt="">
-                    Nº de aluno: {{ utilizador.numero_aluno or '--' }}</span>
-            </div>
-
-            <div class="profile-badges">
-                <span class="badge-active"><span class="status-dot"></span> {{ utilizador.estado or 'Ativo' }} </span>
-                <span class="badge-regular"> {{ utilizador.categoria or 'Aluno regular' }} </span>
-            </div>
-        </div>
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     </section>
 
     <!-- LAYOUT INFERIOR -->
@@ -271,7 +201,6 @@
 
                 <div class="subjects-list">
                     {% for disciplina in disciplinas %}
-<<<<<<< HEAD
                     <span class="subject-item {{ disciplina.classe }}">
                         <img src="{{ disciplina.icone }}" alt="">
                         {{ disciplina.nome }}
@@ -280,16 +209,6 @@
                     <span class="subject-item">
                         Nenhuma disciplina inscrita.
                     </span>
-=======
-                        <span class="subject-item {{ disciplina.classe }}">
-                            <img src="{{ disciplina.icone }}" alt="">
-                            {{ disciplina.nome }}
-                        </span>
-                    {% else %}
-                        <span class="subject-item">
-                            Nenhuma disciplina inscrita.
-                        </span>
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
                     {% endfor %}
                 </div>
             </div>
@@ -317,11 +236,7 @@
                         </div>
 
                         <button type="button" class="security-action-btn" id="abrir-password-modal">Alterar
-<<<<<<< HEAD
                             <span class="arrow">›</span></button>
-=======
-                        <span class="arrow">›</span></button>
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
                     </div>
 
                     <div class="security-row">
@@ -409,13 +324,8 @@
 
     </section>
 
-<<<<<<< HEAD
     </main>
 
-=======
-</main>
-        
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
     </div>
 
     <div class="password-modal" id="password-modal">
@@ -467,17 +377,10 @@
             </form>
         </div>
     </div>
-<<<<<<< HEAD
     <script src="/js/header_notificacoes.js"></script>
     <script src="/js/perfil_password.js"></script>
     <script src="/js/connection_status.js"></script>
     <script src="/js/perfil_avatar.js"></script>
 </body>
 
-=======
-<script src="/js/header_notificacoes.js"></script>
-<script src="/js/perfil_password.js"></script>
-<script src="/js/connection_status.js"></script>
-</body>
->>>>>>> 622dc1411a2c3a7ba36672e96d76121f72c0fa0e
 </html>

@@ -1,0 +1,29 @@
+Testes de API
+Ao todo foram feitos 7 Testes
+
+- /api/tarefas: que confirma o retorno apenas de tarefas ativas da disciplina escolhida.
+- /api/minha-submissao/<id>: confirma se o aluno já submeteu aquela tarefa
+- /upload/submeter: confirma a criação de uma submissão nova
+- formato inválido: bloqueia formatos não suportados pelo sistema (ex: .exe, .bat)
+- disciplina errada: bloqueia tarefa que não pertence à disciplina
+- tarefa inativa: bloqueia submissao em tarefa desativada
+
+
+
+PS C:\Usepython -m pytest tests/api/test_api_cabolearn.py -vn> 
+================ test session starts ================
+platform win32 -- Python 3.14.4, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\elves\AppData\Local\Python\pythoncore-3.14-64\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\elves\OneDrive\Desktop\Projeto_TQS_CaboLearn-main
+collected 8 items                                    
+
+tests/api/test_api_cabolearn.py::test_api_tarefas_retorna_apenas_tarefas_ativas_da_disciplina PASSED [ 12%]
+tests/api/test_api_cabolearn.py::test_api_minha_submissao_retorna_false_quando_nao_existe PASSED [ 25%]
+tests/api/test_api_cabolearn.py::test_upload_submeter_cria_nova_submissao PASSED [ 37%]
+tests/api/test_api_cabolearn.py::test_upload_submeter_mesma_tarefa_atualiza_submissao_existente PASSED [ 50%]
+tests/api/test_api_cabolearn.py::test_api_minha_submissao_retorna_submissao_existente PASSED [ 62%]
+tests/api/test_api_cabolearn.py::test_upload_rejeita_formato_invalido PASSED [ 75%]
+tests/api/test_api_cabolearn.py::test_upload_rejeita_tarefa_de_outra_disciplina PASSED [ 87%]
+tests/api/test_api_cabolearn.py::test_upload_rejeita_tarefa_inativa PASSED [100%]
+
+================= 8 passed in 0.96s =================

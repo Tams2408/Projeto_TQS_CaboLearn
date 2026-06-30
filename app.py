@@ -262,6 +262,11 @@ def carregar_utilizadores():
 
 
 def procurar_utilizador_por_email(email):
+    email = email.strip()
+
+    if email != email.lower():
+        return None
+    
     utilizadores = carregar_utilizadores()
 
     for utilizador in utilizadores:
@@ -402,6 +407,10 @@ def login():
     if request.method == "POST":
         email = request.form.get("email", "").strip()
         senha = request.form.get("password", "").strip()
+
+        if email != email.lower():
+            erro = "O email deve ser escrito apenas com letras minúsculas."
+            return render_template("login.html", erro=erro)
 
         utilizador = procurar_utilizador_por_email(email)
 
@@ -1597,7 +1606,7 @@ def criar_utilizador_admin(dados):
     tipo = dados.get("tipo", "").strip()
 
     for utilizador in utilizadores:
-        if utilizador.get("email", "").lower() == email:
+        if utilizador.get("email", "") == email:
             return False, "Este email já existe."
 
     senha_valida, erros_senha = validar_palavra_passe_admin(dados.get("senha", ""))
