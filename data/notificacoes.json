@@ -207,5 +207,93 @@
         "disciplina": "Matemática",
         "lida": true,
         "criada_em": "30/06/2026 11:51"
+    },
+    {
+        "id": 20,
+        "destinatario_id": 2,
+        "destinatario_tipo": "professor",
+        "titulo": "Submissão atualizada",
+        "mensagem": "Elves Garcia atualizou 'Ficha de exercicio' em Matemática. Submissão atrasada em 1 dia(s) e 18 hora(s).",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": false,
+        "criada_em": "01/07/2026 12:10"
+    },
+    {
+        "id": 21,
+        "destinatario_id": 3,
+        "destinatario_tipo": "estudante",
+        "titulo": "Submissão atualizada",
+        "mensagem": "A sua submissão da tarefa 'Ficha de exercicio' foi atualizada com sucesso.",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": true,
+        "criada_em": "01/07/2026 12:10"
+    },
+    {
+        "id": 22,
+        "destinatario_id": 2,
+        "destinatario_tipo": "professor",
+        "titulo": "Submissão atualizada",
+        "mensagem": "Elves Garcia atualizou 'Ficha de exercicio' em Matemática. Submissão atrasada em 1 dia(s) e 21 hora(s).",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": false,
+        "criada_em": "01/07/2026 15:11"
+    },
+    {
+        "id": 23,
+        "destinatario_id": 3,
+        "destinatario_tipo": "estudante",
+        "titulo": "Submissão atualizada",
+        "mensagem": "A sua submissão da tarefa 'Ficha de exercicio' foi atualizada com sucesso.",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": true,
+        "criada_em": "01/07/2026 15:11"
+    },
+    {
+        "id": 24,
+        "destinatario_id": 2,
+        "destinatario_tipo": "professor",
+        "titulo": "Submissão atualizada",
+        "mensagem": "Elves Garcia atualizou 'Ficha de exercicio' em Matemática. Submissão atrasada em 1 dia(s) e 21 hora(s).",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": false,
+        "criada_em": "01/07/2026 15:12"
+    },
+    {
+        "id": 25,
+        "destinatario_id": 3,
+        "destinatario_tipo": "estudante",
+        "titulo": "Submissão atualizada",
+        "mensagem": "A sua submissão da tarefa 'Ficha de exercicio' foi atualizada com sucesso.",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": true,
+        "criada_em": "01/07/2026 15:12"
+    },
+    {
+        "id": 26,
+        "destinatario_id": 2,
+        "destinatario_tipo": "professor",
+        "titulo": "Submissão atualizada",
+        "mensagem": "Elves Garcia atualizou 'Ficha de exercicio' em Matemática. Submissão atrasada em 1 dia(s) e 21 hora(s).",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": false,
+        "criada_em": "01/07/2026 15:17"
+    },
+    {
+        "id": 27,
+        "destinatario_id": 3,
+        "destinatario_tipo": "estudante",
+        "titulo": "Submissão atualizada",
+        "mensagem": "A sua submissão da tarefa 'Ficha de exercicio' foi atualizada com sucesso.",
+        "tipo": "submissao",
+        "disciplina": "Matemática",
+        "lida": true,
+        "criada_em": "01/07/2026 15:17"
     }
 ]

@@ -18,5 +18,45 @@
         "submissao_id": 1,
         "estado": "simulado",
         "criado_em": "30/06/2026 11:20"
+    },
+    {
+        "id": 3,
+        "destinatario": "elves@cabolearn.com",
+        "assunto": "Confirmação de submissão - CaboLearn",
+        "mensagem": "Olá Elves Garcia,\n\nA sua submissão foi registada com sucesso.\n\nTarefa: Ficha de exercicio\nDisciplina: Matemática\nFicheiro: Components-of-Selenium.png-2.jpg\nData de envio: 01/07/2026 12:10\nEstado: Atualizado\nAtenção: a submissão foi enviada com 1 dia(s) e 18 hora(s) de atraso.\n\nCaboLearn",
+        "tipo": "confirmacao_submissao",
+        "submissao_id": 1,
+        "estado": "simulado",
+        "criado_em": "01/07/2026 12:10"
+    },
+    {
+        "id": 4,
+        "destinatario": "elves@cabolearn.com",
+        "assunto": "Confirmação de submissão - CaboLearn",
+        "mensagem": "Olá Elves Garcia,\n\nA sua submissão foi registada com sucesso.\n\nTarefa: Ficha de exercicio\nDisciplina: Matemática\nFicheiro: trabalho-teste.pdf\nData de envio: 01/07/2026 15:11\nEstado: Atualizado\nAtenção: a submissão foi enviada com 1 dia(s) e 21 hora(s) de atraso.\n\nCaboLearn",
+        "tipo": "confirmacao_submissao",
+        "submissao_id": 1,
+        "estado": "simulado",
+        "criado_em": "01/07/2026 15:11"
+    },
+    {
+        "id": 5,
+        "destinatario": "elves@cabolearn.com",
+        "assunto": "Confirmação de submissão - CaboLearn",
+        "mensagem": "Olá Elves Garcia,\n\nA sua submissão foi registada com sucesso.\n\nTarefa: Ficha de exercicio\nDisciplina: Matemática\nFicheiro: trabalho-teste.pdf\nData de envio: 01/07/2026 15:12\nEstado: Atualizado\nAtenção: a submissão foi enviada com 1 dia(s) e 21 hora(s) de atraso.\n\nCaboLearn",
+        "tipo": "confirmacao_submissao",
+        "submissao_id": 1,
+        "estado": "simulado",
+        "criado_em": "01/07/2026 15:12"
+    },
+    {
+        "id": 6,
+        "destinatario": "elves@cabolearn.com",
+        "assunto": "Confirmação de submissão - CaboLearn",
+        "mensagem": "Olá Elves Garcia,\n\nA sua submissão foi registada com sucesso.\n\nTarefa: Ficha de exercicio\nDisciplina: Matemática\nFicheiro: trabalho-teste.pdf\nData de envio: 01/07/2026 15:17\nEstado: Atualizado\nAtenção: a submissão foi enviada com 1 dia(s) e 21 hora(s) de atraso.\n\nCaboLearn",
+        "tipo": "confirmacao_submissao",
+        "submissao_id": 1,
+        "estado": "simulado",
+        "criado_em": "01/07/2026 15:17"
     }
 ]
