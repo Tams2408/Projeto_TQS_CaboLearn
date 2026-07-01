@@ -1,7 +1,18 @@
-version: "3.9"
-
 services:
-  sprint:
-    build: .
+  cabolearn:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: cabolearn
     ports:
       - "5000:5000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Persistir os dados (utilizadores, submissões, notificações, tarefas, emails)
+      - ../data:/app/data
+      # Persistir os ficheiros submetidos pelos estudantes
+      - ../uploads:/app/uploads
+      # Persistir as fotografias de perfil (avatares)
+      - ../app/assets/uploads/avatars:/app/app/assets/uploads/avatars
+    restart: unless-stopped
