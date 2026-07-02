@@ -11,7 +11,11 @@ COPY app.py .
 COPY criar_utilizador.py .
 COPY app/ app/
 COPY data/ data/
-COPY uploads/ uploads/
+
+# "uploads/" está no .gitignore (contém ficheiros submetidos por estudantes,
+# não deve ir para o controlo de versões nem para a imagem) — por isso não é
+# copiada, apenas criada vazia aqui. Em runtime é montada como volume pelo
+# docker-compose.yml, tanto localmente como em produção.
 
 # Garantir que as pastas de dados/uploads/avatars existem dentro do container
 RUN mkdir -p /app/uploads /app/app/assets/uploads/avatars
