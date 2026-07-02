@@ -378,7 +378,7 @@ def test_submissao_sem_ficheiro_e_rejeitada(client, app_module):
     dados = resposta.get_json()
 
     assert dados["ok"] is False
-    assert "Dados incompletos" in dados["erro"]
+    assert "Selecione um ficheiro para realizar a submissão" in dados["erro"]
 
     submissoes = read_json(app_module.SUBMISSOES_FILE)
 
